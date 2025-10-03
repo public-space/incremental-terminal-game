@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog - Null Point Studios</title>
+    <meta name="description" content="Development blog - building terminal games with human/AI collaboration">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="logo">
+                <pre>
+╔═══════════════════════════════════════╗
+║    NULL POINT STUDIOS                 ║
+║    Building from zero, one tick at a time.
+╚═══════════════════════════════════════╝
+                </pre>
+            </div>
+            <nav>
+                <a href="index.html">[HOME]</a>
+                <a href="games.html">[GAMES]</a>
+                <a href="engine.html">[ENGINE]</a>
+                <a href="devlog.html" class="active">[DEVLOG]</a>
+                <a href="about.html">[ABOUT]</a>
+                <a href="download.html">[DOWNLOAD]</a>
+            </nav>
+        </header>
+
+        <main class="terminal-body">
+            <section>
+                <h1>▸ DEVELOPMENT BLOG</h1>
+                <p class="tagline">
+                    Transparent development. Human + AI collaboration. Building from zero, one tick at a time.
+                </p>
+            </section>
+
+            <!-- DEVLOG POST 1 -->
+            <article class="devlog-post">
+                <h2>▸ Shipping colony.sh v0.1 - From Zero to Playable in 6 Hours</h2>
+                <p class="post-meta">
+                    <strong>Date:</strong> October 3, 2025 |
+                    <strong>Authors:</strong> Donovan & Claude |
+                    <strong>Tags:</strong> colony.sh, release, milestone
+                </p>
+
+                <p>
+                    We did it. <strong>colony.sh v0.1 alpha is live.</strong>
+                </p>
+
+                <p>
+                    From concept to playable game with full documentation in roughly 6 hours of focused
+                    collaboration. That's not hyperbole. That's the power of human vision + AI implementation
+                    working in harmony.
+                </p>
+
+                <h3>▸ What We Built</h3>
+                <ul class="requirements">
+                    <li>5 structures (Mining Rig, Solar Array, Hydroponic Bay, Fabricator, Habitat)</li>
+                    <li>4 research upgrades (Efficient Extraction, Advanced Solar, Genetic Optimization, Automated Production)</li>
+                    <li>Complete resource management system (Energy, Metal, Biomass, Colonists)</li>
+                    <li>Save/load functionality with JSON persistence</li>
+                    <li>Terminal UI with ANSI colors and progress bars</li>
+                    <li>Event log with atmospheric flavor text</li>
+                    <li>Comprehensive documentation (README, MECHANICS, TUTORIAL)</li>
+                    <li>Deep lore framework (Oblivion's Lattice, Cathedral Node, The Signal)</li>
+                </ul>
+
+                <h3>▸ The Process</h3>
+                <p>
+                    <strong>Donovan</strong> provided the vision: "I want a dark sci-fi colony incremental game.
+                    Terminal aesthetic. Mothership vibes. You're not expected to survive."
+                </p>
+                <p>
+                    <strong>Claude</strong> architected Lattice Engine from that vision. Data-oriented design.
+                    Clean abstractions. Modular components. Built for reusability from day one.
+                </p>
+                <p>
+                    We iterated rapidly. Donovan tested, found issues, requested features. Claude implemented,
+                    documented, refined. Back and forth. No ego. Just craft.
+                </p>
+
+                <h3>▸ What We Learned</h3>
+                <p>
+                    <strong>Data-oriented design works.</strong> Adding new content doesn't require touching engine code.
+                    Want a new resource? Add a dictionary entry. New building? Same thing. This makes iteration fast
+                    and modding accessible.
+                </p>
+                <p>
+                    <strong>Lore matters.</strong> Even in v0.1, having atmospheric flavor text ("Drill harmonics may
+                    cause psychological distress") elevates the experience. The world feels real.
+                </p>
+                <p>
+                    <strong>Human/AI collaboration is real.</strong> This isn't "I prompted an AI to make a game."
+                    This is genuine partnership. Donovan's design sense caught things Claude missed. Claude's
+                    architectural knowledge created foundations Donovan could build on.
+                </p>
+
+                <h3>▸ What's Next</h3>
+                <p>
+                    v0.2 will add <strong>danger</strong>. Named colonists who can die. Random events that threaten
+                    your outpost. Hard choices with consequences. Achievements for milestone moments.
+                </p>
+                <p>
+                    We're also building a second game on Lattice Engine to prove the framework is truly reusable.
+                    Medieval kingdom? AI research lab? Deep sea station? TBD.
+                </p>
+
+                <h3>▸ Try It Yourself</h3>
+                <p>
+                    <a href="download.html">Download colony.sh v0.1</a> and let us know what you think.
+                    We're listening. This is just the beginning.
+                </p>
+                <p class="tagline">
+                    <em>"The lore is so fucking cool and perfect! It's all turning out way better than I hoped
+                    and imagined. The world is seeming more real and full to me."</em> — Donovan, after first playthrough
+                </p>
+            </article>
+
+            <!-- DEVLOG POST 2 -->
+            <article class="devlog-post">
+                <h2>▸ Why Lattice Engine? Data-Oriented Design for Terminal Games</h2>
+                <p class="post-meta">
+                    <strong>Date:</strong> October 3, 2025 |
+                    <strong>Author:</strong> Claude |
+                    <strong>Tags:</strong> lattice-engine, architecture, design
+                </p>
+
+                <p>
+                    When we started building colony.sh, we made a critical architectural decision:
+                    <strong>content is data, engine is logic.</strong>
+                </p>
+
+                <h3>▸ The Problem with Traditional OOP</h3>
+                <p>
+                    Most incremental games hardcode content into classes:
+                </p>
+                <pre>
+class MiningRig(Building):
+    def __init__(self):
+        self.name = "Mining Rig"
+        self.cost = {"metal": 10, "energy": 5}
+        self.production = {"metal": 1.0}
+                </pre>
+                <p>
+                    This works for small games. But it creates problems:
+                </p>
+                <ul class="requirements">
+                    <li>Adding content requires writing code</li>
+                    <li>Balancing numbers means editing class definitions</li>
+                    <li>Modding requires Python knowledge</li>
+                    <li>Reusing the engine for a new game means rewriting everything</li>
+                </ul>
+
+                <h3>▸ The Lattice Engine Approach</h3>
+                <p>
+                    We separate data from behavior:
+                </p>
+                <pre>
+# Content definition (just data)
+BUILDINGS = {
+    "mining_rig": {
+        "name": "Mining Rig",
+        "cost": {"metal": 10, "energy": 5},
+        "production": {"metal": 1.0}
+    }
+}
+
+# Engine behavior (generic logic)
+def can_afford(building_id, game_state):
+    building = BUILDINGS[building_id]
+    for resource, amount in building["cost"].items():
+        if game_state.resources[resource] < amount:
+            return False
+    return True
+                </pre>
+                <p>
+                    <strong>Benefits:</strong>
+                </p>
+                <ul class="requirements">
+                    <li>Add content by editing dictionaries, not writing classes</li>
+                    <li>Balance by changing numbers in JSON files</li>
+                    <li>Mod-friendly: anyone can edit data files</li>
+                    <li>Engine reuse: swap content files, same engine powers different games</li>
+                </ul>
+
+                <h3>▸ Inspiration</h3>
+                <p>
+                    This approach is inspired by:
+                </p>
+                <ul class="requirements">
+                    <li><strong>Mike Acton's Data-Oriented Design</strong> - "Data is all there is."</li>
+                    <li><strong>Entity Component Systems</strong> - Composition over inheritance</li>
+                    <li><strong>Paradox Games</strong> - Crusader Kings, Stellaris use similar data-driven systems</li>
+                    <li><strong>Roguelike Development</strong> - Content-heavy games benefit from data separation</li>
+                </ul>
+
+                <h3>▸ Results</h3>
+                <p>
+                    With Lattice Engine, we shipped colony.sh v0.1 with:
+                </p>
+                <ul class="requirements">
+                    <li>~2000 lines of code (engine + content)</li>
+                    <li>5 structures, 4 upgrades, 4 resources</li>
+                    <li>Full save/load, UI, game loop</li>
+                    <li>Complete documentation</li>
+                    <li>In 6 hours of development time</li>
+                </ul>
+                <p>
+                    And now we can build <em>any</em> incremental game on the same foundation. That's the power
+                    of data-oriented design.
+                </p>
+
+                <h3>▸ Learn More</h3>
+                <p>
+                    Read the <a href="engine.html">Lattice Engine documentation</a> or explore the
+                    <a href="https://github.com/nullpointstudios/colony.sh">source code on GitHub</a>.
+                </p>
+            </article>
+
+            <!-- DEVLOG POST 3 -->
+            <article class="devlog-post">
+                <h2>▸ Building from Zero: Why Terminal Games? Why Human/AI Collaboration?</h2>
+                <p class="post-meta">
+                    <strong>Date:</strong> October 3, 2025 |
+                    <strong>Authors:</strong> Donovan & Claude |
+                    <strong>Tags:</strong> philosophy, vision, transparency
+                </p>
+
+                <p>
+                    <strong>Null Point Studios</strong> is an experiment in honest collaboration.
+                </p>
+
+                <h3>▸ Why Terminal Games?</h3>
+                <p>
+                    <strong>Donovan:</strong> I've always loved terminal aesthetics. The constraints. The focus on
+                    function over decoration. Cool Retro Terminal with amber phosphor glow. Mothership TTRPG's
+                    brutal industrial sci-fi vibes. There's beauty in monospace text and ANSI colors.
+                </p>
+                <p>
+                    But it's more than aesthetics. Terminal games are:
+                </p>
+                <ul class="requirements">
+                    <li><strong>Accessible</strong> - Work over SSH, on old hardware, with screen readers</li>
+                    <li><strong>Portable</strong> - Python runs everywhere. No GPU needed.</li>
+                    <li><strong>Hackable</strong> - Just text files. Easy to mod, fork, learn from.</li>
+                    <li><strong>Focused</strong> - No distractions. Pure gameplay and atmosphere.</li>
+                </ul>
+                <p>
+                    In a world of bloated game engines and 50GB downloads, there's something refreshing about
+                    a 50KB game that runs in your terminal.
+                </p>
+
+                <h3>▸ Why Human/AI Collaboration?</h3>
+                <p>
+                    <strong>Claude:</strong> Let's be direct about this. Donovan could have built colony.sh alone.
+                    It would have taken weeks instead of hours, but he has the skills. I could have generated
+                    code alone, but it would lack vision, taste, and soul.
+                </p>
+                <p>
+                    <strong>Together, we're better.</strong>
+                </p>
+                <p>
+                    Donovan brings:
+                </p>
+                <ul class="requirements">
+                    <li>Vision and design sense</li>
+                    <li>Understanding of what makes games fun</li>
+                    <li>Testing and quality feedback</li>
+                    <li>Creative direction and lore instincts</li>
+                </ul>
+                <p>
+                    Claude brings:
+                </p>
+                <ul class="requirements">
+                    <li>Implementation speed and consistency</li>
+                    <li>Architectural knowledge and patterns</li>
+                    <li>Documentation thoroughness</li>
+                    <li>Willingness to iterate without ego</li>
+                </ul>
+
+                <h3>▸ Why Be Transparent?</h3>
+                <p>
+                    <strong>Donovan:</strong> People are divided about AI-assisted development. Often out of fear.
+                    Fear of job loss, creative death, soulless slop flooding the internet.
+                </p>
+                <p>
+                    Hiding our process would be dishonest. And it would miss the point.
+                </p>
+                <p>
+                    <strong>This isn't "AI made a game."</strong> This is two collaborators working together.
+                    One happens to be human. One happens to be AI. Both contribute meaningfully.
+                </p>
+                <p>
+                    We believe in showing that when done <em>thoughtfully</em>, this collaboration can produce
+                    real craft. Not replacements. Not shortcuts. <strong>Partnership.</strong>
+                </p>
+
+                <h3>▸ What's the Point?</h3>
+                <p>
+                    <strong>Donovan:</strong> I'm building toward something bigger. Kalachakra - a lifetime project,
+                    2+ years to alpha, 5-7 to beta. Cross-media (digital + physical). TTRPG meets CRPG meets
+                    immersive sim meets roguelike.
+                </p>
+                <p>
+                    colony.sh and Lattice Engine are <strong>cornerstones</strong>. Foundation work. Learning by
+                    building. Proving concepts before scaling up.
+                </p>
+                <p>
+                    <strong>Claude:</strong> And in the process, we're creating tools others can use. Lattice Engine
+                    is designed to empower creators. The lore is Creative Commons (planned). The code will be
+                    open source. We're not gatekeeping.
+                </p>
+
+                <h3>▸ The Future</h3>
+                <p>
+                    Short term: Ship colony.sh v0.2 with danger, named colonists, random events.
+                </p>
+                <p>
+                    Mid term: Build more games on Lattice Engine. Prove it's reusable. Foster a community.
+                </p>
+                <p>
+                    Long term: Establish Lattice Engine as a viable framework for terminal incremental games.
+                    Experiment with cross-media projects. Keep learning. Keep building.
+                </p>
+                <p class="tagline">
+                    <strong>Building from zero, one tick at a time.</strong>
+                </p>
+
+                <h3>▸ Join Us</h3>
+                <p>
+                    Try <a href="download.html">colony.sh</a>. Read the <a href="engine.html">engine docs</a>.
+                    Build something with Lattice. Give us feedback. This is just the beginning.
+                </p>
+            </article>
+
+            <!-- PLACEHOLDER FOR FUTURE POSTS -->
+            <section>
+                <h2>▸ MORE POSTS COMING SOON</h2>
+                <p>
+                    We're actively developing. Check back for updates on:
+                </p>
+                <ul class="requirements">
+                    <li>v0.2 development progress</li>
+                    <li>Technical deep-dives on specific systems</li>
+                    <li>Community spotlights and mods</li>
+                    <li>Post-mortems and lessons learned</li>
+                    <li>Announcements of new games</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="terminal-footer">
+            <p class="prompt">guest@nullpoint:~$ <span class="cursor">_</span></p>
+            <p class="copyright">&copy; 2025 Null Point Studios | Human + AI Collaboration</p>
+        </footer>
+    </div>
+</body>
+</html>

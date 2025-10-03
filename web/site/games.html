@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Null Point Studios</title>
+    <meta name="description" content="Terminal incremental games built on Lattice Engine">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="logo">
+                <pre>
+╔═══════════════════════════════════════╗
+║    NULL POINT STUDIOS                 ║
+║    Building from zero, one tick at a time.
+╚═══════════════════════════════════════╝
+                </pre>
+            </div>
+            <nav>
+                <a href="index.html">[HOME]</a>
+                <a href="games.html" class="active">[GAMES]</a>
+                <a href="engine.html">[ENGINE]</a>
+                <a href="devlog.html">[DEVLOG]</a>
+                <a href="about.html">[ABOUT]</a>
+                <a href="download.html">[DOWNLOAD]</a>
+            </nav>
+        </header>
+
+        <main class="terminal-body">
+            <section id="colony">
+                <h1>▸ colony.sh</h1>
+                <p class="tagline">
+                    <strong>A dark sci-fi colony management incremental game for your terminal.</strong>
+                </p>
+                <p>
+                    You are the administrator of a dying outpost on Oblivion's Lattice, a desolate planetoid
+                    at the edge of known space. Your colony survives on borrowed time. Resource depletion is
+                    inevitable. The void is patient.
+                </p>
+                <p>
+                    <strong>You are not expected to survive.</strong>
+                </p>
+
+                <div class="game-preview">
+                    <pre>
+╔═══ COLONY.SH ═══════════════════════════════════════════════════════╗
+║ Sol 042 | Uptime: 2520s                                             ║
+╠═════════════════════════════════════════════════════════════════════╣
+║ RESOURCES                                                           ║
+║ ──────────────────────────────────────────────────────────────────  ║
+║ ⚡ Energy      87.5/100.0   (+2.5/s)  [████████░░] 88%              ║
+║ ⛏ Metal       34.2/50.0    (+1.5/s)  [██████░░░░] 68%              ║
+║ 🧬 Biomass     12.8/75.0    (+2.0/s)  [███░░░░░░░] 17%              ║
+║ 👤 Colonists   3/10                                                 ║
+║                                                                     ║
+║ STRUCTURES                                                          ║
+║ ──────────────────────────────────────────────────────────────────  ║
+║ ⛏ Mining Rig       [██] 2    | +1.0 Metal/s                        ║
+║ ⚡ Solar Array      [█░] 1    | +1.5 Energy/s                       ║
+║ 🧬 Hydroponic Bay   [█░] 1    | +1.0 Biomass/s                      ║
+║                                                                     ║
+║ EVENT LOG                                                           ║
+╠═════════════════════════════════════════════════════════════════════╣
+║ [Sol 042] ⚠ Energy reserves approaching critical threshold          ║
+║ [Sol 041] ✓ Research complete: Efficient Extraction                 ║
+║ [Sol 039] ✓ Solar Array constructed - Cathedral Node reactors idle  ║
+║ [Sol 038] ⚠ Drill harmonics detected - Sector 7 offline             ║
+║                                                                     ║
+║ The void is patient. You are not expected to survive.              ║
+╚═════════════════════════════════════════════════════════════════════╝
+                    </pre>
+                </div>
+            </section>
+
+            <section>
+                <h2>▸ FEATURES</h2>
+                <ul class="requirements">
+                    <li><strong>Idle Progression</strong> - Resources generate while you work, sleep, or explore other tasks</li>
+                    <li><strong>5 Structures</strong> - Mining Rigs, Solar Arrays, Hydroponics, Fabricators, Habitats</li>
+                    <li><strong>4 Research Upgrades</strong> - Unlock efficiency improvements and new capabilities</li>
+                    <li><strong>Dark Sci-Fi Lore</strong> - Fragmented logs, mysterious signals, ominous discoveries</li>
+                    <li><strong>Terminal Native</strong> - Beautiful ANSI colors, box-drawing characters, clean animations</li>
+                    <li><strong>Save/Load System</strong> - JSON-based persistence, resume anytime</li>
+                    <li><strong>Data-Oriented Design</strong> - Built on Lattice Engine, easy to mod and extend</li>
+                    <li><strong>No Dependencies</strong> - Pure Python, works on Linux, macOS, WSL</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>▸ VERSION ROADMAP</h2>
+
+                <div class="devlog-post">
+                    <h3>v0.1 Alpha (Current)</h3>
+                    <p class="post-meta">Released: October 3, 2025</p>
+                    <ul class="requirements">
+                        <li>Core incremental mechanics</li>
+                        <li>5 structures, 4 research items</li>
+                        <li>Resource management system</li>
+                        <li>Save/load functionality</li>
+                        <li>Event log with lore fragments</li>
+                    </ul>
+                </div>
+
+                <div class="devlog-post">
+                    <h3>v0.2 (Planned)</h3>
+                    <p class="post-meta">Target: November 2025</p>
+                    <ul class="requirements">
+                        <li><strong>Named Colonists</strong> - Individual colonists with names and roles</li>
+                        <li><strong>Random Events</strong> - Equipment failures, discoveries, psychological incidents</li>
+                        <li><strong>Achievements</strong> - Unlock milestones and hidden challenges</li>
+                        <li><strong>Expanded Lore</strong> - More mysteries, Cathedral Node backstory</li>
+                        <li><strong>Danger</strong> - Colonist deaths, catastrophic failures, hard choices</li>
+                    </ul>
+                </div>
+
+                <div class="devlog-post">
+                    <h3>v0.3 - v1.0 (Future)</h3>
+                    <p class="post-meta">Target: 2026</p>
+                    <ul class="requirements">
+                        <li><strong>Prestige System</strong> - "Archive Protocol" - Reset with bonuses</li>
+                        <li><strong>Multiple Endings</strong> - Success, failure, transcendence, mysteries solved</li>
+                        <li><strong>Expanded Content</strong> - More structures, research, story arcs</li>
+                        <li><strong>The Signal</strong> - Uncover what's really happening on Oblivion's Lattice</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>▸ TECHNICAL SPECS</h2>
+                <pre>
+<strong>Platform:</strong>       Linux, macOS, WSL (Windows Subsystem for Linux)
+<strong>Language:</strong>       Python 3.8+
+<strong>Dependencies:</strong>   None (uses only standard library)
+<strong>File Size:</strong>      ~50KB (compact, portable)
+<strong>Save Format:</strong>    JSON (human-readable, easy to backup)
+<strong>Architecture:</strong>   Data-oriented (built on Lattice Engine)
+<strong>License:</strong>        TBD (open source planned)
+                </pre>
+            </section>
+
+            <section>
+                <h2>▸ WHAT PLAYERS SAY</h2>
+                <div class="team-member">
+                    <p>
+                        <em>"The lore is so fucking cool and perfect! It's all turning out way better
+                        than I hoped and imagined. The world is seeming more real and full to me."</em>
+                    </p>
+                    <p class="role">— Donovan, Lead Developer</p>
+                </div>
+                <p>
+                    <strong>More reviews coming soon!</strong> colony.sh v0.1 just launched.
+                    Be among the first players. Share your thoughts with us.
+                </p>
+            </section>
+
+            <section>
+                <h2>▸ GET COLONY.SH</h2>
+                <p>
+                    Ready to command your dying outpost? The void awaits.
+                </p>
+                <div class="cta">
+                    <a href="download.html" class="btn btn-primary">[DOWNLOAD v0.1]</a>
+                    <a href="devlog.html" class="btn">[READ DEVLOG]</a>
+                    <a href="engine.html" class="btn">[EXPLORE ENGINE]</a>
+                </div>
+            </section>
+
+            <section>
+                <h2>▸ FUTURE GAMES</h2>
+                <p>
+                    colony.sh is the first game built on <strong>Lattice Engine</strong>. More terminal
+                    incremental games are in development:
+                </p>
+                <ul class="requirements">
+                    <li><strong>Medieval Kingdom Builder</strong> (Concept) - Manage a growing realm</li>
+                    <li><strong>AI Research Lab</strong> (Concept) - Develop increasingly powerful AI systems</li>
+                    <li><strong>Deep Sea Station</strong> (Concept) - Survive in the crushing depths</li>
+                </ul>
+                <p>
+                    Want to build your own terminal incremental game? <a href="engine.html">Learn about Lattice Engine</a>.
+                </p>
+            </section>
+        </main>
+
+        <footer class="terminal-footer">
+            <p class="prompt">guest@nullpoint:~$ <span class="cursor">_</span></p>
+            <p class="copyright">&copy; 2025 Null Point Studios | Human + AI Collaboration</p>
+        </footer>
+    </div>
+</body>
+</html>

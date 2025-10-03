@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - Null Point Studios</title>
+    <meta name="description" content="Download and install colony.sh and other Lattice Engine games">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="logo">
+                <pre>
+╔═══════════════════════════════════════╗
+║    NULL POINT STUDIOS                 ║
+║    Building from zero, one tick at a time.
+╚═══════════════════════════════════════╝
+                </pre>
+            </div>
+            <nav>
+                <a href="index.html">[HOME]</a>
+                <a href="games.html">[GAMES]</a>
+                <a href="engine.html">[ENGINE]</a>
+                <a href="devlog.html">[DEVLOG]</a>
+                <a href="about.html">[ABOUT]</a>
+                <a href="download.html" class="active">[DOWNLOAD]</a>
+            </nav>
+        </header>
+
+        <main class="terminal-body">
+            <section>
+                <h1>▸ DOWNLOAD COLONY.SH</h1>
+                <p class="tagline">
+                    Get the game running in under 60 seconds. No compilation. No virtual environments. Just run.
+                </p>
+            </section>
+
+            <section>
+                <h2>▸ SYSTEM REQUIREMENTS</h2>
+                <div class="download-box">
+                    <h3>Minimum Requirements</h3>
+                    <ul class="requirements">
+                        <li><strong>OS:</strong> Linux, macOS, or Windows with WSL</li>
+                        <li><strong>Python:</strong> 3.8 or higher</li>
+                        <li><strong>Terminal:</strong> Any terminal emulator (GNOME Terminal, Konsole, iTerm2, etc.)</li>
+                        <li><strong>Display:</strong> 80x24 characters minimum (larger recommended)</li>
+                        <li><strong>Disk Space:</strong> ~5MB</li>
+                        <li><strong>Dependencies:</strong> None (uses Python standard library only)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>▸ INSTALLATION</h2>
+
+                <h3>Option 1: Quick Install (GitHub)</h3>
+                <pre>
+# Clone the repository
+git clone https://github.com/nullpointstudios/colony.sh.git
+cd colony.sh
+
+# Make the launcher executable
+chmod +x colony.sh
+
+# Run the game
+./colony.sh
+                </pre>
+
+                <h3>Option 2: Direct Download (Coming Soon)</h3>
+                <pre>
+# Download the latest release
+wget https://github.com/nullpointstudios/colony.sh/releases/latest/colony.tar.gz
+
+# Extract
+tar -xzf colony.tar.gz
+cd colony
+
+# Make executable and run
+chmod +x colony.sh
+./colony.sh
+                </pre>
+
+                <h3>Option 3: Manual Setup</h3>
+                <p>
+                    1. Download the source code from <a href="https://github.com/nullpointstudios/colony.sh">GitHub</a><br>
+                    2. Extract to your desired location<br>
+                    3. Open terminal in the extracted directory<br>
+                    4. Run: <code>python3 src/main.py</code>
+                </p>
+            </section>
+
+            <section>
+                <h2>▸ QUICK START GUIDE</h2>
+                <pre>
+<strong>Starting the Game:</strong>
+./colony.sh
+
+<strong>Main Menu:</strong>
+[N] New Game    - Start fresh outpost
+[L] Load Game   - Resume saved game
+[Q] Quit        - Exit to terminal
+
+<strong>In-Game Controls:</strong>
+[B] Build       - Construct structures
+[U] Upgrade     - Research improvements
+[S] Save        - Save current progress
+[Q] Quit        - Save and exit
+
+<strong>Navigation:</strong>
+- Use number keys to select menu options
+- Press [Enter] to confirm
+- Press [Q] to return to previous menu
+                </pre>
+            </section>
+
+            <section>
+                <h2>▸ FILE LOCATIONS</h2>
+                <pre>
+<strong>Game Directory Structure:</strong>
+colony.sh/
+├── colony.sh           # Launch script
+├── src/                # Source code
+│   ├── main.py         # Entry point
+│   ├── engine/         # Lattice Engine
+│   └── content/        # Game data
+├── saves/              # Your save files (created on first save)
+├── logs/               # Debug logs (if enabled)
+└── README.md           # Documentation
+
+<strong>Save Files:</strong>
+Default location: ./saves/colony_save_*.json
+
+You can backup save files by copying the saves/ directory.
+                </pre>
+            </section>
+
+            <section>
+                <h2>▸ TERMINAL SETUP (OPTIONAL)</h2>
+                <p>
+                    For the best experience, we recommend configuring your terminal for retro CRT aesthetics:
+                </p>
+
+                <h3>Cool Retro Terminal (Linux)</h3>
+                <pre>
+# Install Cool Retro Terminal
+sudo apt install cool-retro-term
+
+# Launch with amber profile
+cool-retro-term -e ./colony.sh
+                </pre>
+
+                <h3>Terminal Color Schemes</h3>
+                <p>
+                    colony.sh works with any terminal, but looks especially good with:
+                </p>
+                <ul class="requirements">
+                    <li><strong>Amber CRT</strong> - Classic phosphor glow (recommended)</li>
+                    <li><strong>Green Terminal</strong> - IBM 3270 vibes</li>
+                    <li><strong>Monochrome</strong> - Pure ASCII aesthetic</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>▸ TROUBLESHOOTING</h2>
+
+                <div class="team-member">
+                    <h3>Game won't start / "Permission denied"</h3>
+                    <p>
+                        Make sure the launcher is executable:
+                    </p>
+                    <pre>chmod +x colony.sh</pre>
+                </div>
+
+                <div class="team-member">
+                    <h3>Python version error</h3>
+                    <p>
+                        colony.sh requires Python 3.8+. Check your version:
+                    </p>
+                    <pre>python3 --version</pre>
+                    <p>
+                        If your version is too old, install a newer Python or run directly:
+                    </p>
+                    <pre>python3.8 src/main.py</pre>
+                </div>
+
+                <div class="team-member">
+                    <h3>Display looks broken / wrong colors</h3>
+                    <p>
+                        Ensure your terminal supports ANSI color codes. Try:
+                    </p>
+                    <ul class="requirements">
+                        <li>Using a modern terminal (GNOME Terminal, Konsole, iTerm2)</li>
+                        <li>Expanding your terminal window (minimum 80x24)</li>
+                        <li>Checking terminal color settings</li>
+                    </ul>
+                </div>
+
+                <div class="team-member">
+                    <h3>Save files not loading</h3>
+                    <p>
+                        Check that the saves/ directory exists and has proper permissions:
+                    </p>
+                    <pre>
+mkdir -p saves
+chmod 755 saves
+                    </pre>
+                </div>
+
+                <div class="team-member">
+                    <h3>Still having issues?</h3>
+                    <p>
+                        Check the <a href="https://github.com/nullpointstudios/colony.sh/issues">GitHub Issues</a>
+                        or create a new issue with:
+                    </p>
+                    <ul class="requirements">
+                        <li>Your OS and version</li>
+                        <li>Python version (python3 --version)</li>
+                        <li>Terminal emulator</li>
+                        <li>Error message or description</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>▸ UPDATING</h2>
+                <pre>
+# If installed via git clone
+cd colony.sh
+git pull origin main
+
+# If using manual download
+# Download latest version and extract
+# Your saves/ directory will be preserved
+                </pre>
+            </section>
+
+            <section>
+                <h2>▸ UNINSTALLING</h2>
+                <p>
+                    To remove colony.sh:
+                </p>
+                <pre>
+# Backup your saves if you want to keep them
+cp -r colony.sh/saves ~/colony_saves_backup
+
+# Remove the game directory
+rm -rf colony.sh
+                </pre>
+                <p>
+                    colony.sh doesn't install anything outside its own directory. No system files modified.
+                </p>
+            </section>
+
+            <section>
+                <h2>▸ NEXT STEPS</h2>
+                <div class="cta">
+                    <a href="https://github.com/nullpointstudios/colony.sh" class="btn btn-primary">[DOWNLOAD FROM GITHUB]</a>
+                    <a href="games.html" class="btn">[LEARN MORE]</a>
+                    <a href="devlog.html" class="btn">[READ DEVLOG]</a>
+                </div>
+                <p style="margin-top: 20px;">
+                    Once you're running, the void awaits. Good luck, Administrator.
+                </p>
+            </section>
+        </main>
+
+        <footer class="terminal-footer">
+            <p class="prompt">guest@nullpoint:~$ <span class="cursor">_</span></p>
+            <p class="copyright">&copy; 2025 Null Point Studios | Human + AI Collaboration</p>
+        </footer>
+    </div>
+</body>
+</html>

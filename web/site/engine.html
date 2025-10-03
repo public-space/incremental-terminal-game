@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lattice Engine - Null Point Studios</title>
+    <meta name="description" content="Data-oriented framework for building terminal incremental games">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal">
+        <header class="terminal-header">
+            <div class="logo">
+                <pre>
+╔═══════════════════════════════════════╗
+║    NULL POINT STUDIOS                 ║
+║    Building from zero, one tick at a time.
+╚═══════════════════════════════════════╝
+                </pre>
+            </div>
+            <nav>
+                <a href="index.html">[HOME]</a>
+                <a href="games.html">[GAMES]</a>
+                <a href="engine.html" class="active">[ENGINE]</a>
+                <a href="devlog.html">[DEVLOG]</a>
+                <a href="about.html">[ABOUT]</a>
+                <a href="download.html">[DOWNLOAD]</a>
+            </nav>
+        </header>
+
+        <main class="terminal-body">
+            <section>
+                <h1>▸ LATTICE ENGINE</h1>
+                <p class="tagline">
+                    <strong>A reusable, data-oriented framework for building terminal incremental games in Python.</strong>
+                </p>
+                <p>
+                    Content is data. Engine is logic. No engine changes needed to add resources, buildings, or research.
+                </p>
+            </section>
+
+            <section>
+                <h2>▸ DESIGN PHILOSOPHY</h2>
+                <p>
+                    Lattice Engine embraces <strong>data-oriented design</strong>. Instead of creating new classes
+                    for every game element, you define content in simple dictionaries and JSON files.
+                </p>
+                <p>
+                    <strong>This means:</strong>
+                </p>
+                <ul class="requirements">
+                    <li>Adding a new resource? Just add a dictionary entry.</li>
+                    <li>Creating a building? Define its costs and production in data.</li>
+                    <li>Want to balance the game? Edit numbers in JSON, not code.</li>
+                    <li>Building a new game? Swap out content files, engine stays the same.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>▸ CORE FEATURES</h2>
+                <div class="engine-features">
+                    <pre>
+<strong>▸ Resource Management</strong>
+  - Automatic resource generation based on producers
+  - Capacity tracking and overflow prevention
+  - Multi-resource dependencies
+
+<strong>▸ Building System</strong>
+  - Data-driven building definitions
+  - Cost calculation and validation
+  - Production rate modifiers
+
+<strong>▸ Upgrade/Research System</strong>
+  - Tech tree progression
+  - Percentage-based modifiers
+  - Prerequisite checking
+
+<strong>▸ Tick Simulation</strong>
+  - Configurable tick rate (default: 1 second)
+  - Resource generation per tick
+  - Delta time support (catch-up on load)
+
+<strong>▸ Save/Load System</strong>
+  - JSON-based persistence
+  - Human-readable save files
+  - Easy to backup and share
+
+<strong>▸ UI Framework</strong>
+  - Terminal rendering with ANSI colors
+  - Progress bars and animations
+  - Menu system with keyboard navigation
+  - Event log with color-coded messages
+
+<strong>▸ Modular Architecture</strong>
+  - Clean separation of engine and content
+  - Easy to extend and modify
+  - No dependencies beyond Python stdlib
+                    </pre>
+                </div>
+            </section>
+
+            <section>
+                <h2>▸ ARCHITECTURE</h2>
+                <pre>
+<strong>Engine Components:</strong>
+
+engine/
+├── state.py           # GameState - Core data management
+├── resources.py       # Resource tracking and generation
+├── buildings.py       # Building construction and production
+├── upgrades.py        # Research/upgrade system
+├── tick.py            # Game loop and tick processing
+├── save_load.py       # Persistence layer
+└── ui.py              # Terminal rendering
+
+<strong>Content Structure:</strong>
+
+content/
+├── resources.py       # Resource definitions (Energy, Metal, etc.)
+├── buildings.py       # Building definitions (Mining Rig, etc.)
+├── upgrades.py        # Research definitions
+└── config.py          # Game balance and configuration
+
+<strong>Data Flow:</strong>
+
+User Input → Menu System → Game State Update
+                              ↓
+                         Tick Processing
+                              ↓
+              Resource Generation ← Building Production
+                              ↓
+                        UI Rendering → Terminal Display
+                </pre>
+            </section>
+
+            <section>
+                <h2>▸ EXAMPLE: DEFINING A RESOURCE</h2>
+                <p>
+                    Here's how you define a resource in Lattice Engine:
+                </p>
+                <pre>
+# content/resources.py
+
+RESOURCES = {
+    "energy": {
+        "name": "Energy",
+        "symbol": "⚡",
+        "base_capacity": 100.0,
+        "base_generation": 0.5,
+        "description": "Powers all outpost operations"
+    },
+    "metal": {
+        "name": "Metal",
+        "symbol": "⛏",
+        "base_capacity": 50.0,
+        "base_generation": 0.0,
+        "description": "Extracted from planetoid crust"
+    }
+}
+                </pre>
+                <p>
+                    That's it. The engine handles storage, generation, UI display, save/load automatically.
+                </p>
+            </section>
+
+            <section>
+                <h2>▸ EXAMPLE: DEFINING A BUILDING</h2>
+                <p>
+                    Buildings are just as simple:
+                </p>
+                <pre>
+# content/buildings.py
+
+BUILDINGS = {
+    "mining_rig": {
+        "name": "Mining Rig",
+        "symbol": "⛏",
+        "description": "Automated drilling platform",
+        "cost": {
+            "metal": 10,
+            "energy": 5
+        },
+        "production": {
+            "metal": 1.0
+        },
+        "flavor_text": "Warning: Drill harmonics may cause distress."
+    }
+}
+                </pre>
+                <p>
+                    Define the costs and production. Engine handles affordability checks, resource consumption,
+                    production calculation, and UI presentation.
+                </p>
+            </section>
+
+            <section>
+                <h2>▸ EXAMPLE: TICK PROCESSING</h2>
+                <p>
+                    The game loop runs every tick (default: 1 second):
+                </p>
+                <pre>
+# engine/tick.py (simplified)
+
+def process_tick(game_state):
+    """Process one game tick"""
+
+    # 1. Calculate resource generation from all buildings
+    for building_id, count in game_state.buildings.items():
+        building = BUILDINGS[building_id]
+        for resource, amount in building.production.items():
+            # Apply any upgrade modifiers
+            modified_amount = apply_modifiers(amount, resource)
+            game_state.add_resource(resource, modified_amount * count)
+
+    # 2. Increment game time
+    game_state.ticks += 1
+
+    # 3. Check for events, achievements, etc.
+    process_events(game_state)
+
+    return game_state
+                </pre>
+            </section>
+
+            <section>
+                <h2>▸ BUILDING YOUR OWN GAME</h2>
+                <p>
+                    Want to create your own terminal incremental game using Lattice Engine?
+                </p>
+
+                <h3>Step 1: Clone the Template</h3>
+                <pre>
+git clone https://github.com/nullpointstudios/lattice-engine-template.git
+cd lattice-engine-template
+                </pre>
+
+                <h3>Step 2: Define Your Content</h3>
+                <p>
+                    Edit the content files to match your game's theme:
+                </p>
+                <ul class="requirements">
+                    <li><code>content/resources.py</code> - What resources does your game have?</li>
+                    <li><code>content/buildings.py</code> - What can players build?</li>
+                    <li><code>content/upgrades.py</code> - What research/upgrades exist?</li>
+                    <li><code>content/config.py</code> - Game balance, tick rate, etc.</li>
+                </ul>
+
+                <h3>Step 3: Customize UI</h3>
+                <p>
+                    Modify <code>engine/ui.py</code> to match your aesthetic:
+                </p>
+                <ul class="requirements">
+                    <li>Change color schemes</li>
+                    <li>Adjust layout and spacing</li>
+                    <li>Add custom ASCII art</li>
+                    <li>Create unique menu flows</li>
+                </ul>
+
+                <h3>Step 4: Add Flavor</h3>
+                <p>
+                    Write lore, flavor text, event messages to give your game personality.
+                </p>
+
+                <h3>Step 5: Balance & Playtest</h3>
+                <p>
+                    Tweak numbers in content files until progression feels right.
+                </p>
+            </section>
+
+            <section>
+                <h2>▸ EXAMPLE GAMES YOU COULD BUILD</h2>
+                <ul class="requirements">
+                    <li><strong>Medieval Kingdom</strong> - Resources: Food, Wood, Stone, Gold | Buildings: Farm, Quarry, Castle</li>
+                    <li><strong>AI Research Lab</strong> - Resources: Compute, Data, Power | Buildings: GPU Cluster, Data Center</li>
+                    <li><strong>Deep Sea Station</strong> - Resources: Oxygen, Minerals, Energy | Buildings: Hydroponics, Mining Sub</li>
+                    <li><strong>Post-Apocalypse Shelter</strong> - Resources: Scrap, Water, Food | Buildings: Water Filter, Garden</li>
+                    <li><strong>Space Station</strong> - Resources: Energy, Oxygen, Materials | Buildings: Solar Array, Life Support</li>
+                </ul>
+                <p>
+                    All built on the same engine. Just swap the content definitions.
+                </p>
+            </section>
+
+            <section>
+                <h2>▸ TECHNICAL SPECIFICATIONS</h2>
+                <pre>
+<strong>Language:</strong>       Python 3.8+
+<strong>Dependencies:</strong>   None (stdlib only)
+<strong>Lines of Code:</strong>  ~2000 LOC (engine + colony.sh)
+<strong>License:</strong>        MIT (planned)
+<strong>Platform:</strong>       Cross-platform (Linux, macOS, WSL)
+<strong>Performance:</strong>    Minimal CPU usage, runs on potato hardware
+<strong>Save Format:</strong>    JSON (human-readable, version-control friendly)
+                </pre>
+            </section>
+
+            <section>
+                <h2>▸ DESIGN INSPIRATIONS</h2>
+                <p>
+                    Lattice Engine draws from several design philosophies:
+                </p>
+                <ul class="requirements">
+                    <li><strong>Data-Oriented Design</strong> - Separation of data and logic (Mike Acton, Casey Muratori)</li>
+                    <li><strong>Entity Component System</strong> - Composition over inheritance</li>
+                    <li><strong>Incremental Game Design</strong> - NGU Industries, Universal Paperclips, Cookie Clicker</li>
+                    <li><strong>Terminal UI</strong> - Unix philosophy, minimal interfaces</li>
+                    <li><strong>Modding-Friendly</strong> - Easy to read, modify, and extend</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>▸ ROADMAP</h2>
+
+                <div class="devlog-post">
+                    <h3>v0.1 (Current)</h3>
+                    <ul class="requirements">
+                        <li>Core resource, building, upgrade systems</li>
+                        <li>Tick simulation and save/load</li>
+                        <li>Basic UI framework</li>
+                        <li>Proven with colony.sh</li>
+                    </ul>
+                </div>
+
+                <div class="devlog-post">
+                    <h3>v0.2 (Planned)</h3>
+                    <ul class="requirements">
+                        <li>Event system (random events, triggers)</li>
+                        <li>Achievement system</li>
+                        <li>Prestige/reset mechanics</li>
+                        <li>Extended documentation</li>
+                    </ul>
+                </div>
+
+                <div class="devlog-post">
+                    <h3>v1.0 (Goal)</h3>
+                    <ul class="requirements">
+                        <li>Stable, well-documented API</li>
+                        <li>Multiple reference games</li>
+                        <li>Community templates</li>
+                        <li>Tutorial series</li>
+                        <li>Modding tools</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>▸ GET STARTED</h2>
+                <div class="cta">
+                    <a href="https://github.com/nullpointstudios/lattice-engine" class="btn btn-primary">[VIEW ON GITHUB]</a>
+                    <a href="download.html" class="btn">[TRY COLONY.SH]</a>
+                    <a href="devlog.html" class="btn">[READ DEVLOG]</a>
+                </div>
+                <p style="margin-top: 20px;">
+                    Want to contribute? Found a bug? Have an idea?
+                    <a href="https://github.com/nullpointstudios/lattice-engine/issues">Open an issue on GitHub</a>.
+                </p>
+            </section>
+        </main>
+
+        <footer class="terminal-footer">
+            <p class="prompt">guest@nullpoint:~$ <span class="cursor">_</span></p>
+            <p class="copyright">&copy; 2025 Null Point Studios | Human + AI Collaboration</p>
+        </footer>
+    </div>
+</body>
+</html>

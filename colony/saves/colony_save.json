@@ -1,0 +1,319 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created_at": "2025-10-03T06:19:33.986709",
+    "last_saved": "2025-10-03T06:56:10.985205",
+    "total_playtime": 2196.524122953415,
+    "tick_count": 559,
+    "game_name": "colony.sh",
+    "sol": 10,
+    "started": true
+  },
+  "state": {},
+  "resources": {
+    "energy": {
+      "name": "energy",
+      "amount": 99.49713802337646,
+      "max_storage": 100.0,
+      "generation_rate": 2.5,
+      "display_name": "\u26a1 Energy",
+      "description": "Life support. Without it, everything stops.",
+      "unlocked": true,
+      "metadata": {
+        "metadata": {
+          "icon": "\u26a1",
+          "color": "cyan",
+          "critical_threshold": 10.0
+        }
+      }
+    },
+    "metal": {
+      "name": "metal",
+      "amount": 10.0,
+      "max_storage": 50.0,
+      "generation_rate": 0,
+      "display_name": "\u26cf Metal",
+      "description": "Salvaged from dead rock. Construction material.",
+      "unlocked": true,
+      "metadata": {
+        "metadata": {
+          "icon": "\u26cf",
+          "color": "white"
+        }
+      }
+    },
+    "biomass": {
+      "name": "biomass",
+      "amount": 15.0,
+      "max_storage": 75.0,
+      "generation_rate": 0,
+      "display_name": "\ud83e\uddec Biomass",
+      "description": "Recycled organic matter. Keeps colonists alive. Don't think about it.",
+      "unlocked": true,
+      "metadata": {
+        "metadata": {
+          "icon": "\ud83e\uddec",
+          "color": "green",
+          "warning": "Low biomass = starvation"
+        }
+      }
+    },
+    "colonists": {
+      "name": "colonists",
+      "amount": 3.0,
+      "max_storage": 10.0,
+      "generation_rate": 0,
+      "display_name": "\ud83d\udc64 Colonists",
+      "description": "Fragile human units. They break easily.",
+      "unlocked": true,
+      "metadata": {
+        "metadata": {
+          "icon": "\ud83d\udc64",
+          "color": "yellow",
+          "integer_only": true,
+          "precious": true
+        }
+      }
+    }
+  },
+  "buildings": {
+    "solar_array": {
+      "name": "solar_array",
+      "display_name": "Solar Array",
+      "description": "Harvests dim starlight. Barely enough.",
+      "cost": {
+        "metal": 5.0
+      },
+      "count": 1,
+      "produces": {
+        "energy": 3.0
+      },
+      "consumes": {},
+      "unlocked": true,
+      "max_count": null,
+      "build_time": 0.0,
+      "effects": {
+        "metadata": {
+          "icon": "\u26a1",
+          "category": "Power",
+          "flavor": "The panels are cold to the touch. Inefficient. But they work."
+        }
+      },
+      "metadata": {}
+    },
+    "mining_rig": {
+      "name": "mining_rig",
+      "display_name": "Mining Rig",
+      "description": "Drills into dead rock. Hungry for power.",
+      "cost": {
+        "metal": 10.0,
+        "energy": 5.0
+      },
+      "count": 0,
+      "produces": {
+        "metal": 1.5
+      },
+      "consumes": {
+        "energy": 2.0
+      },
+      "unlocked": true,
+      "max_count": null,
+      "build_time": 0.0,
+      "effects": {
+        "metadata": {
+          "icon": "\u26cf",
+          "category": "Extraction",
+          "flavor": "Grinding metal teeth. They never stop."
+        }
+      },
+      "metadata": {}
+    },
+    "reclamation_bay": {
+      "name": "reclamation_bay",
+      "display_name": "Reclamation Bay",
+      "description": "Turns waste into something edible. Don't think about it.",
+      "cost": {
+        "metal": 15.0,
+        "energy": 8.0
+      },
+      "count": 0,
+      "produces": {
+        "biomass": 2.0
+      },
+      "consumes": {
+        "energy": 1.5
+      },
+      "unlocked": true,
+      "max_count": null,
+      "build_time": 0.0,
+      "effects": {
+        "metadata": {
+          "icon": "\ud83e\uddec",
+          "category": "Life Support",
+          "flavor": "The vats bubble. The smell is... organic."
+        }
+      },
+      "metadata": {}
+    },
+    "hab_module": {
+      "name": "hab_module",
+      "display_name": "Hab Module",
+      "description": "Cramped quarters. Better than vacuum.",
+      "cost": {
+        "metal": 20.0,
+        "energy": 10.0
+      },
+      "count": 1,
+      "produces": {},
+      "consumes": {
+        "energy": 0.5
+      },
+      "unlocked": true,
+      "max_count": null,
+      "build_time": 0.0,
+      "effects": {
+        "metadata": {
+          "icon": "\ud83c\udfe0",
+          "category": "Infrastructure",
+          "flavor": "Thin walls. You hear everything.",
+          "colonist_capacity": 5
+        }
+      },
+      "metadata": {}
+    },
+    "research_terminal": {
+      "name": "research_terminal",
+      "display_name": "Research Terminal",
+      "description": "Access to corrupted databases. Maybe they'll help.",
+      "cost": {
+        "metal": 25.0,
+        "energy": 15.0
+      },
+      "count": 0,
+      "produces": {},
+      "consumes": {
+        "energy": 3.0
+      },
+      "unlocked": true,
+      "max_count": 3,
+      "build_time": 0.0,
+      "effects": {
+        "metadata": {
+          "icon": "\ud83d\udda5",
+          "category": "Research",
+          "flavor": "Flickering screens. Fragments of lost knowledge.",
+          "enables_research": true
+        }
+      },
+      "metadata": {}
+    }
+  },
+  "units": {},
+  "upgrades": {
+    "efficient_extraction": {
+      "name": "efficient_extraction",
+      "display_name": "Efficient Extraction",
+      "description": "Squeeze more from nothing. +50% metal generation.",
+      "cost": {
+        "metal": 30.0,
+        "energy": 20.0
+      },
+      "purchased": false,
+      "effects": {
+        "metal_production_multiplier": 1.5
+      },
+      "unlocked": true,
+      "prerequisites": [],
+      "unlocks": [],
+      "repeatable": false,
+      "times_purchased": 0,
+      "max_purchases": null,
+      "metadata": {
+        "metadata": {
+          "icon": "\u26cf+",
+          "category": "Extraction",
+          "flavor": "Sharper drills. Deeper cuts. The rock yields."
+        }
+      }
+    },
+    "closed_loop_bioreactor": {
+      "name": "closed_loop_bioreactor",
+      "display_name": "Closed-Loop Bioreactor",
+      "description": "Less waste. More time. +50% biomass generation.",
+      "cost": {
+        "metal": 40.0,
+        "energy": 25.0,
+        "biomass": 10.0
+      },
+      "purchased": false,
+      "effects": {
+        "biomass_production_multiplier": 1.5
+      },
+      "unlocked": true,
+      "prerequisites": [],
+      "unlocks": [],
+      "repeatable": false,
+      "times_purchased": 0,
+      "max_purchases": null,
+      "metadata": {
+        "metadata": {
+          "icon": "\ud83e\uddec+",
+          "category": "Life Support",
+          "flavor": "The cycle tightens. Nothing is wasted. Everything feeds back."
+        }
+      }
+    },
+    "fusion_ignition": {
+      "name": "fusion_ignition",
+      "display_name": "Fusion Ignition",
+      "description": "Brief hope. Exponential power. +100% energy generation.",
+      "cost": {
+        "metal": 50.0,
+        "energy": 40.0
+      },
+      "purchased": false,
+      "effects": {
+        "energy_production_multiplier": 2.0
+      },
+      "unlocked": true,
+      "prerequisites": [],
+      "unlocks": [],
+      "repeatable": false,
+      "times_purchased": 0,
+      "max_purchases": null,
+      "metadata": {
+        "metadata": {
+          "icon": "\u26a1\u26a1",
+          "category": "Power",
+          "flavor": "The reactor hums. For now, there is enough."
+        }
+      }
+    },
+    "redundant_systems": {
+      "name": "redundant_systems",
+      "display_name": "Redundant Systems",
+      "description": "Backup protocols. -20% energy consumption.",
+      "cost": {
+        "metal": 35.0,
+        "energy": 30.0
+      },
+      "purchased": false,
+      "effects": {
+        "energy_consumption_multiplier": 0.8
+      },
+      "unlocked": true,
+      "prerequisites": [],
+      "unlocks": [],
+      "repeatable": false,
+      "times_purchased": 0,
+      "max_purchases": null,
+      "metadata": {
+        "metadata": {
+          "icon": "\ud83d\udd27",
+          "category": "Efficiency",
+          "flavor": "Failsafes upon failsafes. When one fails, another wakes."
+        }
+      }
+    }
+  }
+}
