@@ -66,7 +66,7 @@ try:
 
     # Save to temp file
     temp_file = tempfile.mktemp(suffix='.json')
-    game.save(temp_file)
+    game.save_game(temp_file)
     print(f"  - Saved to {temp_file}")
 
     # Try to load it

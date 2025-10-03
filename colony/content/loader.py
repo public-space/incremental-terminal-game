@@ -112,7 +112,7 @@ def load_save_game(save_file: str) -> GameState:
         ValueError: If save file is corrupted
     """
     game_state = load_game_content()
-    game_state.load(save_file)
+    game_state.load_game(save_file)
     return game_state
 
 
