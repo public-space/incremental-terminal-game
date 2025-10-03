@@ -172,4 +172,38 @@
 
 ---
 
-**Last Updated**: 2025-10-02
+## 🏷️ Version Tracking System
+
+**Added:** `[v0.2 Planning - 2025-10-03]`
+
+All new ideas added to this reservoir (and all documentation) should include a version stamp to track when they were conceived:
+
+**Format:**
+```
+**Version Stamp:** [vX.X Planning - YYYY-MM-DD]
+```
+
+**Examples:**
+```
+## New Feature Idea
+**Version Stamp:** [v0.2 Planning - 2025-10-03]
+Description...
+
+## Lore Addition
+**Version Stamp:** [v0.3 Planning - 2025-10-15]
+Story concept...
+```
+
+**Applies To:**
+- Site ideas
+- Game features
+- Engine updates
+- Lore additions
+- Documentation improvements
+- Goals and milestones
+
+**Purpose:** Track the evolution of ideas across development versions. Know what was conceived during v0.1, v0.2, v0.3, etc.
+
+---
+
+**Last Updated**: 2025-10-03

@@ -31197,3 +31197,1696 @@ _**User**_
 
 [Request interrupted by user for tool use]
 
+_**User**_
+
+oh sorry i wasnt very clear. i forgot i'm doing the gits. sorry that was a lot of data to dump. both files are just chatlogs. ignore what i said about those! i commited and pushed. please parse through my long rambling message. extract bugs, feautures and fixes. you can push most of these to our next v0.3. we can just focus on fixing things in v0.2. append my new fixes/features ideas into our documentation and devlog for what we want to do as we go! and then iterate through the rest of our message as we plan what to do next. and then tell me how to make a new branch :) sorry it's so scattered
+
+---
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>Okay, the user wants me to:
+
+1. Parse through their long message
+2. Extract bugs, features, and fixes
+3. Push most features to v0.3 (since v0.2 will focus on fixing bugs)
+4. Append the new ideas to documentation/devlog
+5. Iterate through the rest of the message to plan next steps
+6. Tell them how to make a new branch
+
+Let me extract everything from their long message:
+
+**FEATURES (for v0.3):**
+1. Start dialog message - intro lore in bordered box
+2. Second dialog - basic functionality/commands tutorial
+3. Build/Research menus - different coloring for titles/first lines, background label styling, or slightly larger text
+4. Info/Colony statistics - different colors for parameter labels vs current stats
+5. Save/load dialog screens showing save names (max 3 saves)
+6. Quit confirmation dialog
+7. Message log in info screen
+8. Building animations - loading animation as building reaches peak resource creation
+9. Loading ISO ASCII image for welcome screen (alien vibes)
+10. Resource display icons (like Claude Code's ⛁ ⛀ ⛝ ⛶) showing ratios/percentages
+11. Developer mode in engine - better debugging/logging console feedback (not just stack traces)
+
+**DOCUMENTATION REQUESTS:**
+1. Philosophy document for Null Studio, Lattice Engine, and Colony.sh
+2. Version stamps on new ideas (date + version) to track when ideas were developed
+3. Separate v0.2 devlog and documentation
+
+**BUGS TO FIX (v0.2):**
+- Already documented in v0.1-BUGS-TO-FIX.md
+
+**GIT INSTRUCTIONS:**
+- How to make a branch
+- How to commit and push the 2nd branch
+
+Let me read the existing bug file first to see what we have:</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+No worries! Let me parse your message and organize everything properly.
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Tool use: **Read** `./development/v0.1-BUGS-TO-FIX.md`
+
+Result:
+
+```
+1→# v0.1 Bugs & Issues to Fix
+     2→
+     3→**Source:** First playtest by Donovan (October 3, 2025)
+     4→**Status:** To be fixed in v0.2 branch
+     5→
+     6→---
+     7→
+     8→## 🐛 Critical Bugs
+     9→
+    10→### 1. Building Construction Error
+    11→**Error Message:**
+    12→\```python
+    13→[Sol 004 06:49:48] ⚠ Error: unsupported operand type(s) for *: 'float' and 'ResourceManager'
+    14→\```
+    15→
+    16→**When it occurs:**
+    17→- Trying to build a second Solar Array
+    18→- Trying to build Mining Rigs
+    19→
+    20→**Likely cause:** Type error in production calculation - multiplying float by ResourceManager object instead of a number
+    21→
+    22→**Priority:** HIGH - Breaks core gameplay loop
+    23→
+    24→---
+    25→
+    26→### 2. Research Purchase Error
+    27→**Error Message:**
+    28→\```python
+    29→[Sol 007 06:52:42] ⚠ Error: UpgradeManager.purchase() takes 2 positional arguments but 3 were given
+    30→\```
+    31→
+    32→**When it occurs:**
+    33→- Trying to purchase research upgrades
+    34→
+    35→**Likely cause:** Method signature mismatch - calling with wrong number of arguments
+    36→
+    37→**Priority:** HIGH - Breaks progression system
+    38→
+    39→---
+    40→
+    41→## 🎨 UI Issues
+    42→
+    43→### 3. Main Menu Flickering
+    44→**Description:** Main menu flickers, making it hard to input commands
+    45→
+    46→**Impact:** User has to "catch the letter and enter super quickly" before it disappears
+    47→
+    48→**Priority:** HIGH - Poor user experience
+    49→
+    50→---
+    51→
+    52→### 4. Border Alignment
+    53→**Description:** Borders aren't quite lined up properly
+    54→
+    55→**Impact:** Visual polish
+    56→
+    57→**Priority:** MEDIUM - Cosmetic but noticeable
+    58→
+    59→---
+    60→
+    61→## 💡 Feature Requests / Improvements
+    62→
+    63→### 5. Error Handling & User Dialogs
+    64→**Request:** "we need to add error handling in the form of dialogues for the user"
+    65→
+    66→**Details:**
+    67→- Better error messages that explain what went wrong
+    68→- User-friendly dialogs instead of stack traces
+    69→- Graceful degradation
+    70→
+    71→**Priority:** MEDIUM
+    72→
+    73→---
+    74→
+    75→### 6. Message/Lore Log
+    76→**Request:** "want to create a message log that logs everything the user does. this will later turn into a lore log as well"
+    77→
+    78→**Details:**
+    79→- Track all user actions
+    80→- Display as log entries
+    81→- Later: integrate with lore discoveries
+    82→
+    83→**Priority:** LOW (for v0.2+)
+    84→
+    85→---
+    86→
+    87→### 7. Tmux/Tiled Terminal Interface (Future)
+    88→**Request:** "eventually it would be amazing to have a tmux/tiled kind of large terminal window so the user can see many things at once"
+    89→
+    90→**Vision:**
+    91→- Multiple panels showing different info
+    92→- Complex system feeling
+    93→- Alien/MUTHER-style interfaces
+    94→- Make players "feel like hackers"
+    95→
+    96→**Priority:** LOW (for v1.0+)
+    97→
+    98→---
+    99→
+   100→### 8. Tileset Support (Optional)
+   101→**Request:** "in the go terminal roguelike shamogu he used something where you could run it with a `-t` flag for a very basic tileset: `~$ ./shamogu -t`"
+   102→
+   103→**Priority:** LOW (for future versions)
+   104→
+   105→---
+   106→
+   107→## ✅ What Works Perfectly
+   108→
+   109→According to playtest:
+   110→- ✅ Help screen works perfectly
+   111→- ✅ Save system works perfectly
+   112→- ✅ Load system works perfectly ("fuck the load and save worked!")
+   113→- ✅ Info screen is awesome
+   114→- ✅ Quit functionality works well
+   115→- ✅ Timers and tickers working perfectly
+   116→- ✅ Menu choices are amazing and clear
+   117→- ✅ Color palette is amazing
+   118→- ✅ Lore is "so fucking cool and perfect"
+   119→- ✅ Archive message on load: "Colony systems restored from archive"
+   120→
+   121→---
+   122→
+   123→## 🎯 Donovan's Overall Feedback
+   124→
+   125→> "I'm honestly completely blown away by claude's lore. it's perfect and everything i could want. i love it."
+   126→
+   127→> "damn i was literally going 'what!' and 'oh fuck' 'that's so good' and laughing and surprised cuz the lore hit so goddamn hard and was so cool and immersive."
+   128→
+   129→> "i'm very impressed and very excited."
+   130→
+   131→> "youre a beast my friend. i'm so stoked!"
+   132→
+   133→> "if it didn't flicker i could get deep into this"
+   134→
+   135→---
+   136→
+   137→## 🔧 Fix Priority Order for v0.2
+   138→
+   139→1. **Building construction bug** (HIGH) - Breaks gameplay
+   140→2. **Research purchase bug** (HIGH) - Breaks progression
+   141→3. **Menu flickering** (HIGH) - UX blocker
+   142→4. **Border alignment** (MEDIUM) - Polish
+   143→5. **Error handling dialogs** (MEDIUM) - Better UX
+   144→6. **Message log** (LOW) - Feature for later
+   145→
+   146→---
+   147→
+   148→**Next Steps:**
+   149→- Create v0.2-dev branch
+   150→- Fix critical bugs first
+   151→- Add error handling
+   152→- Test thoroughly before adding new features
+   153→
+   154→---
+   155→
+   156→**Inspirations Shared:**
+   157→
+   158→### Science Fiction
+   159→- Philip K. Dick
+   160→- William Gibson
+   161→- Peter F. Hamilton - Reality Dysfunction
+   162→- Harlan Ellison
+   163→- Dune
+   164→
+   165→### Films
+   166→- Alien (1979) - MUTHER computer interface ⭐
+   167→- MANIAC (Netflix) - GRTA computer
+   168→
+   169→### Games
+   170→- Colony Ship (Vince D. Weller)
+   171→- Caves of Qud
+   172→- Rimworld
+   173→- Dwarf Fortress
+   174→- Dead Space
+   175→- F.E.A.R
+   176→- Left 4 Dead
+   177→- Fallout (early)
+   178→- Mothership (TTRPG)
+   179→- Eve Online
+   180→
+   181→### Horror/Philosophy
+   182→- HP Lovecraft
+   183→- Kafka
+   184→- Camus
+   185→- Nietzsche
+   186→- Buddhism / Kalachakra
+   187→- Thelema
+   188→
+   189→### Film Directors
+   190→- David Cronenberg
+   191→- David Lynch
+   192→- Gaspar Noé
+   193→- Tarkovsky (Stalker)
+   194→- Stanley Kubrick
+   195→
+   196→---
+   197→
+   198→*"if you want to play a good RPG you're going to have to make it yourself"* - Vince D. Weller
+   199→
+```
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>Good, I have the existing bugs. Now let me create a new document for the v0.3 features based on the user's message. Let me organize everything:
+
+**From the user's long message, here's what I extracted:**
+
+**FEATURES FOR v0.3:**
+1. Start dialog message - intro lore in bordered box
+2. Second dialog - basic functionality/commands tutorial  
+3. Build/Research menus - different coloring for titles/first lines, background labels, or larger text
+4. Info/Colony statistics - different colors for parameter labels vs stats
+5. Save/load dialog screens - show save names (max 3 saves)
+6. Quit confirmation dialog
+7. Message log integration into info screen
+8. Building animations - loading bars as resources generate
+9. Loading ISO ASCII image for welcome screen (alien vibes)
+10. Resource display icons (⛁ ⛀ ⛝ ⛶ style) for ratios/percentages
+11. Developer mode in engine - better debugging/logging
+
+**DOCUMENTATION TO CREATE:**
+1. Philosophy document for Null Studio, Lattice Engine, Colony.sh
+2. Version stamping system (date + version on all new ideas)
+
+**v0.2 FOCUS:**
+- Fix the 4 bugs (already documented)
+- That's it! Features go to v0.3
+
+Let me create the v0.3 features document and update the philosophy doc.</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Now let me create a v0.3 features document and philosophy doc with all your new ideas:
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Tool use: **Write**
+
+```md
+# v0.3 Feature Wishlist
+
+**Version Stamp:** `[v0.3 Planning - 2025-10-03]`
+**Status:** Planned for post-v0.2 implementation
+**Philosophy:** Features added AFTER bugs are fixed in v0.2
+
+---
+
+## 🎭 Dialog Systems
+
+### 1. Intro Dialog (Lore)
+**Description:** Bordered dialog box on first launch with intro lore
+**Content:** "You are..." style scene-setting (not full lore dump, just hook)
+**Priority:** HIGH - First impression matters
+
+### 2. Tutorial Dialog
+**Description:** Second dialog explaining basic functionality
+**Content:**
+- Basic commands
+- How to save
+- Core mechanics (bare bones explanation)
+**Priority:** HIGH - User onboarding
+
+### 3. Quit Confirmation Dialog
+**Description:** "Are you sure you want to quit?" prompt
+**Priority:** MEDIUM - Prevents accidental quits
+
+---
+
+## 🎨 Visual Enhancements
+
+### 4. Menu Title Styling
+**Target:** Build and Research menus
+**Options:**
+- Different coloring for titles/first lines
+- Background label styling
+- Slightly larger text (if possible)
+**Design Decision:** Claude's discretion ("you've made it look amazing so far")
+**Priority:** MEDIUM
+
+### 5. Info Screen Color Differentiation
+**Target:** Info/Colony statistics page
+**Implementation:** Different colors for parameter labels vs current stats
+**Example:**
+\```
+Energy: [label color] 150/200 [stat color]
+\```
+**Priority:** MEDIUM
+
+### 6. Building Animations
+**Description:** Loading animation as buildings generate resources
+**Visual:** Progress bar showing production cycle
+**Condition:** "if possible and not too hard"
+**Priority:** LOW - Nice to have
+
+### 7. Loading Screen ASCII Art
+**Description:** ISO-style ASCII image for welcome screen
+**Theme:** Alien vibes, simple design
+**Priority:** LOW - Polish feature
+
+---
+
+## 💾 Save/Load UI Improvements
+
+### 8. Save/Load Dialog Screens
+**Description:** Show save file names in dialog interface
+**Limit:** Maximum 3 saves for now
+**Display:**
+\```
+╔════════════════════════╗
+║   SAVED COLONIES       ║
+╠════════════════════════╣
+║ 1. Colony Alpha        ║
+║ 2. Colony Beta         ║
+║ 3. [Empty Slot]        ║
+╚════════════════════════╝
+\```
+**Condition:** "if that's not too difficult"
+**Priority:** MEDIUM
+
+---
+
+## 📊 Message & Logging Systems
+
+### 9. Message Log in Info Screen
+**Description:** Integrate message log into info screen
+**Decision:** Claude's discretion for "easiest to implement and most aesthetically pleasing"
+**Future:** Will evolve into lore log
+**Priority:** MEDIUM
+
+---
+
+## 🔧 Engine Enhancements
+
+### 10. Resource Display Icons
+**Inspiration:** Claude Code's context usage display
+**Icons:** ⛁ ⛀ ⛝ ⛶ (terminal-style)
+**Implementation:**
+\```
+[⛁] Energy:    150/200 (75%)
+[⛀] Minerals:  89/100  (89%)
+[⛝] Research:  45/50   (90%)
+\```
+**Features:**
+- Ratios and percentages
+- Visual capacity indicators
+- Terminal aesthetic maintained
+**Engine Update:** Ratios/percentages need to be factored into Lattice Engine
+**Priority:** MEDIUM
+
+### 11. Developer Mode
+**Description:** Enhanced debug environment in Lattice Engine
+**Features:**
+- Pseudo-terminal console feedback
+- Better debugging than just stack traces
+- Logging system for developers
+**Target:** Development/testing workflow
+**Priority:** LOW - Developer tool
+
+---
+
+## 📝 Version Tracking System
+
+### 12. Idea Version Stamps
+**System:** All new ideas tagged with date + version
+**Format:** `[v0.X Planning - YYYY-MM-DD]`
+**Purpose:** Track when ideas were conceived
+**Example:**
+\```
+## New Feature Idea
+**Version Stamp:** [v0.2 Planning - 2025-10-03]
+Description...
+\```
+**Applies To:**
+- Site ideas
+- Game features
+- Engine updates
+- Lore additions
+- Documentation
+- Goals
+
+---
+
+## 🎯 Implementation Notes
+
+**User's Priority:**
+> "fixing the bugs first is priority. and then implementing when set. these ideas can be saved for v0.3 as well. up to you."
+
+**Development Strategy:**
+- v0.2 = Bug fixes ONLY
+- v0.3 = Features from this list
+- Extensive testing before each release
+- Separate devlogs for each version
+
+**Design Freedom:**
+> "use your discretion for all these design decisions. you've made it look amazing so far and i don't want to get in the way."
+
+---
+
+## 🔮 Future Additions
+
+As we work, new ideas will be added to the Idea Reservoir with version stamps.
+
+**Donovan's Note:**
+> "if you come up with any more ideas as we go please add them to the ideas and lore reservoir"
+
+---
+
+**Engine Updates Required:**
+- v0.2 of Lattice Engine may be needed
+- "do what seems smarter in editing each one. little or as much as possible"
+- Balance between game updates and engine updates
+
+---
+
+*Ideas extracted from development session 2025-10-03*
+
+```
+
+Result:
+
+```
+File created successfully at: /mnt/alaya/claude-code/incremental-terminal-game/development/v0.3-FEATURES.md
+```
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>Good! Now let me create the philosophy document.</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Tool use: **Write**
+
+```md
+# Development Philosophy
+
+**Version Stamp:** `[v0.1-v0.2 - 2025-10-03]`
+
+---
+
+## 🌌 Null Point Studios
+
+### Vision
+**Tagline:** *"if you want to play a good RPG you're going to have to make it yourself"* - Vince D. Weller
+
+Null Point Studios embraces the philosophy of creating experiences that don't exist elsewhere. We build games that blend:
+- Deep, atmospheric storytelling
+- Meaningful player agency
+- Terminal/retro aesthetics with modern design
+- Systems that respect player intelligence
+
+### Core Principles
+
+**1. Atmosphere Over Graphics**
+- ASCII and terminal interfaces create unique immersion
+- Color palettes set mood and tone
+- Minimalism forces imagination
+
+**2. Depth Without Bloat**
+- Every system serves gameplay
+- Complexity emerges from simple rules
+- No features for features' sake
+
+**3. Player Respect**
+- No hand-holding, but clear feedback
+- Save systems that work
+- Information accessible when needed
+- Let players discover, don't force tutorials
+
+**4. Incremental Polish**
+- Fix what's broken before adding new
+- Test thoroughly at each stage
+- Version control isn't just for code - it's for ideas
+
+**5. Developer Joy**
+- Build tools that make development pleasant
+- Debug systems that help, not obscure
+- Documentation that teaches
+
+---
+
+## ⚙️ Lattice Engine
+
+### What Is It?
+A terminal-based game engine for incremental/idle games with roguelike aesthetics. Built in Python for maximum readability and extensibility.
+
+### Design Philosophy
+
+**Modular Architecture**
+\```
+Every aspect and function should be in its own python file
+for maximum organization, modularability, and readable clean code.
+\```
+- Each system isolated and testable
+- Easy to extend without breaking existing features
+- Future developers (including yourself) can understand it
+
+**Tick-Based Reality**
+- Everything updates on game ticks
+- Idle mechanics emerge naturally
+- Resources flow like time
+
+**Clean Abstractions**
+- ResourceManager handles all resources
+- BuildingManager handles all buildings
+- UpgradeManager handles all research
+- MessageLog handles all events
+- Each knows its job, does it well
+
+**Error Philosophy**
+> "extensive error handling and debugging so the game doesn't crash and so we can figure out what's wrong and fix it promptly"
+
+- Graceful degradation over crashes
+- Error messages that explain
+- Stack traces for developers, dialogs for players
+- Log everything, hide nothing from devs
+
+**Developer Mode (v0.3+)**
+- Pseudo-terminal console
+- Rich debugging beyond stack traces
+- Make development feel like hacking
+
+### Visual Design Principles
+
+**Terminal Aesthetics**
+- Borders and boxes create structure
+- Colors convey meaning (not just decoration)
+- Icons (⛁ ⛀ ⛝ ⛶) show ratios visually
+- Animations confirm action without distraction
+
+**Clarity First**
+- Numbers always visible
+- Stats differentiated from labels
+- Progress bars show change
+- Dialogs guide without blocking
+
+**Future Vision: Tmux-Style Panels**
+- Multiple simultaneous views
+- Complex system feeling
+- Make players "feel like hackers"
+- Alien/MUTHER-style interfaces
+
+---
+
+## 🪐 Colony.sh
+
+### Theme & Atmosphere
+**Setting:** Mars colonization with existential dread
+**Tone:** Hard sci-fi meets cosmic horror
+**Aesthetic:** 1970s computer terminals (Alien's MUTHER)
+
+### Lore Philosophy
+> "I'm honestly completely blown away by claude's lore. it's perfect and everything i could want."
+> - Donovan, First Playtest
+
+**Narrative Design:**
+- Lore reveals through gameplay, not dumps
+- Every mechanic has in-world justification
+- Message log becomes lore log
+- Environmental storytelling through UI
+
+**Player Experience:**
+- Start small (basic resources)
+- Unlock exponential growth
+- Three layers minimum: base → intermediate → advanced
+- Choices matter, but not punishing
+
+**Inspirations Blend:**
+
+*Science Fiction:*
+- Philip K. Dick (paranoia, identity)
+- William Gibson (cyberpunk grit)
+- Peter F. Hamilton (vast scope)
+- Dune (resource scarcity, ecology)
+
+*Visual:*
+- Alien (1979) - MUTHER interface ⭐
+- MANIAC - GRTA computer
+
+*Games:*
+- NGU Industries (incremental mechanics, humor)
+- Universal Paperclips (exponential growth)
+- Caves of Qud (weird sci-fi)
+- Dwarf Fortress (emergent complexity)
+- Mothership TTRPG (horror in space)
+
+*Philosophy:*
+- Lovecraft (cosmic insignificance)
+- Camus (absurdism)
+- Buddhism (cycles, impermanence)
+
+### Gameplay Philosophy
+
+**Early Game (First 10 Minutes):**
+- Actions feel meaningful immediately
+- Progress visible and rewarding
+- Core loop clicks into place
+- "I get it" moment happens fast
+
+**Mid Game:**
+- Exponential growth unlocked
+- Strategic choices emerge
+- Systems interconnect
+- Prestige/reset on horizon
+
+**Long Game:**
+- Can run idle
+- Deep optimization possible
+- Lore mysteries deepen
+- Multiple valid strategies
+
+**Balance Philosophy:**
+- Rewarding in 10 minutes
+- Engaging for hours
+- Respects player's time
+- Idle when you want, active when you don't
+
+---
+
+## 🔧 Development Workflow
+
+### Version Strategy
+
+**v0.1** ✅
+- Core gameplay loop
+- Save/load system
+- Basic UI and menus
+- Lore foundation
+- **Status:** Complete, playtested
+
+**v0.2** 🔧
+- **BUGS ONLY**
+- Fix construction errors
+- Fix research errors
+- Fix menu flickering
+- Fix border alignment
+- No new features
+
+**v0.3** 📋
+- Feature additions
+- Dialog systems
+- Visual enhancements
+- Engine improvements
+- Polish and animations
+
+### Git Philosophy
+- Branch for each version
+- Main stays stable
+- Commit messages tell story
+- Push conversation logs (`.specstory/`)
+
+### Documentation Standards
+> "Keep a separate v0.2 devlog and documentation just to keep things isolated and easy to see"
+
+- Each version gets its own devlog
+- Bugs tracked separately from features
+- Ideas timestamped with version
+- Philosophy evolves with project
+
+### Testing Protocol
+> "extensive testing to make sure each part works with the whole before fixing"
+
+- Integration testing before commits
+- Playtest after each major change
+- Log everything during testing
+- If it flickers, it's not done
+
+---
+
+## 🎯 Guiding Quotes
+
+> "do what seems smarter in editing each one. little or as much as possible"
+
+> "use your discretion for all these design decisions. you've made it look amazing so far and i don't want to get in the way"
+
+> "fixing the bugs first is priority. and then implementing when set"
+
+> "i'm very impressed and very excited"
+
+> "if it didn't flicker i could get deep into this"
+
+---
+
+## 🌟 The Meta-Philosophy
+
+**Build What You Want To Play**
+- Scratch your own itch
+- Make the game you wish existed
+- Trust your taste
+
+**Iteration Is Love**
+- Each version better than last
+- Listen to playtests
+- Fix before feature
+
+**Document Everything**
+- Future you will thank you
+- Ideas are precious
+- Conversations become lore
+
+**Terminal Magic**
+- ASCII isn't limitation, it's aesthetic
+- Constraints breed creativity
+- Retro visuals, modern feel
+
+---
+
+*"damn i was literally going 'what!' and 'oh fuck' 'that's so good' and laughing and surprised cuz the lore hit so goddamn hard and was so cool and immersive."* - Donovan, discovering Colony.sh for the first time
+
+*"youre a beast my friend. i'm so stoked!"*
+
+---
+
+**Null Point Studios**
+**Lattice Engine**
+**Colony.sh**
+
+*Making the games we want to play.*
+
+```
+
+Result:
+
+```
+File created successfully at: /mnt/alaya/claude-code/incremental-terminal-game/development/PHILOSOPHY.md
+```
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>Good! Now let me create a quick git workflow guide and then summarize what's next. Let me also check if there's an existing idea reservoir to update with the versioning system.</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Tool use: **Glob**
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Tool use: **Glob**
+
+Result:
+
+```
+/mnt/alaya/claude-code/incremental-terminal-game/development/Idea_Reservoir.md
+```
+
+Result:
+
+```
+/mnt/alaya/claude-code/incremental-terminal-game/development/Idea_Reservoir.md
+```
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>Found the Idea Reservoir. Let me read it and append the versioning system info.</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Tool use: **Read** `./development/Idea_Reservoir.md`
+
+Result:
+
+```
+1→# 💡 Idea Reservoir
+     2→**Future Game Concepts & Expansion Ideas**
+     3→
+     4→---
+     5→
+     6→## 🏷️ Game Names
+     7→
+     8→### Chosen: **colony.sh** ✓
+     9→**Why it's perfect**:
+    10→- `.sh` extension = instant terminal/Linux aesthetic
+    11→- Concise, memorable, easy to type
+    12→- Fits the frontier colony theme perfectly
+    13→- Professional yet playful
+    14→- Launcher command: `./colony.sh`
+    15→
+    16→### Other Name Ideas
+    17→*(Add alternatives here for future consideration)*
+    18→
+    19→---
+    20→
+    21→## 🚀 Colony.sh - Current Implementation
+    22→**Dark sci-fi frontier colony management**
+    23→**Vibe**: Mothership, cosmic horror, fragile survival on the edge of oblivion
+    24→**Tone**: Cold, computational, ominous - you're managing a dying process trying to stay alive
+    25→
+    26→### Phase 1 - Core Survival System ✓ (In Progress)
+    27→**Resources (4)**:
+    28→- **Energy** - Life support. Without it, everything stops.
+    29→- **Metal** - Salvaged from the wreckage. Construction material.
+    30→- **Biomass** - Recycled organic matter. Keeps colonists alive.
+    31→- **Colonists** - Fragile human units. They break easily.
+    32→
+    33→**Structures (5)**:
+    34→- **Solar Array** - Harvests dim starlight. Barely enough.
+    35→- **Mining Rig** - Drills into dead rock. Hungry for power.
+    36→- **Reclamation Bay** - Turns waste into something edible. Don't think about it.
+    37→- **Hab Module** - Cramped quarters. Better than vacuum.
+    38→- **Research Terminal** - Access to corrupted databases. Maybe they'll help.
+    39→
+    40→**Research (3-4)**:
+    41→- **Efficient Extraction** - Squeeze more from nothing
+    42→- **Closed-Loop Bioreactor** - Less waste. More time.
+    43→- **Fusion Ignition** - Brief hope. Exponential power.
+    44→
+    45→**Event Log**: Cold timestamps. Sol count. Messages from a dying outpost.
+    46→
+    47→### Phase 2 - Entropy Creeps In
+    48→- **Random Events**: Signal loss, hull breach, equipment decay, **something in the dark**
+    49→- **Environmental Hazards**: Radiation storms, cold snaps, dust clouds that eat metal
+    50→- **Colonist System**: They have names. They have needs. They die.
+    51→- **Deeper Research**: Unlock fragments of pre-collapse tech
+    52→- **New Resources**: Rare elements, corrupted data, oxygen debt
+    53→
+    54→### Phase 3 - The Lattice Expands
+    55→- **Multiple Nodes**: Other outposts. Some respond. Some don't.
+    56→- **Exploration**: Send crews into the unknown. Not all return.
+    57→- **Automation Tier**: AI assistants. They help. They watch.
+    58→- **Defense Protocols**: Against what? You don't know yet.
+    59→- **Wonder Projects**: Cathedral Node, Drift Engine, Void Beacon
+    60→- **Prestige**: "Archive Protocol" - reset but keep knowledge
+    61→
+    62→---
+    63→
+    64→## 🎮 Future Game Themes (Archive)
+    65→
+    66→### 🤖 AI Research Lab (Inspired by Skynet Simulator)
+    67→**Theme**: Start with basic compute resources and scale up to build AGI
+    68→- **Resources**: Compute power, data, researchers, memory, energy
+    69→- **Progression**:
+    70→  - Basic algorithms → Machine learning → Deep learning → AGI
+    71→  - Research projects that unlock new capabilities
+    72→  - Data centers, GPU farms, quantum computers
+    73→- **Unique Mechanics**:
+    74→  - Research trees with branching paths
+    75→  - Training cycles that take time
+    76→  - Breakthrough events
+    77→  - Ethical dilemmas and choices
+    78→  - Exponential scaling (very idle-game friendly)
+    79→- **Inspiration**: Skynet Simulator, Universal Paperclips
+    80→
+    81→### 🚀 Space Mining Colony
+    82→**Theme**: Extract resources on an alien planet and expand into the stars
+    83→- **Resources**: Ore, energy, water, rare minerals, colonists
+    84→- **Progression**:
+    85→  - Mining outpost → Colony → Planetary empire → Interstellar civilization
+    86→  - Terraform planets, build space stations
+    87→  - Research alien technology
+    88→- **Unique Mechanics**:
+    89→  - Multiple planets/asteroids to colonize
+    90→  - Space travel and logistics
+    91→  - Alien encounters
+    92→  - Resource scarcity and trade routes
+    93→
+    94→### ☢️ Post-Apocalyptic Survivor
+    95→**Theme**: Rebuild civilization from the ashes
+    96→- **Resources**: Scrap, food, water, survivors, medicine
+    97→- **Progression**:
+    98→  - Scavenger camp → Settlement → Town → New civilization
+    99→  - Clear radiation zones, restore infrastructure
+   100→  - Recruit specialists with different skills
+   101→- **Unique Mechanics**:
+   102→  - Random events (raiders, storms, discoveries)
+   103→  - Morale system
+   104→  - Permadeath for units (hardcore mode)
+   105→  - Exploration and map unlocking
+   106→
+   107→### 🧪 Mad Scientist Laboratory
+   108→**Theme**: Conduct increasingly absurd experiments
+   109→- **Resources**: Research points, test subjects, funding, equipment
+   110→- **Progression**: Simple chemistry → Genetic engineering → Reality manipulation
+   111→- **Unique Mechanics**:
+   112→  - Experiment success/failure with consequences
+   113→  - Prestige through publishing papers
+   114→  - Humor and absurdist flavor text
+   115→
+   116→### 🏰 Medieval Kingdom
+   117→**Theme**: Build a kingdom from a small village
+   118→- **Resources**: Wood, stone, food, gold, population
+   119→- **Progression**: Village → Town → City → Kingdom → Empire
+   120→- **Unique Mechanics**:
+   121→  - Random events (bandits, festivals, royal visitors, dragon attacks)
+   122→  - Seasons (different resource generation rates)
+   123→  - Heroes/Champions (special units with names and leveling)
+   124→  - Quests (short objectives with rewards)
+   125→- **Phase 2**: Military system, diplomacy, technology tree, prestige
+   126→- **Phase 3**: Multiple provinces, religion/culture, wonder buildings
+   127→
+   128→---
+   129→
+   130→## 🔧 Engine Features to Add
+   131→
+   132→### Core Systems
+   133→- [ ] Event system (random events, triggers, consequences)
+   134→- [ ] Achievement system
+   135→- [ ] Statistics tracking (total resources gathered, buildings built, etc.)
+   136→- [ ] Prestige/reset mechanics
+   137→- [ ] Multiple save slots
+   138→- [ ] Auto-save functionality
+   139→- [ ] Settings/options menu (tick speed, colors, animations on/off)
+   140→
+   141→### UI Enhancements
+   142→- [ ] Multiple screen layouts (compact, detailed, debug)
+   143→- [ ] Notification system (popup messages, alerts)
+   144→- [ ] Progress bars with ETA calculations
+   145→- [ ] Graphs and charts (resource history)
+   146→- [ ] Help system (in-game documentation)
+   147→- [ ] Sound effects (terminal beeps, using '\a')
+   148→
+   149→### Advanced Mechanics
+   150→- [ ] Quest/mission system
+   151→- [ ] Crafting/combination system
+   152→- [ ] Tech tree visualization
+   153→- [ ] Relationship/reputation systems
+   154→- [ ] Worker assignment and automation
+   155→
+   156→---
+   157→
+   158→## 🎨 Visual Improvements
+   159→- Animated ASCII art (walking workers, building construction)
+   160→- Color themes (dark mode, light mode, cyberpunk, retro)
+   161→- Particle effects (sparkles, explosions using characters)
+   162→- Weather animations (rain, snow in background)
+   163→- Smooth transitions between screens
+   164→
+   165→---
+   166→
+   167→## 📝 Notes
+   168→- Keep engine modular so any theme can be swapped in
+   169→- Use data-driven design (JSON/YAML configs for game content)
+   170→- Focus on extensibility and clean APIs
+   171→- Document everything for future reference
+   172→
+   173→---
+   174→
+   175→**Last Updated**: 2025-10-02
+   176→
+```
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>Perfect! Now let me append the versioning system info to the Idea Reservoir, and create a git workflow guide.</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Tool use: **Edit**
+
+Result:
+
+```
+The file /mnt/alaya/claude-code/incremental-terminal-game/development/Idea_Reservoir.md has been updated. Here's the result of running `cat -n` on a snippet of the edited file:
+   169→- Use data-driven design (JSON/YAML configs for game content)
+   170→- Focus on extensibility and clean APIs
+   171→- Document everything for future reference
+   172→
+   173→---
+   174→
+   175→## 🏷️ Version Tracking System
+   176→
+   177→**Added:** `[v0.2 Planning - 2025-10-03]`
+   178→
+   179→All new ideas added to this reservoir (and all documentation) should include a version stamp to track when they were conceived:
+   180→
+   181→**Format:**
+   182→\```
+   183→**Version Stamp:** [vX.X Planning - YYYY-MM-DD]
+   184→\```
+   185→
+   186→**Examples:**
+   187→\```
+   188→## New Feature Idea
+   189→**Version Stamp:** [v0.2 Planning - 2025-10-03]
+   190→Description...
+   191→
+   192→## Lore Addition
+   193→**Version Stamp:** [v0.3 Planning - 2025-10-15]
+   194→Story concept...
+   195→\```
+   196→
+   197→**Applies To:**
+   198→- Site ideas
+   199→- Game features
+   200→- Engine updates
+   201→- Lore additions
+   202→- Documentation improvements
+   203→- Goals and milestones
+   204→
+   205→**Purpose:** Track the evolution of ideas across development versions. Know what was conceived during v0.1, v0.2, v0.3, etc.
+   206→
+   207→---
+   208→
+   209→**Last Updated**: 2025-10-03
+   210→
+```
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>Great! Now let me create the git workflow guide.</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Tool use: **Write**
+
+```md
+# Git Workflow for Colony.sh Development
+
+**Version Stamp:** `[v0.2 Planning - 2025-10-03]`
+
+---
+
+## 🌿 Branch Strategy
+
+### Main Branch
+- **Purpose:** Stable, working versions only
+- **Contains:** Released versions (v0.1, v0.2, etc.)
+- **Rule:** Never push broken code to main
+
+### Development Branches
+- **Naming:** `v0.X-dev` (e.g., `v0.2-dev`, `v0.3-dev`)
+- **Purpose:** Active development and testing
+- **Merge to main:** Only after thorough testing
+
+---
+
+## 📋 How to Create a New Version Branch
+
+### For v0.2 (Bug Fixes)
+
+\```bash
+# Make sure you're on main and up to date
+git checkout main
+git pull origin main
+
+# Create and switch to v0.2-dev branch
+git checkout -b v0.2-dev
+
+# Verify you're on the new branch
+git branch
+# Should show: * v0.2-dev
+\```
+
+### For v0.3 (Features)
+
+\```bash
+# Start from main (or from v0.2-dev if merged)
+git checkout main
+git pull origin main
+
+# Create v0.3 branch
+git checkout -b v0.3-dev
+\```
+
+---
+
+## 💾 Committing Changes
+
+### Standard Commit Flow
+
+\```bash
+# Check what's changed
+git status
+
+# See the actual changes
+git diff
+
+# Stage files you want to commit
+git add <filename>
+
+# Or stage everything
+git add .
+
+# Commit with descriptive message
+git commit -m "v0.2: Fix building construction type error
+
+- Fixed ResourceManager multiplication error
+- Buildings now properly calculate production
+- Tested with Solar Array and Mining Rig
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>"
+\```
+
+### Commit Message Format
+
+**Template:**
+\```
+v0.X: [Brief summary of change]
+
+- Bullet point details
+- What was fixed/added
+- Testing notes
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+\```
+
+**Examples:**
+\```bash
+# Bug fix
+git commit -m "v0.2: Fix research purchase argument error"
+
+# Feature addition
+git commit -m "v0.3: Add intro dialog system"
+
+# Multiple changes
+git commit -m "v0.2: Fix menu flickering and border alignment
+
+- Reduced screen refresh rate
+- Fixed border calculations
+- Tested on multiple terminal sizes"
+\```
+
+---
+
+## 🚀 Pushing to GitHub
+
+### First Time Pushing a New Branch
+
+\```bash
+# Push and set upstream tracking
+git push -u origin v0.2-dev
+\```
+
+The `-u` flag sets up tracking so future pushes are simpler.
+
+### Subsequent Pushes
+
+\```bash
+# Just push (tracking already set up)
+git push
+\```
+
+### Push Specific Branch
+
+\```bash
+git push origin v0.2-dev
+\```
+
+---
+
+## 🔄 Switching Between Branches
+
+### Switch to Main
+
+\```bash
+git checkout main
+\```
+
+### Switch to Development Branch
+
+\```bash
+git checkout v0.2-dev
+\```
+
+### Check Current Branch
+
+\```bash
+git branch
+# The current branch will have an asterisk: * v0.2-dev
+\```
+
+---
+
+## 🔀 Merging v0.2 Back to Main (When Ready)
+
+### Step 1: Test Everything
+
+Make absolutely sure v0.2-dev is working:
+- All bugs fixed ✓
+- Game runs without errors ✓
+- Save/load works ✓
+- Extensively playtested ✓
+
+### Step 2: Merge
+
+\```bash
+# Switch to main branch
+git checkout main
+
+# Make sure main is up to date
+git pull origin main
+
+# Merge v0.2-dev into main
+git merge v0.2-dev
+
+# If no conflicts, push to GitHub
+git push origin main
+\```
+
+### Step 3: Tag the Release (Optional but Recommended)
+
+\```bash
+# Create a version tag
+git tag -a v0.2 -m "Colony.sh v0.2 - Bug Fixes
+
+- Fixed building construction error
+- Fixed research purchase error
+- Fixed menu flickering
+- Fixed border alignment"
+
+# Push the tag
+git push origin v0.2
+\```
+
+---
+
+## 🔍 Useful Git Commands
+
+### Check Status
+
+\```bash
+git status              # See what's changed
+git log --oneline       # See recent commits
+git diff                # See unstaged changes
+git diff --staged       # See staged changes
+\```
+
+### Undo Mistakes
+
+\```bash
+# Unstage a file (keep changes)
+git reset HEAD <filename>
+
+# Discard changes to a file (CAREFUL!)
+git checkout -- <filename>
+
+# Undo last commit (keep changes)
+git reset --soft HEAD~1
+\```
+
+### View Branch Info
+
+\```bash
+git branch              # List local branches
+git branch -a           # List all branches (local + remote)
+git remote -v           # Show remote repository info
+\```
+
+---
+
+## 📊 Development Workflow Example
+
+### v0.2 Development Cycle
+
+\```bash
+# 1. Create branch
+git checkout -b v0.2-dev
+
+# 2. Fix a bug
+# ... edit files ...
+git add .
+git commit -m "v0.2: Fix building construction error"
+
+# 3. Push to GitHub
+git push -u origin v0.2-dev
+
+# 4. Fix another bug
+# ... edit files ...
+git add .
+git commit -m "v0.2: Fix research purchase error"
+git push
+
+# 5. Test thoroughly
+./colony.sh
+
+# 6. When all bugs fixed and tested
+git checkout main
+git merge v0.2-dev
+git push origin main
+git tag -a v0.2 -m "v0.2 Release - All bugs fixed"
+git push origin v0.2
+\```
+
+---
+
+## 🎯 Quick Reference
+
+### Create branch:
+\```bash
+git checkout -b v0.X-dev
+\```
+
+### Commit changes:
+\```bash
+git add .
+git commit -m "v0.X: Description"
+\```
+
+### Push first time:
+\```bash
+git push -u origin v0.X-dev
+\```
+
+### Push after that:
+\```bash
+git push
+\```
+
+### Merge to main:
+\```bash
+git checkout main
+git merge v0.X-dev
+git push origin main
+\```
+
+---
+
+## 💡 Pro Tips
+
+1. **Commit often** - Small, focused commits are easier to understand and debug
+2. **Test before merge** - Never merge broken code to main
+3. **Use branches** - Keep experimental features isolated
+4. **Write good messages** - Future you will thank you
+5. **Push regularly** - Don't lose work, backup to GitHub often
+
+---
+
+## 🚨 Emergency: "I Messed Up"
+
+### Accidentally committed to main instead of branch
+
+\```bash
+# Create branch with current changes
+git branch v0.2-dev
+
+# Reset main to remote
+git reset --hard origin/main
+
+# Switch to new branch
+git checkout v0.2-dev
+\```
+
+### Want to start over on current branch
+
+\```bash
+# See what's different from main
+git diff main
+
+# If you want to throw away ALL changes and match main
+git reset --hard main
+\```
+
+### Conflicts during merge
+
+\```bash
+# Git will tell you which files have conflicts
+# Open them and look for:
+<<<<<<< HEAD
+(your changes)
+=======
+(their changes)
+>>>>>>> branch-name
+
+# Fix manually, then:
+git add <fixed-files>
+git commit -m "Resolved merge conflicts"
+\```
+
+---
+
+**Remember:**
+- `main` = stable and working
+- `vX.X-dev` = active development
+- Commit early, commit often
+- Test before merging
+- Document everything
+
+---
+
+*Happy coding! 🚀*
+
+```
+
+Result:
+
+```
+File created successfully at: /mnt/alaya/claude-code/incremental-terminal-game/development/GIT-WORKFLOW.md
+```
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>Perfect! Now let me create a v0.2 devlog placeholder and summarize everything for Donovan.</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Tool use: **Write**
+
+```md
+# v0.2 Development Log
+
+**Version:** v0.2
+**Branch:** v0.2-dev
+**Focus:** Bug Fixes Only
+**Started:** 2025-10-03
+
+---
+
+## 🎯 v0.2 Goals
+
+**Primary Objective:** Fix all critical bugs from v0.1 playtest
+
+**Secondary Objective:** Maintain stability, no new features
+
+**Philosophy:**
+> "fixing the bugs first is priority. and then implementing when set. these ideas can be saved for v0.3 as well."
+
+---
+
+## 🐛 Bugs to Fix (From v0.1-BUGS-TO-FIX.md)
+
+### Critical Bugs
+- [ ] **Building Construction Error** (HIGH)
+  - Error: `unsupported operand type(s) for *: 'float' and 'ResourceManager'`
+  - Occurs when building second Solar Array or Mining Rigs
+  - Type error in production calculation
+
+- [ ] **Research Purchase Error** (HIGH)
+  - Error: `UpgradeManager.purchase() takes 2 positional arguments but 3 were given`
+  - Occurs when purchasing research upgrades
+  - Method signature mismatch
+
+### UI Issues
+- [ ] **Main Menu Flickering** (HIGH)
+  - Menu flickers, making it hard to input commands
+  - User has to "catch the letter" before it disappears
+  - Affects gameplay experience significantly
+
+- [ ] **Border Alignment** (MEDIUM)
+  - Borders not properly aligned
+  - Visual polish issue
+
+---
+
+## 📝 Development Log
+
+### 2025-10-03 - Planning Session
+
+**Actions:**
+- Created v0.3-FEATURES.md (pushed features to future version)
+- Created PHILOSOPHY.md (Null Studio, Lattice Engine, Colony.sh)
+- Created GIT-WORKFLOW.md (branching and commit instructions)
+- Updated Idea_Reservoir.md (added version stamp system)
+- Created this devlog for v0.2 tracking
+
+**Decisions:**
+- v0.2 = Bugs only, no features
+- v0.3 = Feature additions (dialogs, visuals, animations, etc.)
+- Keep separate documentation for each version
+- Version stamp all new ideas: `[vX.X Planning - YYYY-MM-DD]`
+
+**Next Steps:**
+1. Create v0.2-dev branch
+2. Fix building construction error (priority 1)
+3. Fix research purchase error (priority 2)
+4. Fix menu flickering (priority 3)
+5. Fix border alignment (priority 4)
+6. Test thoroughly
+7. Merge to main when stable
+
+---
+
+### [Date] - [Entry Title]
+
+**What Changed:**
+-
+
+**Issues Encountered:**
+-
+
+**Solutions:**
+-
+
+**Testing Notes:**
+-
+
+**Next Steps:**
+-
+
+---
+
+## 🧪 Testing Checklist
+
+Before merging v0.2-dev to main:
+
+- [ ] Building construction works (Solar Array, Mining Rig)
+- [ ] Research purchases work (all upgrades)
+- [ ] Menu doesn't flicker
+- [ ] Borders aligned properly
+- [ ] Save/load still works
+- [ ] All resources display correctly
+- [ ] Game runs for 10+ minutes without errors
+- [ ] Played through early game progression
+
+---
+
+## 📊 Metrics
+
+**Bugs Fixed:** 0/4
+**Test Runs:** 0
+**Commits:** 0
+**Status:** Planning
+
+---
+
+## 💭 Notes & Observations
+
+*Use this space for random thoughts, discoveries, and insights during development*
+
+---
+
+**Branch Status:** Not yet created
+**Last Updated:** 2025-10-03
+
+```
+
+Result:
+
+```
+File created successfully at: /mnt/alaya/claude-code/incremental-terminal-game/development/v0.2-DEVLOG.md
+```
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>Perfect! Now let me create a summary of everything and give Donovan the git branch creation instructions. Let me organize this clearly.</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Perfect! I've organized everything. Here's what I did:
+
+## 📋 Documentation Created
+
+### 1. **v0.3-FEATURES.md** ✓
+Moved all your new feature ideas to v0.3:
+- Dialog systems (intro lore + tutorial)
+- Menu visual improvements
+- Save/load UI with named slots
+- Quit confirmation
+- Message log in info screen
+- Building animations
+- Resource display icons (⛁ ⛀ ⛝ ⛶ style)
+- Developer mode
+- Loading screen ASCII art
+- Version stamping system
+
+### 2. **PHILOSOPHY.md** ✓
+Created philosophy doc for:
+- **Null Point Studios** - Vision and principles
+- **Lattice Engine** - Modular architecture, terminal aesthetics, developer mode
+- **Colony.sh** - Lore approach, gameplay balance, inspirations
+
+### 3. **GIT-WORKFLOW.md** ✓
+Complete git guide with:
+- Branching strategy
+- Commit procedures
+- Push instructions
+- Merge workflow
+- Emergency fixes
+
+### 4. **Updated Idea_Reservoir.md** ✓
+Added version stamp system:
+- Format: `[vX.X Planning - YYYY-MM-DD]`
+- Tracks when ideas were conceived
+
+### 5. **v0.2-DEVLOG.md** ✓
+Separate devlog for v0.2 tracking
+
+---
+
+## 🎯 v0.2 Focus: Bugs Only
+
+From `v0.1-BUGS-TO-FIX.md`:
+1. Building construction error (HIGH)
+2. Research purchase error (HIGH)  
+3. Menu flickering (HIGH)
+4. Border alignment (MEDIUM)
+
+All features → v0.3
+
+---
+
+## 🌿 How to Create v0.2 Branch
+
+```bash
+# Make sure you're on main
+git checkout main
+
+# Pull latest (just in case)
+git pull origin main
+
+# Create and switch to v0.2-dev branch
+git checkout -b v0.2-dev
+
+# Verify you're on new branch
+git branch
+# Should show: * v0.2-dev
+
+# Push to GitHub with tracking
+git push -u origin v0.2-dev
+```
+
+After you make changes:
+```bash
+git add .
+git commit -m "v0.2: [description of fix]"
+git push
+```
+
+That's it! Branch created, docs updated, features organized. Ready to start fixing bugs in v0.2! 🚀
+
+---
+
+_**User**_
+
+yes and then i'm going to switch the branch and then we can continue
+
+---
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+<think><details>The user is saying they're going to create the v0.2-dev branch themselves (following the instructions I just provided), and then we can continue with the bug fixing work. They're letting me know they'll handle the git branching, and then we'll resume.
+
+I should just acknowledge this briefly and wait for them to come back after they've created and switched to the branch.</details></think>
+
+_**Agent (claude-sonnet-4-5-20250929)**_
+
+Perfect! Go ahead and create the v0.2-dev branch. Once you've switched to it, we'll start fixing those bugs in priority order:
+
+1. Building construction error
+2. Research purchase error  
+3. Menu flickering
+4. Border alignment
+
+See you when you're on v0.2-dev! 🔧
+
