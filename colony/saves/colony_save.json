@@ -1,19 +1,19 @@
 {
   "metadata": {
     "version": "1.0.0",
-    "created_at": "2025-10-03T06:19:33.986709",
-    "last_saved": "2025-10-03T06:56:10.985205",
-    "total_playtime": 2196.524122953415,
-    "tick_count": 559,
+    "created_at": "2025-10-03T08:08:33.299287",
+    "last_saved": "2025-10-03T08:11:47.135235",
+    "total_playtime": 193.32829570770264,
+    "tick_count": 10,
     "game_name": "colony.sh",
-    "sol": 10,
+    "sol": 1,
     "started": true
   },
   "state": {},
   "resources": {
     "energy": {
       "name": "energy",
-      "amount": 99.49713802337646,
+      "amount": 20.790571808815002,
       "max_storage": 100.0,
       "generation_rate": 2.5,
       "display_name": "\u26a1 Energy",
