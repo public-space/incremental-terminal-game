@@ -168,12 +168,12 @@ class MainScreen:
                 status_parts = []
 
                 # Production
-                for res, rate in building.production.items():
+                for res, rate in building.produces.items():
                     total_rate = rate * building.count
                     status_parts.append(f"+{total_rate:.1f} {res}/s")
 
                 # Consumption
-                for res, rate in building.consumption.items():
+                for res, rate in building.consumes.items():
                     total_rate = rate * building.count
                     status_parts.append(f"-{total_rate:.1f} {res}/s")
 

@@ -104,26 +104,30 @@ Energy generated = 3.0 * solar_array_count * energy_multiplier
 #### Mining Rig
 ```yaml
 Cost:
-  metal: 8.0
+  metal: 10.0
   energy: 5.0
 Production:
-  metal: 2.0/s per building
+  metal: 1.5/s per building
+Consumption:
+  energy: 2.0/s per building
 Max Count: unlimited
 Unlocked: true
 ```
 
 **Net effect**:
 - Costs 5 energy to build (one-time)
-- Generates 2 metal/s
-- No ongoing consumption
+- Generates 1.5 metal/s
+- Consumes 2.0 energy/s (ongoing)
 
 #### Reclamation Bay
 ```yaml
 Cost:
-  metal: 10.0
+  metal: 15.0
   energy: 8.0
 Production:
-  biomass: 1.5/s per building
+  biomass: 2.0/s per building
+Consumption:
+  energy: 1.5/s per building
 Max Count: unlimited
 Unlocked: true
 ```
@@ -131,29 +135,32 @@ Unlocked: true
 #### Hab Module
 ```yaml
 Cost:
-  metal: 15.0
-  biomass: 10.0
-Production:
-  colonists: 1 (one-time, not per second)
+  metal: 20.0
+  energy: 10.0
+Production: none
+Consumption:
+  energy: 0.5/s per building
 Max Count: unlimited
 Unlocked: true
+Capacity: 5 colonists per module
 ```
 
 **Special behavior**:
-- Adds 1 colonist when built
-- Does NOT generate colonists over time
-- Colonists are precious - no decay
+- Provides life support systems
+- Each module can house up to 5 colonists
+- Constant energy drain for life support
 
 #### Research Terminal
 ```yaml
 Cost:
-  metal: 20.0
+  metal: 25.0
   energy: 15.0
-  biomass: 10.0
 Production: none
-Max Count: 1
+Consumption:
+  energy: 3.0/s per building
+Max Count: 3
 Unlocked: true
-Effect: Unlocks advanced research options
+Effect: Enables advanced research options
 ```
 
 ## Research (Upgrades)
@@ -177,6 +184,7 @@ Cost:
 Effects:
   metal_production_multiplier: 1.5
 Prerequisites: none
+Unlocked: true
 ```
 
 **Formula**:
@@ -184,14 +192,21 @@ Prerequisites: none
 metal_production = base_production * 1.5
 ```
 
-#### Solar Efficiency
+#### Closed-Loop Bioreactor
 ```yaml
 Cost:
-  metal: 25.0
-  biomass: 15.0
+  metal: 40.0
+  energy: 25.0
+  biomass: 10.0
 Effects:
-  energy_production_multiplier: 1.5
+  biomass_production_multiplier: 1.5
 Prerequisites: none
+Unlocked: true
+```
+
+**Formula**:
+```
+biomass_production = base_production * 1.5
 ```
 
 #### Fusion Ignition
@@ -201,32 +216,32 @@ Cost:
   energy: 40.0
 Effects:
   energy_production_multiplier: 2.0
-Prerequisites:
-  - Research Terminal (built)
-  - Solar Efficiency (researched)
-Unlocked: false (locked until prerequisites met)
+Prerequisites: none
+Unlocked: true
 ```
 
-**Stacking behavior**:
+**Formula**:
 ```
-If Solar Efficiency AND Fusion Ignition both purchased:
-  energy_production = base * 1.5 * 2.0 = base * 3.0
+energy_production = base_production * 2.0
 ```
 
-Multipliers are **multiplicative**, not additive.
-
-#### Bioreactor Upgrade
+#### Redundant Systems
 ```yaml
 Cost:
-  metal: 40.0
+  metal: 35.0
   energy: 30.0
-  biomass: 20.0
 Effects:
-  biomass_production_multiplier: 1.75
-Prerequisites:
-  - Research Terminal (built)
-Unlocked: false
+  energy_consumption_multiplier: 0.8
+Prerequisites: none
+Unlocked: true
 ```
+
+**Formula**:
+```
+energy_consumption = base_consumption * 0.8
+```
+
+All multipliers are **multiplicative** when stacked.
 
 ### Upgrade Application
 
@@ -245,81 +260,82 @@ def apply_upgrades(base_production):
 ### Early Game (Sol 0-10)
 
 **Starting resources**:
-- Energy: 20 (enough for 4 seconds at base consumption)
-- Metal: 10 (enough for 2 Solar Arrays)
+- Energy: 20
+- Metal: 10
 - Biomass: 15
 - Colonists: 3
 
-**Initial production** (with starter Solar Array at count=1):
-- Energy: +2.5/s (from 1 Solar Array with starting game boost)
+**Starting structures** (count=1):
+- Solar Array: +3.0 energy/s
+- Hab Module: -0.5 energy/s (life support)
+
+**Net starting production**:
+- Energy: +2.5/s
+- Metal: 0/s
+- Biomass: 0/s
 
 **First build path**:
-1. Build Mining Rig (8 metal) → +2 metal/s
-2. Build Solar Array (5 metal) → +3 energy/s
-3. Build Reclamation Bay (10 metal, 8 energy) → +1.5 biomass/s
+1. Build Mining Rig (10 metal, 5 energy) → +1.5 metal/s, -2.0 energy/s
+2. Build Solar Array (5 metal) → +3.0 energy/s
+3. Build Reclamation Bay (15 metal, 8 energy) → +2.0 biomass/s, -1.5 energy/s
 
 ### Mid Game (Sol 10-50)
 
 **Focus**: Multiply production through research
 
 **Recommended progression**:
-1. Research Efficient Extraction → 1.5x metal
-2. Research Solar Efficiency → 1.5x energy
-3. Build Research Terminal
-4. Research Fusion Ignition → 2.0x energy (total 3.0x with Solar Efficiency)
+1. Research Efficient Extraction → 1.5x metal production
+2. Research Fusion Ignition → 2.0x energy production
+3. Build Research Terminal (25 metal, 15 energy)
+4. Research Closed-Loop Bioreactor → 1.5x biomass production
+5. Research Redundant Systems → 0.8x energy consumption (20% savings)
 
 ### Late Game (Sol 50+)
 
-**Max theoretical production** (with all upgrades, 10 of each building):
+**Max theoretical production** (with all upgrades, 10 of each production building):
 
 ```yaml
 Energy:
-  Base: 3.0/s per Solar Array * 10 = 30/s
-  With Solar Efficiency (1.5x): 45/s
-  With Fusion Ignition (2.0x): 90/s
-  Total: 90/s
+  Production (10 Solar Arrays):
+    Base: 3.0/s * 10 = 30/s
+    With Fusion Ignition (2.0x): 60/s
+  Consumption:
+    Base: 10 Mining Rigs (2.0/s) + 10 Reclamation Bays (1.5/s) +
+          2 Hab Modules (0.5/s) + 3 Research Terminals (3.0/s) = 45/s
+    With Redundant Systems (0.8x): 36/s
+  Net: 60/s - 36/s = +24/s
 
 Metal:
-  Base: 2.0/s per Mining Rig * 10 = 20/s
-  With Efficient Extraction (1.5x): 30/s
-  Total: 30/s
+  Base: 1.5/s per Mining Rig * 10 = 15/s
+  With Efficient Extraction (1.5x): 22.5/s
+  Total: 22.5/s
 
 Biomass:
-  Base: 1.5/s per Reclamation Bay * 10 = 15/s
-  With Bioreactor Upgrade (1.75x): 26.25/s
-  Total: 26.25/s
+  Base: 2.0/s per Reclamation Bay * 10 = 20/s
+  With Closed-Loop Bioreactor (1.5x): 30/s
+  Total: 30/s
 ```
 
 ## Progression Gates
 
 ### Resource Gates
 
-**To afford first Mining Rig**: Need 8 metal
-- Start with 10 metal → Can build immediately
-- But should build Solar Array first for energy
+**To afford first Mining Rig**: Need 10 metal + 5 energy
+- Start with 10 metal, 20 energy → Can build immediately
+- WARNING: Consumes 2.0 energy/s, so build Solar Arrays to compensate
 
-**To afford Research Terminal**: Need 20 metal + 15 energy + 10 biomass
-- Requires balanced production of all three
-- Typical time: Sol 20-30
+**To afford Research Terminal**: Need 25 metal + 15 energy
+- Requires sustained metal production
+- Typical time: Sol 15-25
 
 **To afford Fusion Ignition**: Need 50 metal + 40 energy
-- Requires sustained production
+- Requires sustained production and resource stockpiling
 - Typical time: Sol 40-60
 
 ### Unlock Gates
 
-Some research is locked behind prerequisites:
-
-```python
-Fusion Ignition.unlocked = (
-    Research_Terminal.count > 0 AND
-    Solar_Efficiency.purchased
-)
-
-Bioreactor_Upgrade.unlocked = (
-    Research_Terminal.count > 0
-)
-```
+All research is unlocked from the start in v0.1 alpha.
+Future versions may add prerequisite chains.
 
 ## Save System
 

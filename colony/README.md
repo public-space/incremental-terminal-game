@@ -70,48 +70,50 @@ You're managing a frontier colony on a dead world. Your mission:
 - Harvests dim starlight. Barely enough.
 
 ### Mining Rig
-- **Cost**: 8 metal, 5 energy
-- **Produces**: +2.0 metal/s
-- Drills into dead rock. Yields slowly.
+- **Cost**: 10 metal, 5 energy
+- **Produces**: +1.5 metal/s
+- **Consumes**: -2.0 energy/s
+- Drills into dead rock. Hungry for power.
 
 ### Reclamation Bay
-- **Cost**: 10 metal, 8 energy
-- **Produces**: +1.5 biomass/s
+- **Cost**: 15 metal, 8 energy
+- **Produces**: +2.0 biomass/s
+- **Consumes**: -1.5 energy/s
 - Turns waste into something edible. Don't think about it.
 
 ### Hab Module
-- **Cost**: 15 metal, 10 biomass
-- **Produces**: +1 colonist
-- Cold storage for fragile humans. One-time expansion.
+- **Cost**: 20 metal, 10 energy
+- **Capacity**: 5 colonists
+- **Consumes**: -0.5 energy/s
+- Cramped quarters. Better than vacuum.
 
 ### Research Terminal
-- **Cost**: 20 metal, 15 energy, 10 biomass
-- **Effect**: Unlocks advanced research
-- Access corrupted databases. Ancient knowledge.
+- **Cost**: 25 metal, 15 energy
+- **Consumes**: -3.0 energy/s
+- **Max**: 3 terminals
+- Access corrupted databases. Maybe they'll help.
 
 ## 🔬 Research
 
 ### Efficient Extraction
 - **Cost**: 30 metal, 20 energy
 - **Effect**: +50% metal generation
-- Sharper drills. Deeper cuts.
+- Sharper drills. Deeper cuts. The rock yields.
 
-### Solar Efficiency
-- **Cost**: 25 metal, 15 biomass
-- **Effect**: +50% energy generation
-- Refined panels capture more photons.
+### Closed-Loop Bioreactor
+- **Cost**: 40 metal, 25 energy, 10 biomass
+- **Effect**: +50% biomass generation
+- Less waste. More time. The cycle tightens.
 
 ### Fusion Ignition
 - **Cost**: 50 metal, 40 energy
-- **Requires**: Research Terminal, Solar Efficiency
 - **Effect**: +100% energy generation
-- Brief hope. Exponential power.
+- Brief hope. Exponential power. The reactor hums.
 
-### Bioreactor Upgrade
-- **Cost**: 40 metal, 30 energy, 20 biomass
-- **Requires**: Research Terminal
-- **Effect**: +75% biomass generation
-- Accelerated decomposition. Faster cycles.
+### Redundant Systems
+- **Cost**: 35 metal, 30 energy
+- **Effect**: -20% energy consumption
+- Backup protocols. Failsafes upon failsafes.
 
 ## 💾 Save System
 
