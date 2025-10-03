@@ -12920,3 +12920,63 @@
 2025-10-03 08:33:56,030 - engine.game_loop - INFO - Game loop stopped
 2025-10-03 08:33:56,030 - engine.game_loop - INFO - Game loop exited
 2025-10-03 08:33:56,030 - main - INFO - === COLONY.SH SHUTDOWN ===
+2025-10-03 10:36:27,875 - engine.state_manager - INFO - StateManager initialized
+2025-10-03 10:36:27,875 - engine.resources - INFO - ResourceManager initialized
+2025-10-03 10:36:27,876 - engine.buildings - INFO - BuildingManager initialized
+2025-10-03 10:36:27,876 - engine.units - INFO - UnitManager initialized
+2025-10-03 10:36:27,876 - engine.upgrades - INFO - UpgradeManager initialized
+2025-10-03 10:36:27,876 - engine.game_state - INFO - GameState initialized
+2025-10-03 10:36:27,877 - engine.resources - INFO - Resource added: energy (initial=20.0, rate=0.0/s)
+2025-10-03 10:36:27,877 - engine.resources - INFO - Resource added: metal (initial=10.0, rate=0.0/s)
+2025-10-03 10:36:27,877 - engine.resources - INFO - Resource added: biomass (initial=15.0, rate=0.0/s)
+2025-10-03 10:36:27,877 - engine.resources - INFO - Resource added: colonists (initial=3.0, rate=0.0/s)
+2025-10-03 10:36:27,877 - engine.buildings - INFO - Building registered: solar_array (cost={'metal': 5.0})
+2025-10-03 10:36:27,878 - engine.buildings - INFO - Building registered: mining_rig (cost={'metal': 10.0, 'energy': 5.0})
+2025-10-03 10:36:27,878 - engine.buildings - INFO - Building registered: reclamation_bay (cost={'metal': 15.0, 'energy': 8.0})
+2025-10-03 10:36:27,878 - engine.buildings - INFO - Building registered: hab_module (cost={'metal': 20.0, 'energy': 10.0})
+2025-10-03 10:36:27,878 - engine.buildings - INFO - Building registered: research_terminal (cost={'metal': 25.0, 'energy': 15.0})
+2025-10-03 10:36:27,878 - engine.upgrades - INFO - Upgrade registered: efficient_extraction (cost={'metal': 30.0, 'energy': 20.0})
+2025-10-03 10:36:27,878 - engine.upgrades - INFO - Upgrade registered: closed_loop_bioreactor (cost={'metal': 40.0, 'energy': 25.0, 'biomass': 10.0})
+2025-10-03 10:36:27,879 - engine.upgrades - INFO - Upgrade registered: fusion_ignition (cost={'metal': 50.0, 'energy': 40.0})
+2025-10-03 10:36:27,879 - engine.upgrades - INFO - Upgrade registered: redundant_systems (cost={'metal': 35.0, 'energy': 30.0})
+2025-10-03 10:36:27,879 - engine.resources - DEBUG - Resource 'energy' amount changed: 20.0 → 20.0
+2025-10-03 10:36:27,879 - engine.resources - DEBUG - Resource 'metal' amount changed: 10.0 → 10.0
+2025-10-03 10:36:27,879 - engine.resources - DEBUG - Resource 'biomass' amount changed: 15.0 → 15.0
+2025-10-03 10:36:27,879 - engine.resources - DEBUG - Resource 'colonists' amount changed: 3.0 → 3.0
+2025-10-03 10:36:27,879 - engine.resources - DEBUG - energy generation rate: 0.0/s → 3.0/s
+2025-10-03 10:37:28,253 - engine.state_manager - INFO - StateManager initialized
+2025-10-03 10:37:28,253 - engine.resources - INFO - ResourceManager initialized
+2025-10-03 10:37:28,253 - engine.buildings - INFO - BuildingManager initialized
+2025-10-03 10:37:28,253 - engine.units - INFO - UnitManager initialized
+2025-10-03 10:37:28,253 - engine.upgrades - INFO - UpgradeManager initialized
+2025-10-03 10:37:28,253 - engine.game_state - INFO - GameState initialized
+2025-10-03 10:37:28,253 - engine.resources - INFO - Resource added: energy (initial=20.0, rate=0.0/s)
+2025-10-03 10:37:28,253 - engine.resources - INFO - Resource added: metal (initial=10.0, rate=0.0/s)
+2025-10-03 10:37:28,253 - engine.resources - INFO - Resource added: biomass (initial=15.0, rate=0.0/s)
+2025-10-03 10:37:28,254 - engine.resources - INFO - Resource added: colonists (initial=3.0, rate=0.0/s)
+2025-10-03 10:37:28,254 - engine.buildings - INFO - Building registered: solar_array (cost={'metal': 5.0})
+2025-10-03 10:37:28,254 - engine.buildings - INFO - Building registered: mining_rig (cost={'metal': 10.0, 'energy': 5.0})
+2025-10-03 10:37:28,254 - engine.buildings - INFO - Building registered: reclamation_bay (cost={'metal': 15.0, 'energy': 8.0})
+2025-10-03 10:37:28,254 - engine.buildings - INFO - Building registered: hab_module (cost={'metal': 20.0, 'energy': 10.0})
+2025-10-03 10:37:28,254 - engine.buildings - INFO - Building registered: research_terminal (cost={'metal': 25.0, 'energy': 15.0})
+2025-10-03 10:37:28,254 - engine.upgrades - INFO - Upgrade registered: efficient_extraction (cost={'metal': 30.0, 'energy': 20.0})
+2025-10-03 10:37:28,254 - engine.upgrades - INFO - Upgrade registered: closed_loop_bioreactor (cost={'metal': 40.0, 'energy': 25.0, 'biomass': 10.0})
+2025-10-03 10:37:28,254 - engine.upgrades - INFO - Upgrade registered: fusion_ignition (cost={'metal': 50.0, 'energy': 40.0})
+2025-10-03 10:37:28,254 - engine.upgrades - INFO - Upgrade registered: redundant_systems (cost={'metal': 35.0, 'energy': 30.0})
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Resource 'energy' amount changed: 20.0 → 20.0
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Resource 'metal' amount changed: 10.0 → 10.0
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Resource 'biomass' amount changed: 15.0 → 15.0
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Resource 'colonists' amount changed: 3.0 → 3.0
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - energy generation rate: 0.0/s → 3.0/s
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Added 40.0 metal (requested 50)
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Added 50.0 energy (requested 50)
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Spent 10.0 metal (remaining: 40.0)
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Spent 5.0 energy (remaining: 65.0)
+2025-10-03 10:37:28,254 - engine.buildings - INFO - Built 1x mining_rig (total: 1)
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - energy generation rate: 3.0/s → 3.0/s
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - metal generation rate: 0.0/s → 1.5/s
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Added 35.0 energy (requested 100)
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Added 10.0 metal (requested 100)
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Spent 30.0 metal (remaining: 20.0)
+2025-10-03 10:37:28,254 - engine.resources - DEBUG - Spent 20.0 energy (remaining: 80.0)
+2025-10-03 10:37:28,254 - engine.upgrades - INFO - Purchased upgrade: efficient_extraction

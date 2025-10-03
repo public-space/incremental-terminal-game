@@ -89,6 +89,9 @@ def load_new_game() -> GameState:
         if building:
             building.count = count
 
+    # Update production rates for starting buildings
+    game_state.buildings._update_production_rates()
+
     # Initialize metadata
     game_state.metadata['game_name'] = 'colony.sh'
     game_state.metadata['sol'] = 0  # Day counter

@@ -42,15 +42,15 @@ class BuildMenu:
 
         # Header
         self.ui.print_colored(
-            "╔═══ BUILD MENU ═══════════════════════════════════════════════════════╗",
+            "╔═══ BUILD MENU ═════════════════════════════════════════════════════════╗",
             Color.BRIGHT_CYAN
         )
         self.ui.print_colored(
-            "║ Construct structures to expand the colony                           ║",
+            "║ Construct structures to expand the colony                            ║",
             Color.CYAN
         )
         self.ui.print_colored(
-            "╠══════════════════════════════════════════════════════════════════════╣",
+            "╠════════════════════════════════════════════════════════════════════════╣",
             Color.BRIGHT_CYAN
         )
 
@@ -64,15 +64,15 @@ class BuildMenu:
 
         # Footer
         self.ui.print_colored(
-            "╠══════════════════════════════════════════════════════════════════════╣",
+            "╠════════════════════════════════════════════════════════════════════════╣",
             Color.BRIGHT_CYAN
         )
         self.ui.print_colored(
-            "║ Enter number to build, or [ESC] to return                           ║",
+            "║ Enter number to build, or [ESC] to return                            ║",
             Color.CYAN
         )
         self.ui.print_colored(
-            "╚══════════════════════════════════════════════════════════════════════╝",
+            "╚════════════════════════════════════════════════════════════════════════╝",
             Color.BRIGHT_CYAN
         )
 
@@ -169,7 +169,7 @@ class BuildMenu:
                         return (False, f"Maximum {building.display_name} count reached")
 
                     # Try to build
-                    success = game_state.buildings.build(building_name, game_state.resources)
+                    success = game_state.buildings.build(building_name)
 
                     if success:
                         return (True, f"{building.display_name} constructed")

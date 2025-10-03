@@ -36,15 +36,15 @@ class HelpScreen:
 
         # Header
         self.ui.print_colored(
-            "╔═══ COLONY.SH HELP ═══════════════════════════════════════════════════╗",
+            "╔═══ COLONY.SH HELP ═════════════════════════════════════════════════════╗",
             Color.BRIGHT_CYAN
         )
         self.ui.print_colored(
-            "║ Survival Manual - Read carefully. Your life depends on it.          ║",
+            "║ Survival Manual - Read carefully. Your life depends on it.           ║",
             Color.CYAN
         )
         self.ui.print_colored(
-            "╠══════════════════════════════════════════════════════════════════════╣",
+            "╠════════════════════════════════════════════════════════════════════════╣",
             Color.BRIGHT_CYAN
         )
 
@@ -87,15 +87,15 @@ class HelpScreen:
 
         # Footer
         self.ui.print_colored(
-            "╠══════════════════════════════════════════════════════════════════════╣",
+            "╠════════════════════════════════════════════════════════════════════════╣",
             Color.BRIGHT_CYAN
         )
         self.ui.print_colored(
-            "║ Press [ENTER] to return                                              ║",
+            "║ Press [ENTER] to return                                               ║",
             Color.CYAN
         )
         self.ui.print_colored(
-            "╚══════════════════════════════════════════════════════════════════════╝",
+            "╚════════════════════════════════════════════════════════════════════════╝",
             Color.BRIGHT_CYAN
         )
 

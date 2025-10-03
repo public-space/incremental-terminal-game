@@ -84,15 +84,15 @@ class MainScreen:
         subtitle = f"Sol {sol:03d} | Uptime: {int(playtime)}s"
 
         self.ui.print_colored(
-            f"╔═══ {title} ═══════════════════════════════════════════════════════╗",
+            f"╔═══ {title} ════════════════════════════════════════════════════════╗",
             Color.BRIGHT_CYAN
         )
         self.ui.print_colored(
-            f"║ {subtitle:<70} ║",
+            f"║ {subtitle:<69} ║",
             Color.CYAN
         )
         self.ui.print_colored(
-            "╠══════════════════════════════════════════════════════════════════════╣",
+            "╠════════════════════════════════════════════════════════════════════════╣",
             Color.BRIGHT_CYAN
         )
 
@@ -101,9 +101,9 @@ class MainScreen:
         resources = game_state.resources
 
         # Resource header
-        self.ui.print_colored("║ RESOURCES", Color.BRIGHT_WHITE)
+        self.ui.print_colored("║ RESOURCES" + " " * 60 + " ║", Color.BRIGHT_WHITE)
         self.ui.print_colored(
-            "║ ────────────────────────────────────────────────────────────────── ║",
+            "║ " + "─" * 69 + " ║",
             Color.WHITE
         )
 
@@ -148,9 +148,9 @@ class MainScreen:
         buildings = game_state.buildings
 
         # Structure header
-        self.ui.print_colored("║ STRUCTURES", Color.BRIGHT_WHITE)
+        self.ui.print_colored("║ STRUCTURES" + " " * 59 + " ║", Color.BRIGHT_WHITE)
         self.ui.print_colored(
-            "║ ────────────────────────────────────────────────────────────────── ║",
+            "║ " + "─" * 69 + " ║",
             Color.WHITE
         )
 
@@ -189,9 +189,9 @@ class MainScreen:
 
     def _render_event_log(self, event_log: EventLog):
         """Render event log."""
-        self.ui.print_colored("║ EVENT LOG", Color.BRIGHT_WHITE)
+        self.ui.print_colored("║ EVENT LOG" + " " * 60 + " ║", Color.BRIGHT_WHITE)
         self.ui.print_colored(
-            "╠══════════════════════════════════════════════════════════════════════╣",
+            "╠════════════════════════════════════════════════════════════════════════╣",
             Color.BRIGHT_CYAN
         )
 
@@ -212,22 +212,22 @@ class MainScreen:
 
                 # Format entry
                 entry_str = str(entry)
-                self.ui.print_colored(f"║ {entry_str:<68} ║", color)
+                self.ui.print_colored(f"║ {entry_str:<69} ║", color)
 
         print()
 
     def _render_commands(self):
         """Render command bar."""
         self.ui.print_colored(
-            "╠══════════════════════════════════════════════════════════════════════╣",
+            "╠════════════════════════════════════════════════════════════════════════╣",
             Color.BRIGHT_CYAN
         )
 
         commands = "[B]uild  [R]esearch  [I]nfo  [H]elp  [S]ave  [Q]uit"
-        self.ui.print_colored(f"║ {commands:<68} ║", Color.CYAN)
+        self.ui.print_colored(f"║ {commands:<69} ║", Color.CYAN)
 
         self.ui.print_colored(
-            "╚══════════════════════════════════════════════════════════════════════╝",
+            "╚════════════════════════════════════════════════════════════════════════╝",
             Color.BRIGHT_CYAN
         )
 

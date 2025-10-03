@@ -65,7 +65,7 @@ class ColonyGame:
         # Timing
         self.sol_timer = 0.0
         self.render_timer = 0.0
-        self.render_interval = 1.0 / 5.0  # Render at 5 FPS
+        self.render_interval = 1.0 / 2.0  # Render at 2 FPS
 
         # Setup
         self._setup_callbacks()
@@ -275,19 +275,19 @@ class ColonyGame:
         ui.clear_screen()
 
         # Title
-        ui.print_colored("╔═══════════════════════════════════════════════════════════════════════╗", Color.BRIGHT_CYAN)
-        ui.print_colored("║                                                                       ║", Color.CYAN)
-        ui.print_colored("║                          COLONY.SH                                    ║", Color.BRIGHT_WHITE, style=Color.BOLD)
-        ui.print_colored("║                                                                       ║", Color.CYAN)
-        ui.print_colored("║                  Frontier Colony Survival Sim                         ║", Color.CYAN)
-        ui.print_colored("║                                                                       ║", Color.CYAN)
-        ui.print_colored("╠═══════════════════════════════════════════════════════════════════════╣", Color.BRIGHT_CYAN)
-        ui.print_colored("║                                                                       ║", Color.WHITE)
-        ui.print_colored("║   [1] New Colony                                                      ║", Color.WHITE)
-        ui.print_colored("║   [2] Load Colony                                                     ║", Color.WHITE)
-        ui.print_colored("║   [3] Quit                                                            ║", Color.WHITE)
-        ui.print_colored("║                                                                       ║", Color.WHITE)
-        ui.print_colored("╚═══════════════════════════════════════════════════════════════════════╝", Color.BRIGHT_CYAN)
+        ui.print_colored("╔════════════════════════════════════════════════════════════════════════╗", Color.BRIGHT_CYAN)
+        ui.print_colored("║                                                                        ║", Color.CYAN)
+        ui.print_colored("║                          COLONY.SH                                     ║", Color.BRIGHT_WHITE, style=Color.BOLD)
+        ui.print_colored("║                                                                        ║", Color.CYAN)
+        ui.print_colored("║                  Frontier Colony Survival Sim                          ║", Color.CYAN)
+        ui.print_colored("║                                                                        ║", Color.CYAN)
+        ui.print_colored("╠════════════════════════════════════════════════════════════════════════╣", Color.BRIGHT_CYAN)
+        ui.print_colored("║                                                                        ║", Color.WHITE)
+        ui.print_colored("║   [1] New Colony                                                       ║", Color.WHITE)
+        ui.print_colored("║   [2] Load Colony                                                      ║", Color.WHITE)
+        ui.print_colored("║   [3] Quit                                                             ║", Color.WHITE)
+        ui.print_colored("║                                                                        ║", Color.WHITE)
+        ui.print_colored("╚════════════════════════════════════════════════════════════════════════╝", Color.BRIGHT_CYAN)
 
         print("\n> ", end='', flush=True)
 
