@@ -30262,3 +30262,792 @@
 2025-10-03 11:28:43,321 - engine.game_loop - INFO - Game loop stopped
 2025-10-03 11:28:43,321 - engine.game_loop - INFO - Game loop exited
 2025-10-03 11:28:43,321 - main - INFO - === COLONY.SH SHUTDOWN ===
+2025-10-03 12:06:16,282 - engine.tick_system - INFO - TickSystem initialized with tick_rate=1.0s
+2025-10-03 12:06:16,282 - engine.ui_framework - INFO - UIFramework initialized (terminal: 92x40)
+2025-10-03 12:06:16,282 - engine.input_handler - INFO - InputHandler initialized
+2025-10-03 12:06:16,282 - engine.animator - INFO - Animator initialized
+2025-10-03 12:06:16,282 - engine.game_loop - INFO - GameLoop initialized (tick_rate=1.0, max_fps=30.0)
+2025-10-03 12:06:16,282 - engine.tick_system - INFO - Registered tick callback: _on_update
+2025-10-03 12:06:16,282 - engine.input_handler - INFO - Command registered: build (aliases: ['b'])
+2025-10-03 12:06:16,283 - engine.input_handler - INFO - Command registered: research (aliases: ['r'])
+2025-10-03 12:06:16,283 - engine.input_handler - INFO - Command registered: info (aliases: ['i'])
+2025-10-03 12:06:16,283 - engine.input_handler - INFO - Command registered: help (aliases: ['h', '?'])
+2025-10-03 12:06:16,283 - engine.input_handler - INFO - Command registered: save (aliases: ['s'])
+2025-10-03 12:06:16,283 - engine.input_handler - INFO - Command registered: quit (aliases: ['q', 'exit'])
+2025-10-03 12:06:16,283 - main - INFO - Colony.sh initialized
+2025-10-03 12:06:16,283 - main - INFO - === COLONY.SH STARTED ===
+2025-10-03 12:06:16,287 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,479 - engine.state_manager - INFO - StateManager initialized
+2025-10-03 12:06:19,480 - engine.resources - INFO - ResourceManager initialized
+2025-10-03 12:06:19,480 - engine.buildings - INFO - BuildingManager initialized
+2025-10-03 12:06:19,480 - engine.units - INFO - UnitManager initialized
+2025-10-03 12:06:19,481 - engine.upgrades - INFO - UpgradeManager initialized
+2025-10-03 12:06:19,481 - engine.game_state - INFO - GameState initialized
+2025-10-03 12:06:19,481 - engine.resources - INFO - Resource added: energy (initial=20.0, rate=0.0/s)
+2025-10-03 12:06:19,482 - engine.resources - INFO - Resource added: metal (initial=10.0, rate=0.0/s)
+2025-10-03 12:06:19,482 - engine.resources - INFO - Resource added: biomass (initial=15.0, rate=0.0/s)
+2025-10-03 12:06:19,482 - engine.resources - INFO - Resource added: colonists (initial=3.0, rate=0.0/s)
+2025-10-03 12:06:19,482 - engine.buildings - INFO - Building registered: solar_array (cost={'metal': 5.0})
+2025-10-03 12:06:19,482 - engine.buildings - INFO - Building registered: mining_rig (cost={'metal': 10.0, 'energy': 5.0})
+2025-10-03 12:06:19,482 - engine.buildings - INFO - Building registered: reclamation_bay (cost={'metal': 15.0, 'energy': 8.0})
+2025-10-03 12:06:19,483 - engine.buildings - INFO - Building registered: hab_module (cost={'metal': 20.0, 'energy': 10.0})
+2025-10-03 12:06:19,483 - engine.buildings - INFO - Building registered: research_terminal (cost={'metal': 25.0, 'energy': 15.0})
+2025-10-03 12:06:19,483 - engine.upgrades - INFO - Upgrade registered: efficient_extraction (cost={'metal': 30.0, 'energy': 20.0})
+2025-10-03 12:06:19,483 - engine.upgrades - INFO - Upgrade registered: closed_loop_bioreactor (cost={'metal': 40.0, 'energy': 25.0, 'biomass': 10.0})
+2025-10-03 12:06:19,483 - engine.upgrades - INFO - Upgrade registered: fusion_ignition (cost={'metal': 50.0, 'energy': 40.0})
+2025-10-03 12:06:19,483 - engine.upgrades - INFO - Upgrade registered: redundant_systems (cost={'metal': 35.0, 'energy': 30.0})
+2025-10-03 12:06:19,484 - engine.state_manager - INFO - State replaced with new data
+2025-10-03 12:06:19,485 - engine.resources - INFO - Loaded 4 resources from data
+2025-10-03 12:06:19,485 - engine.buildings - INFO - Loaded 5 buildings from data
+2025-10-03 12:06:19,485 - engine.resources - DEBUG - metal generation rate: 13.5/s → 13.5/s
+2025-10-03 12:06:19,485 - engine.resources - DEBUG - energy generation rate: 40.5/s → 40.5/s
+2025-10-03 12:06:19,485 - engine.resources - DEBUG - biomass generation rate: 8.0/s → 8.0/s
+2025-10-03 12:06:19,486 - engine.units - INFO - Loaded 0 units from data
+2025-10-03 12:06:19,486 - engine.upgrades - INFO - Loaded 4 upgrades from data
+2025-10-03 12:06:19,486 - engine.game_state - INFO - Game loaded from /mnt/alaya/claude-code/incremental-terminal-game/./colony/saves/colony_save.json
+2025-10-03 12:06:19,486 - main - INFO - Game loaded successfully
+2025-10-03 12:06:19,486 - engine.game_loop - INFO - Entering main game loop
+2025-10-03 12:06:19,486 - engine.tick_system - INFO - TickSystem started
+2025-10-03 12:06:19,486 - engine.game_loop - INFO - Game loop started
+2025-10-03 12:06:19,495 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,528 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,562 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,595 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,628 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,662 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,696 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,728 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,762 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,796 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,829 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,863 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,896 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,929 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,963 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:19,997 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,029 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,064 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,097 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,131 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,164 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,198 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,231 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,264 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,298 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,331 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,365 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,399 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,432 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,466 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,492 - engine.resources - DEBUG - Added 31.73388969898224 energy (requested 40.71358001232147)
+2025-10-03 12:06:20,492 - engine.resources - DEBUG - energy storage full, wasted 8.979690313339233
+2025-10-03 12:06:20,492 - engine.resources - DEBUG - Added 0.0 metal (requested 13.57119333744049)
+2025-10-03 12:06:20,492 - engine.resources - DEBUG - metal storage full, wasted 13.57119333744049
+2025-10-03 12:06:20,492 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.04218864440918)
+2025-10-03 12:06:20,493 - engine.resources - DEBUG - biomass storage full, wasted 8.04218864440918
+2025-10-03 12:06:20,493 - engine.resources - DEBUG - Added 0.0 energy (requested 72.37969779968262)
+2025-10-03 12:06:20,493 - engine.resources - DEBUG - Added 0.0 metal (requested 13.57119333744049)
+2025-10-03 12:06:20,493 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.04218864440918)
+2025-10-03 12:06:20,493 - engine.resources - DEBUG - Spent 31.666117787361145 energy (remaining: 68.33388221263885)
+2025-10-03 12:06:20,493 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:20,493 - engine.tick_system - DEBUG - Tick #1 executed (Δt=1.005s)
+2025-10-03 12:06:20,500 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,532 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,566 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,599 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,633 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,666 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,700 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,733 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,766 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,800 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,833 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,867 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,901 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,934 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:20,967 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,001 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,035 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,068 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,102 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,135 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,169 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,203 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,236 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,269 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,303 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,338 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,371 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,405 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,438 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,472 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,497 - engine.resources - DEBUG - Added 31.666117787361145 energy (requested 40.69613170623779)
+2025-10-03 12:06:21,497 - engine.resources - DEBUG - energy storage full, wasted 9.030013918876648
+2025-10-03 12:06:21,497 - engine.resources - DEBUG - Added 0.0 metal (requested 13.565377235412598)
+2025-10-03 12:06:21,497 - engine.resources - DEBUG - metal storage full, wasted 13.565377235412598
+2025-10-03 12:06:21,497 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.038742065429688)
+2025-10-03 12:06:21,497 - engine.resources - DEBUG - biomass storage full, wasted 8.038742065429688
+2025-10-03 12:06:21,497 - engine.resources - DEBUG - Added 0.0 energy (requested 72.34867858886719)
+2025-10-03 12:06:21,498 - engine.resources - DEBUG - Added 0.0 metal (requested 13.565377235412598)
+2025-10-03 12:06:21,498 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.038742065429688)
+2025-10-03 12:06:21,498 - engine.resources - DEBUG - Spent 31.652546882629395 energy (remaining: 68.3474531173706)
+2025-10-03 12:06:21,498 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:21,498 - engine.tick_system - DEBUG - Tick #2 executed (Δt=1.005s)
+2025-10-03 12:06:21,507 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,538 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,572 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,606 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,639 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,672 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,706 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,739 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,773 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,806 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,840 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,873 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,907 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,940 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:21,973 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,007 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,041 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,074 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,107 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,141 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,174 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,208 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,241 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,275 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,308 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,342 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,375 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,409 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,442 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,476 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,502 - engine.resources - DEBUG - Added 31.652546882629395 energy (requested 40.71034526824951)
+2025-10-03 12:06:22,502 - engine.resources - DEBUG - energy storage full, wasted 9.057798385620117
+2025-10-03 12:06:22,502 - engine.resources - DEBUG - Added 0.0 metal (requested 13.570115089416504)
+2025-10-03 12:06:22,502 - engine.resources - DEBUG - metal storage full, wasted 13.570115089416504
+2025-10-03 12:06:22,502 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.041549682617188)
+2025-10-03 12:06:22,503 - engine.resources - DEBUG - biomass storage full, wasted 8.041549682617188
+2025-10-03 12:06:22,503 - engine.resources - DEBUG - Added 0.0 energy (requested 72.37394714355469)
+2025-10-03 12:06:22,503 - engine.resources - DEBUG - Added 0.0 metal (requested 13.570115089416504)
+2025-10-03 12:06:22,503 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.041549682617188)
+2025-10-03 12:06:22,503 - engine.resources - DEBUG - Spent 31.663601875305176 energy (remaining: 68.33639812469482)
+2025-10-03 12:06:22,503 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:22,504 - engine.tick_system - DEBUG - Tick #3 executed (Δt=1.005s)
+2025-10-03 12:06:22,511 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,543 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,576 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,610 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,643 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,677 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,711 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,744 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,778 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,810 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,845 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,878 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,911 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,945 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:22,979 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,012 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,045 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,079 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,113 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,146 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,179 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,213 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,246 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,280 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,313 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,347 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,380 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,414 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,447 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,481 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,507 - engine.resources - DEBUG - Added 31.663601875305176 energy (requested 40.701645255088806)
+2025-10-03 12:06:23,507 - engine.resources - DEBUG - energy storage full, wasted 9.03804337978363
+2025-10-03 12:06:23,507 - engine.resources - DEBUG - Added 0.0 metal (requested 13.567215085029602)
+2025-10-03 12:06:23,507 - engine.resources - DEBUG - metal storage full, wasted 13.567215085029602
+2025-10-03 12:06:23,507 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.039831161499023)
+2025-10-03 12:06:23,508 - engine.resources - DEBUG - biomass storage full, wasted 8.039831161499023
+2025-10-03 12:06:23,508 - engine.resources - DEBUG - Added 0.0 energy (requested 72.35848045349121)
+2025-10-03 12:06:23,508 - engine.resources - DEBUG - Added 0.0 metal (requested 13.567215085029602)
+2025-10-03 12:06:23,508 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.039831161499023)
+2025-10-03 12:06:23,508 - engine.resources - DEBUG - Spent 31.656835198402405 energy (remaining: 68.3431648015976)
+2025-10-03 12:06:23,508 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:23,508 - engine.tick_system - DEBUG - Tick #4 executed (Δt=1.005s)
+2025-10-03 12:06:23,516 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,548 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,580 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,614 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,648 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,682 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,715 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,749 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,782 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,816 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,849 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,882 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,916 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,950 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:23,984 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,017 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,051 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,084 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,117 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,150 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,184 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,218 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,250 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,285 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,318 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,352 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,385 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,419 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,452 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,486 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,512 - engine.resources - DEBUG - Added 31.656835198402405 energy (requested 40.70203149318695)
+2025-10-03 12:06:24,512 - engine.resources - DEBUG - energy storage full, wasted 9.045196294784546
+2025-10-03 12:06:24,512 - engine.resources - DEBUG - Added 0.0 metal (requested 13.567343831062317)
+2025-10-03 12:06:24,512 - engine.resources - DEBUG - metal storage full, wasted 13.567343831062317
+2025-10-03 12:06:24,512 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.039907455444336)
+2025-10-03 12:06:24,513 - engine.resources - DEBUG - biomass storage full, wasted 8.039907455444336
+2025-10-03 12:06:24,513 - engine.resources - DEBUG - Added 0.0 energy (requested 72.35916709899902)
+2025-10-03 12:06:24,513 - engine.resources - DEBUG - Added 0.0 metal (requested 13.567343831062317)
+2025-10-03 12:06:24,513 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.039907455444336)
+2025-10-03 12:06:24,513 - engine.resources - DEBUG - Spent 31.657135605812073 energy (remaining: 68.34286439418793)
+2025-10-03 12:06:24,513 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:24,513 - engine.tick_system - DEBUG - Tick #5 executed (Δt=1.005s)
+2025-10-03 12:06:24,521 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,553 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,587 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,621 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,654 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,687 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,721 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,754 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,788 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,821 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,855 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,888 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,921 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,955 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:24,989 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,022 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,056 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,089 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,122 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,156 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,189 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,223 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,256 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,290 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,324 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,357 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,390 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,424 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,457 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,491 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,517 - engine.resources - DEBUG - Added 31.657135605812073 energy (requested 40.70686912536621)
+2025-10-03 12:06:25,517 - engine.resources - DEBUG - energy storage full, wasted 9.049733519554138
+2025-10-03 12:06:25,518 - engine.resources - DEBUG - Added 0.0 metal (requested 13.56895637512207)
+2025-10-03 12:06:25,518 - engine.resources - DEBUG - metal storage full, wasted 13.56895637512207
+2025-10-03 12:06:25,518 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.040863037109375)
+2025-10-03 12:06:25,518 - engine.resources - DEBUG - biomass storage full, wasted 8.040863037109375
+2025-10-03 12:06:25,518 - engine.resources - DEBUG - Added 0.0 energy (requested 72.36776733398438)
+2025-10-03 12:06:25,518 - engine.resources - DEBUG - Added 0.0 metal (requested 13.56895637512207)
+2025-10-03 12:06:25,518 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.040863037109375)
+2025-10-03 12:06:25,519 - engine.resources - DEBUG - Spent 31.660898208618164 energy (remaining: 68.33910179138184)
+2025-10-03 12:06:25,519 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:25,519 - engine.tick_system - DEBUG - Tick #6 executed (Δt=1.005s)
+2025-10-03 12:06:25,527 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,558 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,591 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,625 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,658 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,692 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,725 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,759 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,792 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,826 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,860 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,893 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,926 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,960 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:25,993 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,028 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,060 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,094 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,127 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,161 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,194 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,228 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,262 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,295 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,328 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,362 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,395 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,429 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,462 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,496 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,522 - engine.resources - DEBUG - Added 31.660898208618164 energy (requested 40.69714558124542)
+2025-10-03 12:06:26,522 - engine.resources - DEBUG - energy storage full, wasted 9.036247372627258
+2025-10-03 12:06:26,522 - engine.resources - DEBUG - Added 0.0 metal (requested 13.565715193748474)
+2025-10-03 12:06:26,522 - engine.resources - DEBUG - metal storage full, wasted 13.565715193748474
+2025-10-03 12:06:26,523 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.038942337036133)
+2025-10-03 12:06:26,523 - engine.resources - DEBUG - biomass storage full, wasted 8.038942337036133
+2025-10-03 12:06:26,523 - engine.resources - DEBUG - Added 0.0 energy (requested 72.3504810333252)
+2025-10-03 12:06:26,523 - engine.resources - DEBUG - Added 0.0 metal (requested 13.565715193748474)
+2025-10-03 12:06:26,523 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.038942337036133)
+2025-10-03 12:06:26,523 - engine.resources - DEBUG - Spent 31.653335452079773 energy (remaining: 68.34666454792023)
+2025-10-03 12:06:26,523 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:26,524 - engine.tick_system - DEBUG - Tick #7 executed (Δt=1.005s)
+2025-10-03 12:06:26,531 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,563 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,596 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,630 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,663 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,697 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,730 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,763 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,797 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,835 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,865 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,898 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,931 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,965 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:26,998 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,032 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,066 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,098 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,132 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,165 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,199 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,233 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,266 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,299 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,333 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,367 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,400 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,434 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,467 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,500 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,527 - engine.resources - DEBUG - Added 31.653335452079773 energy (requested 40.70262050628662)
+2025-10-03 12:06:27,527 - engine.resources - DEBUG - energy storage full, wasted 9.049285054206848
+2025-10-03 12:06:27,527 - engine.resources - DEBUG - Added 0.0 metal (requested 13.567540168762207)
+2025-10-03 12:06:27,527 - engine.resources - DEBUG - metal storage full, wasted 13.567540168762207
+2025-10-03 12:06:27,527 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.040023803710938)
+2025-10-03 12:06:27,528 - engine.resources - DEBUG - biomass storage full, wasted 8.040023803710938
+2025-10-03 12:06:27,528 - engine.resources - DEBUG - Added 0.0 energy (requested 72.36021423339844)
+2025-10-03 12:06:27,528 - engine.resources - DEBUG - Added 0.0 metal (requested 13.567540168762207)
+2025-10-03 12:06:27,528 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.040023803710938)
+2025-10-03 12:06:27,528 - engine.resources - DEBUG - Spent 31.657593727111816 energy (remaining: 68.34240627288818)
+2025-10-03 12:06:27,528 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:27,528 - engine.tick_system - DEBUG - Tick #8 executed (Δt=1.005s)
+2025-10-03 12:06:27,536 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,568 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,601 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,635 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,669 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,702 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,735 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,769 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,802 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,835 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,869 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,903 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,935 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:27,970 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,003 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,037 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,070 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,104 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,138 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,171 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,205 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,238 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,272 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,305 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,339 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,372 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,406 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,439 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,473 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,506 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,532 - engine.resources - DEBUG - Added 31.657593727111816 energy (requested 40.70942795276642)
+2025-10-03 12:06:28,532 - engine.resources - DEBUG - energy storage full, wasted 9.051834225654602
+2025-10-03 12:06:28,533 - engine.resources - DEBUG - Added 0.0 metal (requested 13.569809317588806)
+2025-10-03 12:06:28,533 - engine.resources - DEBUG - metal storage full, wasted 13.569809317588806
+2025-10-03 12:06:28,533 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.04136848449707)
+2025-10-03 12:06:28,533 - engine.resources - DEBUG - biomass storage full, wasted 8.04136848449707
+2025-10-03 12:06:28,533 - engine.resources - DEBUG - Added 0.0 energy (requested 72.37231636047363)
+2025-10-03 12:06:28,533 - engine.resources - DEBUG - Added 0.0 metal (requested 13.569809317588806)
+2025-10-03 12:06:28,534 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.04136848449707)
+2025-10-03 12:06:28,534 - engine.resources - DEBUG - Spent 31.662888407707214 energy (remaining: 68.33711159229279)
+2025-10-03 12:06:28,534 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:28,534 - engine.tick_system - DEBUG - Tick #9 executed (Δt=1.005s)
+2025-10-03 12:06:28,542 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,573 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,606 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,640 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,673 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,707 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,741 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,774 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,808 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,841 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,875 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,908 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,942 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:28,975 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,009 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,043 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,075 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,109 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,142 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,176 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,209 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,243 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,277 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,310 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,344 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,377 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,410 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,444 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,477 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,511 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,537 - engine.resources - DEBUG - Added 31.662888407707214 energy (requested 40.69652760028839)
+2025-10-03 12:06:29,537 - engine.resources - DEBUG - energy storage full, wasted 9.033639192581177
+2025-10-03 12:06:29,537 - engine.resources - DEBUG - Added 0.0 metal (requested 13.56550920009613)
+2025-10-03 12:06:29,537 - engine.resources - DEBUG - metal storage full, wasted 13.56550920009613
+2025-10-03 12:06:29,538 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.038820266723633)
+2025-10-03 12:06:29,538 - engine.resources - DEBUG - biomass storage full, wasted 8.038820266723633
+2025-10-03 12:06:29,538 - engine.resources - DEBUG - Added 0.0 energy (requested 72.3493824005127)
+2025-10-03 12:06:29,538 - engine.resources - DEBUG - Added 0.0 metal (requested 13.56550920009613)
+2025-10-03 12:06:29,538 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.038820266723633)
+2025-10-03 12:06:29,538 - engine.resources - DEBUG - Spent 31.652854800224304 energy (remaining: 68.3471451997757)
+2025-10-03 12:06:29,539 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:29,539 - engine.tick_system - DEBUG - Tick #10 executed (Δt=1.005s)
+2025-10-03 12:06:29,546 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,578 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,611 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,645 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,679 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,712 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,745 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,779 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,813 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,846 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,879 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,913 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,946 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:29,980 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,014 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,047 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,081 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,114 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,147 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,181 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,215 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,248 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,281 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,315 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,348 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,382 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,415 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,416 - engine.input_handler - DEBUG - Unknown command: qqq
+2025-10-03 12:06:30,449 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,482 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,516 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,542 - engine.resources - DEBUG - Added 31.652854800224304 energy (requested 40.70384681224823)
+2025-10-03 12:06:30,542 - engine.resources - DEBUG - energy storage full, wasted 9.050992012023926
+2025-10-03 12:06:30,542 - engine.resources - DEBUG - Added 0.0 metal (requested 13.567948937416077)
+2025-10-03 12:06:30,542 - engine.resources - DEBUG - metal storage full, wasted 13.567948937416077
+2025-10-03 12:06:30,543 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.040266036987305)
+2025-10-03 12:06:30,543 - engine.resources - DEBUG - biomass storage full, wasted 8.040266036987305
+2025-10-03 12:06:30,543 - engine.resources - DEBUG - Added 0.0 energy (requested 72.36239433288574)
+2025-10-03 12:06:30,543 - engine.resources - DEBUG - Added 0.0 metal (requested 13.567948937416077)
+2025-10-03 12:06:30,543 - engine.resources - DEBUG - Added 0.0 biomass (requested 8.040266036987305)
+2025-10-03 12:06:30,544 - engine.resources - DEBUG - Spent 31.658547520637512 energy (remaining: 68.34145247936249)
+2025-10-03 12:06:30,544 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:30,544 - engine.tick_system - DEBUG - Tick #11 executed (Δt=1.005s)
+2025-10-03 12:06:30,552 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,583 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,616 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,650 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,683 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,717 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,750 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,784 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,817 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,851 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,884 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,917 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,951 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:30,985 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:31,018 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:31,052 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:31,054 - engine.input_handler - DEBUG - Executing command: q with args: []
+2025-10-03 12:06:31,078 - engine.tick_system - INFO - TickSystem stopped after 11 ticks
+2025-10-03 12:06:31,078 - engine.game_loop - INFO - Game loop stopped
+2025-10-03 12:06:31,078 - engine.game_loop - INFO - Game loop exited
+2025-10-03 12:06:31,078 - main - INFO - === COLONY.SH SHUTDOWN ===
+2025-10-03 12:06:34,493 - engine.tick_system - INFO - TickSystem initialized with tick_rate=1.0s
+2025-10-03 12:06:34,493 - engine.ui_framework - INFO - UIFramework initialized (terminal: 92x40)
+2025-10-03 12:06:34,493 - engine.input_handler - INFO - InputHandler initialized
+2025-10-03 12:06:34,494 - engine.animator - INFO - Animator initialized
+2025-10-03 12:06:34,494 - engine.game_loop - INFO - GameLoop initialized (tick_rate=1.0, max_fps=30.0)
+2025-10-03 12:06:34,494 - engine.tick_system - INFO - Registered tick callback: _on_update
+2025-10-03 12:06:34,494 - engine.input_handler - INFO - Command registered: build (aliases: ['b'])
+2025-10-03 12:06:34,494 - engine.input_handler - INFO - Command registered: research (aliases: ['r'])
+2025-10-03 12:06:34,494 - engine.input_handler - INFO - Command registered: info (aliases: ['i'])
+2025-10-03 12:06:34,494 - engine.input_handler - INFO - Command registered: help (aliases: ['h', '?'])
+2025-10-03 12:06:34,495 - engine.input_handler - INFO - Command registered: save (aliases: ['s'])
+2025-10-03 12:06:34,495 - engine.input_handler - INFO - Command registered: quit (aliases: ['q', 'exit'])
+2025-10-03 12:06:34,495 - main - INFO - Colony.sh initialized
+2025-10-03 12:06:34,495 - main - INFO - === COLONY.SH STARTED ===
+2025-10-03 12:06:34,502 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:36,803 - engine.state_manager - INFO - StateManager initialized
+2025-10-03 12:06:36,803 - engine.resources - INFO - ResourceManager initialized
+2025-10-03 12:06:36,803 - engine.buildings - INFO - BuildingManager initialized
+2025-10-03 12:06:36,803 - engine.units - INFO - UnitManager initialized
+2025-10-03 12:06:36,803 - engine.upgrades - INFO - UpgradeManager initialized
+2025-10-03 12:06:36,803 - engine.game_state - INFO - GameState initialized
+2025-10-03 12:06:36,804 - engine.resources - INFO - Resource added: energy (initial=20.0, rate=0.0/s)
+2025-10-03 12:06:36,804 - engine.resources - INFO - Resource added: metal (initial=10.0, rate=0.0/s)
+2025-10-03 12:06:36,804 - engine.resources - INFO - Resource added: biomass (initial=15.0, rate=0.0/s)
+2025-10-03 12:06:36,804 - engine.resources - INFO - Resource added: colonists (initial=3.0, rate=0.0/s)
+2025-10-03 12:06:36,804 - engine.buildings - INFO - Building registered: solar_array (cost={'metal': 5.0})
+2025-10-03 12:06:36,804 - engine.buildings - INFO - Building registered: mining_rig (cost={'metal': 10.0, 'energy': 5.0})
+2025-10-03 12:06:36,805 - engine.buildings - INFO - Building registered: reclamation_bay (cost={'metal': 15.0, 'energy': 8.0})
+2025-10-03 12:06:36,805 - engine.buildings - INFO - Building registered: hab_module (cost={'metal': 20.0, 'energy': 10.0})
+2025-10-03 12:06:36,805 - engine.buildings - INFO - Building registered: research_terminal (cost={'metal': 25.0, 'energy': 15.0})
+2025-10-03 12:06:36,805 - engine.upgrades - INFO - Upgrade registered: efficient_extraction (cost={'metal': 30.0, 'energy': 20.0})
+2025-10-03 12:06:36,805 - engine.upgrades - INFO - Upgrade registered: closed_loop_bioreactor (cost={'metal': 40.0, 'energy': 25.0, 'biomass': 10.0})
+2025-10-03 12:06:36,805 - engine.upgrades - INFO - Upgrade registered: fusion_ignition (cost={'metal': 50.0, 'energy': 40.0})
+2025-10-03 12:06:36,806 - engine.upgrades - INFO - Upgrade registered: redundant_systems (cost={'metal': 35.0, 'energy': 30.0})
+2025-10-03 12:06:36,806 - engine.resources - DEBUG - Resource 'energy' amount changed: 20.0 → 20.0
+2025-10-03 12:06:36,806 - engine.resources - DEBUG - Resource 'metal' amount changed: 10.0 → 10.0
+2025-10-03 12:06:36,806 - engine.resources - DEBUG - Resource 'biomass' amount changed: 15.0 → 15.0
+2025-10-03 12:06:36,806 - engine.resources - DEBUG - Resource 'colonists' amount changed: 3.0 → 3.0
+2025-10-03 12:06:36,806 - engine.resources - DEBUG - energy generation rate: 0.0/s → 2.5/s
+2025-10-03 12:06:36,807 - main - INFO - New game started
+2025-10-03 12:06:36,807 - engine.game_loop - INFO - Entering main game loop
+2025-10-03 12:06:36,807 - engine.tick_system - INFO - TickSystem started
+2025-10-03 12:06:36,807 - engine.game_loop - INFO - Game loop started
+2025-10-03 12:06:36,815 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:36,847 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:36,882 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:36,915 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:36,948 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:36,982 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,015 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,049 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,082 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,115 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,149 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,183 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,216 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,249 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,283 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,317 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,351 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,383 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,417 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,451 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,485 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,518 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,551 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,585 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,618 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,651 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,685 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,718 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,752 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,785 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,812 - engine.resources - DEBUG - Added 2.5132137537002563 energy (requested 2.5132137537002563)
+2025-10-03 12:06:37,812 - engine.resources - DEBUG - Added 3.0158565044403076 energy (requested 3.0158565044403076)
+2025-10-03 12:06:37,813 - engine.resources - DEBUG - Spent 0.5026427507400513 energy (remaining: 25.026427507400513)
+2025-10-03 12:06:37,813 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:37,813 - engine.tick_system - DEBUG - Tick #1 executed (Δt=1.005s)
+2025-10-03 12:06:37,820 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,852 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,886 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,919 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,953 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:37,986 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,021 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,055 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,087 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,121 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,154 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,187 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,222 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,256 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,290 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,323 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,356 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,390 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,424 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,457 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,491 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,524 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,557 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,591 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,624 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,658 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,691 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,725 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,758 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,791 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,817 - engine.resources - DEBUG - Added 2.512809634208679 energy (requested 2.512809634208679)
+2025-10-03 12:06:38,818 - engine.resources - DEBUG - Added 3.015371561050415 energy (requested 3.015371561050415)
+2025-10-03 12:06:38,818 - engine.resources - DEBUG - Spent 0.5025619268417358 energy (remaining: 30.05204677581787)
+2025-10-03 12:06:38,818 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:38,818 - engine.tick_system - DEBUG - Tick #2 executed (Δt=1.005s)
+2025-10-03 12:06:38,826 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,858 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,892 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,925 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,963 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:38,992 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,026 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,059 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,093 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,127 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,160 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,194 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,227 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,260 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,294 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,327 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,361 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,395 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,427 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,461 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,495 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,529 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,561 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,595 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,628 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,662 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,696 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,729 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,763 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,796 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,822 - engine.resources - DEBUG - Added 2.512081265449524 energy (requested 2.512081265449524)
+2025-10-03 12:06:39,823 - engine.resources - DEBUG - Added 3.0144975185394287 energy (requested 3.0144975185394287)
+2025-10-03 12:06:39,823 - engine.resources - DEBUG - Spent 0.5024162530899048 energy (remaining: 35.07620930671692)
+2025-10-03 12:06:39,823 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:39,823 - engine.tick_system - DEBUG - Tick #3 executed (Δt=1.005s)
+2025-10-03 12:06:39,831 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,863 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,898 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,930 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,964 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:39,996 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,031 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,064 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,098 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,131 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,164 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,198 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,231 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,265 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,299 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,332 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,365 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,399 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,433 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,466 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,500 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,533 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,567 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,600 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,633 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,667 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,701 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,734 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,768 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,801 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,827 - engine.resources - DEBUG - Added 2.5126004219055176 energy (requested 2.5126004219055176)
+2025-10-03 12:06:40,827 - engine.resources - DEBUG - Added 3.015120506286621 energy (requested 3.015120506286621)
+2025-10-03 12:06:40,828 - engine.resources - DEBUG - Spent 0.5025200843811035 energy (remaining: 40.101410150527954)
+2025-10-03 12:06:40,828 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:40,828 - engine.tick_system - DEBUG - Tick #4 executed (Δt=1.005s)
+2025-10-03 12:06:40,835 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,868 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,902 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,935 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:40,969 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,001 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,036 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,070 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,103 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,136 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,170 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,203 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,236 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,271 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,304 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,337 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,371 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,404 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,438 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,471 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,504 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,538 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,572 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,606 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,639 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,641 - engine.input_handler - DEBUG - Unknown command: bb
+2025-10-03 12:06:41,673 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,706 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,740 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,773 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,807 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,832 - engine.resources - DEBUG - Added 2.512460947036743 energy (requested 2.512460947036743)
+2025-10-03 12:06:41,832 - engine.resources - DEBUG - Added 3.014953136444092 energy (requested 3.014953136444092)
+2025-10-03 12:06:41,833 - engine.resources - DEBUG - Spent 0.5024921894073486 energy (remaining: 45.12633204460144)
+2025-10-03 12:06:41,833 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 12:06:41,833 - engine.tick_system - DEBUG - Tick #5 executed (Δt=1.005s)
+2025-10-03 12:06:41,841 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,873 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,908 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,941 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:41,974 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:42,008 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:42,041 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:42,075 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:42,108 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:42,142 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:42,176 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:42,209 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:06:42,210 - engine.input_handler - DEBUG - Executing command: b with args: []
+2025-10-03 12:06:42,218 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:13:36,552 - engine.tick_system - INFO - TickSystem initialized with tick_rate=1.0s
+2025-10-03 12:13:36,552 - engine.ui_framework - INFO - UIFramework initialized (terminal: 80x24)
+2025-10-03 12:13:36,553 - engine.input_handler - INFO - InputHandler initialized
+2025-10-03 12:13:36,553 - engine.animator - INFO - Animator initialized
+2025-10-03 12:13:36,553 - engine.game_loop - INFO - GameLoop initialized (tick_rate=1.0, max_fps=30.0)
+2025-10-03 12:13:36,553 - engine.tick_system - INFO - Registered tick callback: _on_update
+2025-10-03 12:13:36,554 - engine.input_handler - INFO - Command registered: build (aliases: ['b'])
+2025-10-03 12:13:36,554 - engine.input_handler - INFO - Command registered: research (aliases: ['r'])
+2025-10-03 12:13:36,554 - engine.input_handler - INFO - Command registered: info (aliases: ['i'])
+2025-10-03 12:13:36,554 - engine.input_handler - INFO - Command registered: help (aliases: ['h', '?'])
+2025-10-03 12:13:36,554 - engine.input_handler - INFO - Command registered: save (aliases: ['s'])
+2025-10-03 12:13:36,554 - engine.input_handler - INFO - Command registered: quit (aliases: ['q', 'exit'])
+2025-10-03 12:13:36,554 - main - INFO - Colony.sh initialized
+2025-10-03 12:13:36,554 - main - INFO - === COLONY.SH STARTED ===
+2025-10-03 12:13:36,555 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 12:13:36,555 - main - ERROR - Fatal error: EOF when reading a line
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/colony/main.py", line 318, in run
+    if not self.run_main_menu():
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/colony/main.py", line 299, in run_main_menu
+    choice = input().strip()
+             ~~~~~^^
+EOFError: EOF when reading a line
+2025-10-03 12:13:36,558 - main - INFO - === COLONY.SH SHUTDOWN ===
