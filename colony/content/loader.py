@@ -80,7 +80,7 @@ def load_new_game() -> GameState:
     # Set starting resources
     starting_resources = get_starting_resources()
     for resource, amount in starting_resources.items():
-        game_state.resources.set(resource, amount)
+        game_state.resources.set_amount(resource, amount)
 
     # Set starting structures
     starting_structures = get_starting_structures()

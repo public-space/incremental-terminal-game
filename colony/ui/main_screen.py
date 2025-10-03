@@ -13,8 +13,13 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 
 from engine import UIFramework, Color, Panel, BorderStyle, GameState
-from ..systems.event_log import EventLog
 from typing import Optional
+
+# Handle imports
+try:
+    from ..systems.event_log import EventLog
+except ImportError:
+    from systems.event_log import EventLog
 
 
 class MainScreen:
