@@ -1,0 +1,6 @@
+2025-10-03 02:46:15,407 - engine.state_manager - INFO - StateManager initialized
+2025-10-03 02:46:15,407 - engine.resources - INFO - ResourceManager initialized
+2025-10-03 02:46:15,407 - engine.buildings - INFO - BuildingManager initialized
+2025-10-03 02:46:15,407 - engine.units - INFO - UnitManager initialized
+2025-10-03 02:46:15,407 - engine.upgrades - INFO - UpgradeManager initialized
+2025-10-03 02:46:15,407 - engine.game_state - INFO - GameState initialized
