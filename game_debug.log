@@ -217,3 +217,822 @@
 2025-10-02 21:39:51,872 - game.upgrades - INFO - Purchased upgrade: repeatable
 2025-10-02 21:39:51,872 - game.resources - DEBUG - Spent 75.0 research (remaining: 865.0)
 2025-10-02 21:39:51,872 - game.upgrades - INFO - Purchased upgrade: repeatable
+2025-10-03 03:10:12,341 - engine.tick_system - INFO - TickSystem initialized with tick_rate=1.0s
+2025-10-03 03:10:12,342 - engine.ui_framework - INFO - UIFramework initialized (terminal: 80x24)
+2025-10-03 03:10:12,342 - engine.input_handler - INFO - InputHandler initialized
+2025-10-03 03:10:12,342 - engine.animator - INFO - Animator initialized
+2025-10-03 03:10:12,342 - engine.game_loop - INFO - GameLoop initialized (tick_rate=1.0, max_fps=30.0)
+2025-10-03 03:10:12,342 - engine.tick_system - INFO - Registered tick callback: _on_update
+2025-10-03 03:10:12,342 - engine.input_handler - INFO - Command registered: build (aliases: ['b'])
+2025-10-03 03:10:12,342 - engine.input_handler - INFO - Command registered: research (aliases: ['r'])
+2025-10-03 03:10:12,342 - engine.input_handler - INFO - Command registered: info (aliases: ['i'])
+2025-10-03 03:10:12,343 - engine.input_handler - INFO - Command registered: help (aliases: ['h', '?'])
+2025-10-03 03:10:12,343 - engine.input_handler - INFO - Command registered: save (aliases: ['s'])
+2025-10-03 03:10:12,343 - engine.input_handler - INFO - Command registered: quit (aliases: ['q', 'exit'])
+2025-10-03 03:10:12,343 - main - INFO - Colony.sh initialized
+2025-10-03 03:10:12,343 - main - INFO - === COLONY.SH STARTED ===
+2025-10-03 03:10:12,352 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:10:12,352 - main - ERROR - Fatal error: 'UIFramework' object has no attribute 'Color'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 313, in run
+    if not self.run_main_menu():
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 278, in run_main_menu
+    ui.print_colored("╔═══════════════════════════════════════════════════════════════════════╗", ui.Color.BRIGHT_CYAN)
+                                                                                                  ^^^^^^^^
+AttributeError: 'UIFramework' object has no attribute 'Color'
+2025-10-03 03:10:12,356 - main - INFO - === COLONY.SH SHUTDOWN ===
+2025-10-03 03:12:27,695 - engine.tick_system - INFO - TickSystem initialized with tick_rate=1.0s
+2025-10-03 03:12:27,695 - engine.ui_framework - INFO - UIFramework initialized (terminal: 80x24)
+2025-10-03 03:12:27,696 - engine.input_handler - INFO - InputHandler initialized
+2025-10-03 03:12:27,696 - engine.animator - INFO - Animator initialized
+2025-10-03 03:12:27,696 - engine.game_loop - INFO - GameLoop initialized (tick_rate=1.0, max_fps=30.0)
+2025-10-03 03:12:27,696 - engine.tick_system - INFO - Registered tick callback: _on_update
+2025-10-03 03:12:27,696 - engine.input_handler - INFO - Command registered: build (aliases: ['b'])
+2025-10-03 03:12:27,696 - engine.input_handler - INFO - Command registered: research (aliases: ['r'])
+2025-10-03 03:12:27,697 - engine.input_handler - INFO - Command registered: info (aliases: ['i'])
+2025-10-03 03:12:27,697 - engine.input_handler - INFO - Command registered: help (aliases: ['h', '?'])
+2025-10-03 03:12:27,697 - engine.input_handler - INFO - Command registered: save (aliases: ['s'])
+2025-10-03 03:12:27,697 - engine.input_handler - INFO - Command registered: quit (aliases: ['q', 'exit'])
+2025-10-03 03:12:27,697 - main - INFO - Colony.sh initialized
+2025-10-03 03:12:27,697 - main - INFO - === COLONY.SH STARTED ===
+2025-10-03 03:12:27,703 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:27,704 - engine.state_manager - INFO - StateManager initialized
+2025-10-03 03:12:27,704 - engine.resources - INFO - ResourceManager initialized
+2025-10-03 03:12:27,704 - engine.buildings - INFO - BuildingManager initialized
+2025-10-03 03:12:27,704 - engine.units - INFO - UnitManager initialized
+2025-10-03 03:12:27,704 - engine.upgrades - INFO - UpgradeManager initialized
+2025-10-03 03:12:27,704 - engine.game_state - INFO - GameState initialized
+2025-10-03 03:12:27,705 - engine.resources - INFO - Resource added: energy (initial=20.0, rate=0.0/s)
+2025-10-03 03:12:27,705 - engine.resources - INFO - Resource added: metal (initial=10.0, rate=0.0/s)
+2025-10-03 03:12:27,705 - engine.resources - INFO - Resource added: biomass (initial=15.0, rate=0.0/s)
+2025-10-03 03:12:27,705 - engine.resources - INFO - Resource added: colonists (initial=3.0, rate=0.0/s)
+2025-10-03 03:12:27,705 - engine.buildings - INFO - Building registered: solar_array (cost={'metal': 5.0})
+2025-10-03 03:12:27,705 - engine.buildings - INFO - Building registered: mining_rig (cost={'metal': 10.0, 'energy': 5.0})
+2025-10-03 03:12:27,705 - engine.buildings - INFO - Building registered: reclamation_bay (cost={'metal': 15.0, 'energy': 8.0})
+2025-10-03 03:12:27,706 - engine.buildings - INFO - Building registered: hab_module (cost={'metal': 20.0, 'energy': 10.0})
+2025-10-03 03:12:27,706 - engine.buildings - INFO - Building registered: research_terminal (cost={'metal': 25.0, 'energy': 15.0})
+2025-10-03 03:12:27,706 - engine.upgrades - INFO - Upgrade registered: efficient_extraction (cost={'metal': 30.0, 'energy': 20.0})
+2025-10-03 03:12:27,706 - engine.upgrades - INFO - Upgrade registered: closed_loop_bioreactor (cost={'metal': 40.0, 'energy': 25.0, 'biomass': 10.0})
+2025-10-03 03:12:27,706 - engine.upgrades - INFO - Upgrade registered: fusion_ignition (cost={'metal': 50.0, 'energy': 40.0})
+2025-10-03 03:12:27,706 - engine.upgrades - INFO - Upgrade registered: redundant_systems (cost={'metal': 35.0, 'energy': 30.0})
+2025-10-03 03:12:27,706 - engine.resources - DEBUG - Resource 'energy' amount changed: 20.0 → 20.0
+2025-10-03 03:12:27,706 - engine.resources - DEBUG - Resource 'metal' amount changed: 10.0 → 10.0
+2025-10-03 03:12:27,707 - engine.resources - DEBUG - Resource 'biomass' amount changed: 15.0 → 15.0
+2025-10-03 03:12:27,707 - engine.resources - DEBUG - Resource 'colonists' amount changed: 3.0 → 3.0
+2025-10-03 03:12:27,707 - main - INFO - New game started
+2025-10-03 03:12:27,707 - engine.game_loop - INFO - Entering main game loop
+2025-10-03 03:12:27,707 - engine.tick_system - INFO - TickSystem started
+2025-10-03 03:12:27,707 - engine.game_loop - INFO - Game loop started
+2025-10-03 03:12:27,915 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:27,916 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:28,149 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:28,150 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:28,384 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:28,385 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:28,618 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:28,619 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:28,712 - engine.resources - DEBUG - Added 3.015192747116089 energy (requested 3.015192747116089)
+2025-10-03 03:12:28,713 - engine.resources - DEBUG - Spent 0.5025321245193481 energy (remaining: 22.51266062259674)
+2025-10-03 03:12:28,713 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 03:12:28,713 - engine.tick_system - DEBUG - Tick #1 executed (Δt=1.005s)
+2025-10-03 03:12:28,853 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:28,854 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:29,088 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:29,088 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:29,322 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:29,323 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:29,557 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:29,557 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:29,717 - engine.resources - DEBUG - Added 2.5122439861297607 energy (requested 2.5122439861297607)
+2025-10-03 03:12:29,717 - engine.resources - DEBUG - Added 3.014692783355713 energy (requested 3.014692783355713)
+2025-10-03 03:12:29,718 - engine.resources - DEBUG - Spent 0.5024487972259521 energy (remaining: 27.537148594856262)
+2025-10-03 03:12:29,718 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 03:12:29,718 - engine.tick_system - DEBUG - Tick #2 executed (Δt=1.005s)
+2025-10-03 03:12:29,791 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:29,792 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:30,026 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:30,026 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:30,260 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:30,260 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:30,495 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:30,496 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:30,723 - engine.resources - DEBUG - Added 2.513701915740967 energy (requested 2.513701915740967)
+2025-10-03 03:12:30,723 - engine.resources - DEBUG - Added 3.01644229888916 energy (requested 3.01644229888916)
+2025-10-03 03:12:30,723 - engine.resources - DEBUG - Spent 0.5027403831481934 energy (remaining: 32.564552426338196)
+2025-10-03 03:12:30,723 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 03:12:30,723 - engine.tick_system - DEBUG - Tick #3 executed (Δt=1.005s)
+2025-10-03 03:12:30,731 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:30,731 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:30,964 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:30,964 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:31,198 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:31,199 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:31,433 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:31,434 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:31,667 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:31,668 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:31,728 - engine.resources - DEBUG - Added 2.5123775005340576 energy (requested 2.5123775005340576)
+2025-10-03 03:12:31,728 - engine.resources - DEBUG - Added 3.014853000640869 energy (requested 3.014853000640869)
+2025-10-03 03:12:31,728 - engine.resources - DEBUG - Spent 0.5024755001068115 energy (remaining: 37.58930742740631)
+2025-10-03 03:12:31,728 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 03:12:31,728 - engine.tick_system - DEBUG - Tick #4 executed (Δt=1.005s)
+2025-10-03 03:12:31,902 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:31,902 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:32,137 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:32,137 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:32,371 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:32,372 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:32,606 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:32,607 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:32,733 - engine.resources - DEBUG - Added 2.512292265892029 energy (requested 2.512292265892029)
+2025-10-03 03:12:32,733 - engine.resources - DEBUG - Added 3.0147507190704346 energy (requested 3.0147507190704346)
+2025-10-03 03:12:32,733 - engine.resources - DEBUG - Spent 0.5024584531784058 energy (remaining: 42.61389195919037)
+2025-10-03 03:12:32,733 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 03:12:32,733 - engine.tick_system - DEBUG - Tick #5 executed (Δt=1.005s)
+2025-10-03 03:12:32,840 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:32,840 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:33,074 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:33,075 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:33,309 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:33,309 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:33,543 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:33,544 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:33,737 - engine.resources - DEBUG - Added 2.511891722679138 energy (requested 2.511891722679138)
+2025-10-03 03:12:33,738 - engine.resources - DEBUG - Added 3.014270067214966 energy (requested 3.014270067214966)
+2025-10-03 03:12:33,738 - engine.resources - DEBUG - Spent 0.5023783445358276 energy (remaining: 47.637675404548645)
+2025-10-03 03:12:33,738 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 03:12:33,738 - engine.tick_system - DEBUG - Tick #6 executed (Δt=1.005s)
+2025-10-03 03:12:33,778 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:33,778 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:34,013 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:34,014 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:34,247 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:34,248 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:34,482 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:34,482 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:34,716 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:34,716 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:34,742 - engine.resources - DEBUG - Added 2.5122463703155518 energy (requested 2.5122463703155518)
+2025-10-03 03:12:34,742 - engine.resources - DEBUG - Added 3.014695644378662 energy (requested 3.014695644378662)
+2025-10-03 03:12:34,743 - engine.resources - DEBUG - Spent 0.5024492740631104 energy (remaining: 52.66216814517975)
+2025-10-03 03:12:34,743 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 03:12:34,743 - engine.tick_system - DEBUG - Tick #7 executed (Δt=1.005s)
+2025-10-03 03:12:34,950 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:34,951 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:35,185 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:35,186 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:35,420 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:35,420 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:35,654 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:35,654 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:35,747 - engine.resources - DEBUG - Added 2.512425184249878 energy (requested 2.512425184249878)
+2025-10-03 03:12:35,747 - engine.resources - DEBUG - Added 3.0149102210998535 energy (requested 3.0149102210998535)
+2025-10-03 03:12:35,748 - engine.resources - DEBUG - Spent 0.5024850368499756 energy (remaining: 57.687018513679504)
+2025-10-03 03:12:35,748 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-03 03:12:35,748 - engine.tick_system - DEBUG - Tick #8 executed (Δt=1.005s)
+2025-10-03 03:12:35,888 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:35,888 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:36,122 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:36,123 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:36,357 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:36,358 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:36,591 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:36,592 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:36,753 - engine.resources - DEBUG - Added 2.5139254331588745 energy (requested 2.5139254331588745)
+2025-10-03 03:12:36,753 - engine.resources - DEBUG - Added 3.0167105197906494 energy (requested 3.0167105197906494)
+2025-10-03 03:12:36,753 - engine.resources - DEBUG - Spent 0.5027850866317749 energy (remaining: 62.71486937999725)
+2025-10-03 03:12:36,753 - engine.game_state - DEBUG - Game updated (Δt=1.006s)
+2025-10-03 03:12:36,754 - engine.tick_system - DEBUG - Tick #9 executed (Δt=1.006s)
+2025-10-03 03:12:36,827 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:36,827 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:37,062 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:37,063 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:12:37,295 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:12:37,296 - engine.game_loop - ERROR - Error in render callback: 'Building' object has no attribute 'production'
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./engine/game_loop.py", line 225, in render
+    callback(self.ui, self.animator)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 174, in _on_render
+    self.main_screen.render(self.game_state, self.event_log)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 69, in render
+    self._render_structures(game_state)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/ui/main_screen.py", line 171, in _render_structures
+    for res, rate in building.production.items():
+                     ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Building' object has no attribute 'production'
+2025-10-03 03:27:17,423 - engine.tick_system - INFO - TickSystem initialized with tick_rate=1.0s
+2025-10-03 03:27:17,423 - engine.ui_framework - INFO - UIFramework initialized (terminal: 80x24)
+2025-10-03 03:27:17,423 - engine.input_handler - INFO - InputHandler initialized
+2025-10-03 03:27:17,423 - engine.animator - INFO - Animator initialized
+2025-10-03 03:27:17,424 - engine.game_loop - INFO - GameLoop initialized (tick_rate=1.0, max_fps=30.0)
+2025-10-03 03:27:17,424 - engine.tick_system - INFO - Registered tick callback: _on_update
+2025-10-03 03:27:17,424 - engine.input_handler - INFO - Command registered: build (aliases: ['b'])
+2025-10-03 03:27:17,424 - engine.input_handler - INFO - Command registered: research (aliases: ['r'])
+2025-10-03 03:27:17,424 - engine.input_handler - INFO - Command registered: info (aliases: ['i'])
+2025-10-03 03:27:17,424 - engine.input_handler - INFO - Command registered: help (aliases: ['h', '?'])
+2025-10-03 03:27:17,425 - engine.input_handler - INFO - Command registered: save (aliases: ['s'])
+2025-10-03 03:27:17,425 - engine.input_handler - INFO - Command registered: quit (aliases: ['q', 'exit'])
+2025-10-03 03:27:17,425 - main - INFO - Colony.sh initialized
+2025-10-03 03:27:17,425 - main - INFO - === COLONY.SH STARTED ===
+2025-10-03 03:27:17,431 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 03:27:17,432 - main - ERROR - Fatal error: EOF when reading a line
+Traceback (most recent call last):
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 313, in run
+    if not self.run_main_menu():
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/alaya/claude-code/incremental-terminal-game/./colony/main.py", line 294, in run_main_menu
+    choice = input().strip()
+             ~~~~~^^
+EOFError: EOF when reading a line
+2025-10-03 03:27:17,434 - main - INFO - === COLONY.SH SHUTDOWN ===
+2025-10-03 03:28:28,843 - engine.state_manager - INFO - StateManager initialized
+2025-10-03 03:28:28,843 - engine.resources - INFO - ResourceManager initialized
+2025-10-03 03:28:28,843 - engine.buildings - INFO - BuildingManager initialized
+2025-10-03 03:28:28,843 - engine.units - INFO - UnitManager initialized
+2025-10-03 03:28:28,843 - engine.upgrades - INFO - UpgradeManager initialized
+2025-10-03 03:28:28,843 - engine.game_state - INFO - GameState initialized
+2025-10-03 03:28:28,843 - engine.resources - INFO - Resource added: energy (initial=20.0, rate=0.0/s)
+2025-10-03 03:28:28,843 - engine.resources - INFO - Resource added: metal (initial=10.0, rate=0.0/s)
+2025-10-03 03:28:28,844 - engine.resources - INFO - Resource added: biomass (initial=15.0, rate=0.0/s)
+2025-10-03 03:28:28,844 - engine.resources - INFO - Resource added: colonists (initial=3.0, rate=0.0/s)
+2025-10-03 03:28:28,844 - engine.buildings - INFO - Building registered: solar_array (cost={'metal': 5.0})
+2025-10-03 03:28:28,844 - engine.buildings - INFO - Building registered: mining_rig (cost={'metal': 10.0, 'energy': 5.0})
+2025-10-03 03:28:28,844 - engine.buildings - INFO - Building registered: reclamation_bay (cost={'metal': 15.0, 'energy': 8.0})
+2025-10-03 03:28:28,844 - engine.buildings - INFO - Building registered: hab_module (cost={'metal': 20.0, 'energy': 10.0})
+2025-10-03 03:28:28,844 - engine.buildings - INFO - Building registered: research_terminal (cost={'metal': 25.0, 'energy': 15.0})
+2025-10-03 03:28:28,844 - engine.upgrades - INFO - Upgrade registered: efficient_extraction (cost={'metal': 30.0, 'energy': 20.0})
+2025-10-03 03:28:28,844 - engine.upgrades - INFO - Upgrade registered: closed_loop_bioreactor (cost={'metal': 40.0, 'energy': 25.0, 'biomass': 10.0})
+2025-10-03 03:28:28,844 - engine.upgrades - INFO - Upgrade registered: fusion_ignition (cost={'metal': 50.0, 'energy': 40.0})
+2025-10-03 03:28:28,844 - engine.upgrades - INFO - Upgrade registered: redundant_systems (cost={'metal': 35.0, 'energy': 30.0})
+2025-10-03 03:28:28,844 - engine.resources - DEBUG - Resource 'energy' amount changed: 20.0 → 20.0
+2025-10-03 03:28:28,844 - engine.resources - DEBUG - Resource 'metal' amount changed: 10.0 → 10.0
+2025-10-03 03:28:28,844 - engine.resources - DEBUG - Resource 'biomass' amount changed: 15.0 → 15.0
+2025-10-03 03:28:28,844 - engine.resources - DEBUG - Resource 'colonists' amount changed: 3.0 → 3.0
+2025-10-03 03:28:28,844 - engine.resources - DEBUG - Added 50.0 energy (requested 50)
+2025-10-03 03:28:28,844 - engine.resources - DEBUG - Added 30.0 metal (requested 30)
+2025-10-03 03:28:28,844 - engine.resources - DEBUG - Added 20.0 biomass (requested 20)
+2025-10-03 03:28:28,844 - engine.ui_framework - INFO - UIFramework initialized (terminal: 80x24)

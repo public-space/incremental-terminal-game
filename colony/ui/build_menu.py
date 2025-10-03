@@ -108,16 +108,16 @@ class BuildMenu:
         )
 
         # Production
-        if building.production:
-            prod_str = ", ".join([f"+{rate:.1f} {res}/s" for res, rate in building.production.items()])
+        if building.produces:
+            prod_str = ", ".join([f"+{rate:.1f} {res}/s" for res, rate in building.produces.items()])
             self.ui.print_colored(
                 f"║     Production: {prod_str:<56} ║",
                 Color.GREEN
             )
 
         # Consumption
-        if building.consumption:
-            cons_str = ", ".join([f"-{rate:.1f} {res}/s" for res, rate in building.consumption.items()])
+        if building.consumes:
+            cons_str = ", ".join([f"-{rate:.1f} {res}/s" for res, rate in building.consumes.items()])
             self.ui.print_colored(
                 f"║     Consumption: {cons_str:<55} ║",
                 Color.YELLOW
