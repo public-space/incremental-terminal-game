@@ -1,0 +1,219 @@
+2025-10-02 21:03:48,633 - __main__ - INFO - TickSystem initialized with tick_rate=1.0s
+2025-10-02 21:03:48,634 - __main__ - INFO - Registered tick callback: example_callback
+2025-10-02 21:03:48,634 - __main__ - INFO - TickSystem started
+2025-10-02 21:03:49,641 - __main__ - DEBUG - Tick #1 executed (Δt=1.007s)
+2025-10-02 21:03:50,650 - __main__ - DEBUG - Tick #2 executed (Δt=1.009s)
+2025-10-02 21:03:51,652 - __main__ - DEBUG - Tick #3 executed (Δt=1.002s)
+2025-10-02 21:03:52,654 - __main__ - DEBUG - Tick #4 executed (Δt=1.001s)
+2025-10-02 21:03:53,642 - __main__ - INFO - TickSystem stopped after 4 ticks
+2025-10-02 21:32:36,605 - engine.state_manager - INFO - StateManager initialized
+2025-10-02 21:32:36,606 - game.resources - INFO - ResourceManager initialized
+2025-10-02 21:32:36,606 - game.buildings - INFO - BuildingManager initialized
+2025-10-02 21:32:36,606 - game.units - INFO - UnitManager initialized
+2025-10-02 21:32:36,606 - game.upgrades - INFO - UpgradeManager initialized
+2025-10-02 21:32:36,607 - __main__ - INFO - GameState initialized
+2025-10-02 21:32:36,607 - __main__ - INFO - Initializing new game...
+2025-10-02 21:32:36,607 - engine.state_manager - DEBUG - State set: game.initialized = True (was None)
+2025-10-02 21:32:36,607 - engine.state_manager - DEBUG - State set: game.started_at = 2025-10-02T21:32:36.607744 (was None)
+2025-10-02 21:32:36,607 - __main__ - INFO - Game initialization complete
+2025-10-02 21:32:36,608 - game.resources - INFO - Resource added: gold (initial=100, rate=1.0/s)
+2025-10-02 21:32:36,608 - game.resources - INFO - Resource added: wood (initial=50, rate=0.0/s)
+2025-10-02 21:32:36,608 - game.buildings - INFO - Building registered: farm (cost={'wood': 30})
+2025-10-02 21:32:36,608 - game.resources - DEBUG - Spent 30 wood (remaining: 20)
+2025-10-02 21:32:36,609 - game.buildings - INFO - Built 1x farm (total: 1)
+2025-10-02 21:32:36,609 - game.resources - DEBUG - gold generation rate: 1.0/s → 0.5/s
+2025-10-02 21:32:36,609 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,609 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,609 - __main__ - DEBUG - Game updated (Δt=1.000s)
+2025-10-02 21:32:36,609 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,610 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,610 - __main__ - DEBUG - Game updated (Δt=1.000s)
+2025-10-02 21:32:36,610 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,610 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,610 - __main__ - DEBUG - Game updated (Δt=1.000s)
+2025-10-02 21:32:36,610 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,610 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,610 - __main__ - DEBUG - Game updated (Δt=1.000s)
+2025-10-02 21:32:36,611 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,611 - game.resources - DEBUG - Added 0.5 gold (requested 0.5)
+2025-10-02 21:32:36,611 - __main__ - DEBUG - Game updated (Δt=1.000s)
+2025-10-02 21:32:36,613 - __main__ - INFO - Game saved to test_save.json
+2025-10-02 21:32:36,613 - engine.state_manager - INFO - StateManager initialized
+2025-10-02 21:32:36,613 - game.resources - INFO - ResourceManager initialized
+2025-10-02 21:32:36,613 - game.buildings - INFO - BuildingManager initialized
+2025-10-02 21:32:36,613 - game.units - INFO - UnitManager initialized
+2025-10-02 21:32:36,614 - game.upgrades - INFO - UpgradeManager initialized
+2025-10-02 21:32:36,614 - __main__ - INFO - GameState initialized
+2025-10-02 21:32:36,614 - engine.state_manager - INFO - State replaced with new data
+2025-10-02 21:32:36,614 - game.resources - INFO - Loaded 2 resources from data
+2025-10-02 21:32:36,614 - game.buildings - INFO - Loaded 1 buildings from data
+2025-10-02 21:32:36,615 - game.resources - DEBUG - gold generation rate: 0.5/s → 0.5/s
+2025-10-02 21:32:36,615 - game.units - INFO - Loaded 0 units from data
+2025-10-02 21:32:36,615 - game.upgrades - INFO - Loaded 0 upgrades from data
+2025-10-02 21:32:36,615 - __main__ - INFO - Game loaded from test_save.json
+2025-10-02 21:39:41,855 - engine.state_manager - INFO - StateManager initialized
+2025-10-02 21:39:41,855 - game.resources - INFO - ResourceManager initialized
+2025-10-02 21:39:41,855 - game.buildings - INFO - BuildingManager initialized
+2025-10-02 21:39:41,855 - game.units - INFO - UnitManager initialized
+2025-10-02 21:39:41,855 - game.upgrades - INFO - UpgradeManager initialized
+2025-10-02 21:39:41,856 - game.game_state - INFO - GameState initialized
+2025-10-02 21:39:41,856 - game.game_state - INFO - Initializing new game...
+2025-10-02 21:39:41,856 - engine.state_manager - DEBUG - State set: game.initialized = True (was None)
+2025-10-02 21:39:41,856 - engine.state_manager - DEBUG - State set: game.started_at = 2025-10-02T21:39:41.856403 (was None)
+2025-10-02 21:39:41,856 - game.game_state - INFO - Game initialization complete
+2025-10-02 21:39:41,856 - game.resources - INFO - Resource added: gold (initial=100, rate=0.5/s)
+2025-10-02 21:39:41,856 - game.resources - INFO - Resource added: wood (initial=200, rate=0.0/s)
+2025-10-02 21:39:41,856 - game.resources - INFO - Resource added: food (initial=50, rate=0.0/s)
+2025-10-02 21:39:41,857 - game.resources - INFO - Resource added: stone (initial=0, rate=0.0/s)
+2025-10-02 21:39:41,857 - game.buildings - INFO - Building registered: farm (cost={'wood': 50, 'gold': 20})
+2025-10-02 21:39:41,857 - game.buildings - INFO - Building registered: quarry (cost={'wood': 80, 'gold': 30})
+2025-10-02 21:39:41,857 - game.buildings - INFO - Building registered: lumber_mill (cost={'wood': 100, 'gold': 50})
+2025-10-02 21:39:41,857 - game.units - INFO - Unit registered: worker (cost={'food': 10})
+2025-10-02 21:39:41,857 - game.units - INFO - Unit registered: miner (cost={'food': 15, 'gold': 5})
+2025-10-02 21:39:41,858 - game.upgrades - INFO - Upgrade registered: better_tools (cost={'gold': 50})
+2025-10-02 21:39:41,858 - game.upgrades - INFO - Upgrade registered: advanced_tools (cost={'gold': 150, 'stone': 20})
+2025-10-02 21:39:41,858 - game.upgrades - INFO - Upgrade registered: worker_training (cost={'gold': 30})
+2025-10-02 21:39:41,858 - game.resources - DEBUG - Spent 50 wood (remaining: 150)
+2025-10-02 21:39:41,858 - game.resources - DEBUG - Spent 20 gold (remaining: 80)
+2025-10-02 21:39:41,858 - game.buildings - INFO - Built 1x farm (total: 1)
+2025-10-02 21:39:41,858 - game.resources - DEBUG - food generation rate: 0.0/s → 1.0/s
+2025-10-02 21:39:41,859 - game.resources - DEBUG - Spent 80 wood (remaining: 70)
+2025-10-02 21:39:41,859 - game.resources - DEBUG - Spent 30 gold (remaining: 50)
+2025-10-02 21:39:41,859 - game.buildings - INFO - Built 1x quarry (total: 1)
+2025-10-02 21:39:41,859 - game.resources - DEBUG - food generation rate: 1.0/s → 1.0/s
+2025-10-02 21:39:41,859 - game.resources - DEBUG - stone generation rate: 0.0/s → 0.5/s
+2025-10-02 21:39:41,859 - game.resources - DEBUG - Spent 20 food (remaining: 30)
+2025-10-02 21:39:41,859 - game.units - INFO - Recruited 2x worker (total: 2)
+2025-10-02 21:39:41,859 - game.resources - DEBUG - gold generation rate: 0.5/s → 1.1/s
+2025-10-02 21:39:41,860 - game.resources - DEBUG - Spent 50 gold (remaining: 0)
+2025-10-02 21:39:41,860 - game.upgrades - INFO - Purchased upgrade: better_tools
+2025-10-02 21:39:41,860 - engine.tick_system - INFO - TickSystem initialized with tick_rate=1.0s
+2025-10-02 21:39:41,860 - engine.tick_system - INFO - Registered tick callback: on_tick
+2025-10-02 21:39:41,860 - engine.tick_system - INFO - TickSystem started
+2025-10-02 21:39:42,867 - game.resources - DEBUG - Added 1.1069824218750002 gold (requested 1.1069824218750002)
+2025-10-02 21:39:42,867 - game.resources - DEBUG - Added 1.00634765625 food (requested 1.00634765625)
+2025-10-02 21:39:42,867 - game.resources - DEBUG - Added 0.503173828125 stone (requested 0.503173828125)
+2025-10-02 21:39:42,868 - game.resources - DEBUG - Added 1.00634765625 food (requested 1.00634765625)
+2025-10-02 21:39:42,868 - game.resources - DEBUG - Added 0.503173828125 stone (requested 0.503173828125)
+2025-10-02 21:39:42,868 - game.resources - DEBUG - Added 0.60380859375 gold (requested 0.60380859375)
+2025-10-02 21:39:42,868 - game.resources - DEBUG - Spent 0.20126953125000002 food (remaining: 31.81142578125)
+2025-10-02 21:39:42,869 - game.game_state - DEBUG - Game updated (Δt=1.006s)
+2025-10-02 21:39:42,869 - engine.tick_system - DEBUG - Tick #1 executed (Δt=1.006s)
+2025-10-02 21:39:43,875 - game.resources - DEBUG - Added 1.1092617273330687 gold (requested 1.109261727333069)
+2025-10-02 21:39:43,875 - game.resources - DEBUG - gold storage full, wasted 2.220446049250313e-16
+2025-10-02 21:39:43,875 - game.resources - DEBUG - Added 1.0084197521209717 food (requested 1.0084197521209717)
+2025-10-02 21:39:43,876 - game.resources - DEBUG - Added 0.5042098760604858 stone (requested 0.5042098760604858)
+2025-10-02 21:39:43,876 - game.resources - DEBUG - Added 1.0084197521209717 food (requested 1.0084197521209717)
+2025-10-02 21:39:43,876 - game.resources - DEBUG - Added 0.5042098760604858 stone (requested 0.5042098760604858)
+2025-10-02 21:39:43,876 - game.resources - DEBUG - Added 0.6050518512725831 gold (requested 0.605051851272583)
+2025-10-02 21:39:43,876 - game.resources - DEBUG - Spent 0.20168395042419435 food (remaining: 33.62658133506775)
+2025-10-02 21:39:43,876 - game.game_state - DEBUG - Game updated (Δt=1.008s)
+2025-10-02 21:39:43,876 - engine.tick_system - DEBUG - Tick #2 executed (Δt=1.008s)
+2025-10-02 21:39:44,882 - game.resources - DEBUG - Added 1.1082121610641482 gold (requested 1.108212161064148)
+2025-10-02 21:39:44,883 - game.resources - DEBUG - Added 1.0074656009674072 food (requested 1.0074656009674072)
+2025-10-02 21:39:44,883 - game.resources - DEBUG - Added 0.5037328004837036 stone (requested 0.5037328004837036)
+2025-10-02 21:39:44,883 - game.resources - DEBUG - Added 1.0074656009674072 food (requested 1.0074656009674072)
+2025-10-02 21:39:44,884 - game.resources - DEBUG - Added 0.5037328004837036 stone (requested 0.5037328004837036)
+2025-10-02 21:39:44,884 - game.resources - DEBUG - Added 0.6044793605804442 gold (requested 0.6044793605804443)
+2025-10-02 21:39:44,884 - game.resources - DEBUG - Spent 0.20149312019348145 food (remaining: 35.44001941680908)
+2025-10-02 21:39:44,884 - game.game_state - DEBUG - Game updated (Δt=1.007s)
+2025-10-02 21:39:44,884 - engine.tick_system - DEBUG - Tick #3 executed (Δt=1.007s)
+2025-10-02 21:39:45,891 - game.resources - DEBUG - Added 1.109030938148499 gold (requested 1.1090309381484986)
+2025-10-02 21:39:45,891 - game.resources - DEBUG - Added 1.0082099437713623 food (requested 1.0082099437713623)
+2025-10-02 21:39:45,891 - game.resources - DEBUG - Added 0.5041049718856812 stone (requested 0.5041049718856812)
+2025-10-02 21:39:45,891 - game.resources - DEBUG - Added 1.0082099437713623 food (requested 1.0082099437713623)
+2025-10-02 21:39:45,891 - game.resources - DEBUG - Added 0.5041049718856812 stone (requested 0.5041049718856812)
+2025-10-02 21:39:45,892 - game.resources - DEBUG - Added 0.604925966262817 gold (requested 0.6049259662628174)
+2025-10-02 21:39:45,892 - game.resources - DEBUG - Spent 0.20164198875427247 food (remaining: 37.25479731559753)
+2025-10-02 21:39:45,892 - game.game_state - DEBUG - Game updated (Δt=1.008s)
+2025-10-02 21:39:45,892 - engine.tick_system - DEBUG - Tick #4 executed (Δt=1.008s)
+2025-10-02 21:39:46,899 - game.resources - DEBUG - Added 1.108689999580383 gold (requested 1.1086899995803834)
+2025-10-02 21:39:46,899 - game.resources - DEBUG - gold storage full, wasted 4.440892098500626e-16
+2025-10-02 21:39:46,902 - game.resources - DEBUG - Added 1.0078999996185303 food (requested 1.0078999996185303)
+2025-10-02 21:39:46,902 - game.resources - DEBUG - Added 0.5039499998092651 stone (requested 0.5039499998092651)
+2025-10-02 21:39:46,902 - game.resources - DEBUG - Added 1.0078999996185303 food (requested 1.0078999996185303)
+2025-10-02 21:39:46,902 - game.resources - DEBUG - Added 0.5039499998092651 stone (requested 0.5039499998092651)
+2025-10-02 21:39:46,902 - game.resources - DEBUG - Added 0.6047399997711178 gold (requested 0.6047399997711181)
+2025-10-02 21:39:46,902 - game.resources - DEBUG - Spent 0.20157999992370607 food (remaining: 39.06901731491088)
+2025-10-02 21:39:46,903 - game.game_state - DEBUG - Game updated (Δt=1.008s)
+2025-10-02 21:39:46,903 - engine.tick_system - DEBUG - Tick #5 executed (Δt=1.008s)
+2025-10-02 21:39:47,899 - game.resources - DEBUG - Added 1.1004870176315311 gold (requested 1.100487017631531)
+2025-10-02 21:39:47,899 - game.resources - DEBUG - Added 1.0004427433013916 food (requested 1.0004427433013916)
+2025-10-02 21:39:47,899 - game.resources - DEBUG - Added 0.5002213716506958 stone (requested 0.5002213716506958)
+2025-10-02 21:39:47,900 - game.resources - DEBUG - Added 1.0004427433013916 food (requested 1.0004427433013916)
+2025-10-02 21:39:47,900 - game.resources - DEBUG - Added 0.5002213716506958 stone (requested 0.5002213716506958)
+2025-10-02 21:39:47,900 - game.resources - DEBUG - Added 0.6002656459808353 gold (requested 0.600265645980835)
+2025-10-02 21:39:47,900 - game.resources - DEBUG - Spent 0.20008854866027834 food (remaining: 40.86981425285339)
+2025-10-02 21:39:47,900 - game.game_state - DEBUG - Game updated (Δt=1.000s)
+2025-10-02 21:39:47,900 - engine.tick_system - DEBUG - Tick #6 executed (Δt=1.000s)
+2025-10-02 21:39:48,907 - game.resources - DEBUG - Added 1.1089782238006602 gold (requested 1.1089782238006594)
+2025-10-02 21:39:48,907 - game.resources - DEBUG - Added 1.008162021636963 food (requested 1.008162021636963)
+2025-10-02 21:39:48,908 - game.resources - DEBUG - Added 0.5040810108184814 stone (requested 0.5040810108184814)
+2025-10-02 21:39:48,908 - game.resources - DEBUG - Added 1.008162021636963 food (requested 1.008162021636963)
+2025-10-02 21:39:48,908 - game.resources - DEBUG - Added 0.5040810108184814 stone (requested 0.5040810108184814)
+2025-10-02 21:39:48,908 - game.resources - DEBUG - Added 0.604897212982177 gold (requested 0.6048972129821777)
+2025-10-02 21:39:48,908 - game.resources - DEBUG - Spent 0.2016324043273926 food (remaining: 42.68450589179992)
+2025-10-02 21:39:48,908 - game.game_state - DEBUG - Game updated (Δt=1.008s)
+2025-10-02 21:39:48,908 - engine.tick_system - DEBUG - Tick #7 executed (Δt=1.008s)
+2025-10-02 21:39:49,915 - game.resources - DEBUG - Added 1.1087956905364997 gold (requested 1.108795690536499)
+2025-10-02 21:39:49,915 - game.resources - DEBUG - Added 1.0079960823059082 food (requested 1.0079960823059082)
+2025-10-02 21:39:49,916 - game.resources - DEBUG - Added 0.5039980411529541 stone (requested 0.5039980411529541)
+2025-10-02 21:39:49,916 - game.resources - DEBUG - Added 1.0079960823059082 food (requested 1.0079960823059082)
+2025-10-02 21:39:49,916 - game.resources - DEBUG - Added 0.5039980411529541 stone (requested 0.5039980411529541)
+2025-10-02 21:39:49,916 - game.resources - DEBUG - Added 0.6047976493835456 gold (requested 0.6047976493835449)
+2025-10-02 21:39:49,916 - game.resources - DEBUG - Spent 0.20159921646118165 food (remaining: 44.498898839950556)
+2025-10-02 21:39:49,916 - game.game_state - DEBUG - Game updated (Δt=1.008s)
+2025-10-02 21:39:49,916 - engine.tick_system - DEBUG - Tick #8 executed (Δt=1.008s)
+2025-10-02 21:39:50,923 - game.resources - DEBUG - Added 1.1085195302963253 gold (requested 1.1085195302963258)
+2025-10-02 21:39:50,923 - game.resources - DEBUG - gold storage full, wasted 4.440892098500626e-16
+2025-10-02 21:39:50,923 - game.resources - DEBUG - Added 1.0077450275421143 food (requested 1.0077450275421143)
+2025-10-02 21:39:50,924 - game.resources - DEBUG - Added 0.5038725137710571 stone (requested 0.5038725137710571)
+2025-10-02 21:39:50,924 - game.resources - DEBUG - Added 1.0077450275421143 food (requested 1.0077450275421143)
+2025-10-02 21:39:50,924 - game.resources - DEBUG - Added 0.5038725137710571 stone (requested 0.5038725137710571)
+2025-10-02 21:39:50,924 - game.resources - DEBUG - Added 0.6046470165252682 gold (requested 0.6046470165252685)
+2025-10-02 21:39:50,924 - game.resources - DEBUG - Spent 0.20154900550842286 food (remaining: 46.31283988952636)
+2025-10-02 21:39:50,924 - game.game_state - DEBUG - Game updated (Δt=1.008s)
+2025-10-02 21:39:50,925 - engine.tick_system - DEBUG - Tick #9 executed (Δt=1.008s)
+2025-10-02 21:39:51,861 - engine.tick_system - INFO - TickSystem stopped after 9 ticks
+2025-10-02 21:39:51,864 - game.game_state - INFO - Game saved to test_integration_save.json
+2025-10-02 21:39:51,864 - engine.state_manager - INFO - StateManager initialized
+2025-10-02 21:39:51,864 - game.resources - INFO - ResourceManager initialized
+2025-10-02 21:39:51,864 - game.buildings - INFO - BuildingManager initialized
+2025-10-02 21:39:51,864 - game.units - INFO - UnitManager initialized
+2025-10-02 21:39:51,864 - game.upgrades - INFO - UpgradeManager initialized
+2025-10-02 21:39:51,865 - game.game_state - INFO - GameState initialized
+2025-10-02 21:39:51,865 - engine.state_manager - INFO - State replaced with new data
+2025-10-02 21:39:51,865 - game.resources - INFO - Loaded 4 resources from data
+2025-10-02 21:39:51,866 - game.buildings - INFO - Loaded 3 buildings from data
+2025-10-02 21:39:51,866 - game.resources - DEBUG - food generation rate: 1.0/s → 1.0/s
+2025-10-02 21:39:51,866 - game.resources - DEBUG - stone generation rate: 0.5/s → 0.5/s
+2025-10-02 21:39:51,866 - game.units - INFO - Loaded 2 units from data
+2025-10-02 21:39:51,866 - game.resources - DEBUG - gold generation rate: 1.1/s → 1.7000000000000002/s
+2025-10-02 21:39:51,867 - game.upgrades - INFO - Loaded 3 upgrades from data
+2025-10-02 21:39:51,867 - game.game_state - INFO - Game loaded from test_integration_save.json
+2025-10-02 21:39:51,868 - engine.state_manager - INFO - StateManager initialized
+2025-10-02 21:39:51,868 - game.resources - INFO - ResourceManager initialized
+2025-10-02 21:39:51,868 - game.buildings - INFO - BuildingManager initialized
+2025-10-02 21:39:51,869 - game.units - INFO - UnitManager initialized
+2025-10-02 21:39:51,869 - game.upgrades - INFO - UpgradeManager initialized
+2025-10-02 21:39:51,869 - game.game_state - INFO - GameState initialized
+2025-10-02 21:39:51,869 - game.game_state - INFO - Initializing new game...
+2025-10-02 21:39:51,869 - engine.state_manager - DEBUG - State set: game.initialized = True (was None)
+2025-10-02 21:39:51,869 - engine.state_manager - DEBUG - State set: game.started_at = 2025-10-02T21:39:51.869826 (was None)
+2025-10-02 21:39:51,870 - game.game_state - INFO - Game initialization complete
+2025-10-02 21:39:51,870 - game.resources - INFO - Resource added: gold (initial=10, rate=0.0/s)
+2025-10-02 21:39:51,870 - game.buildings - INFO - Building registered: expensive (cost={'gold': 100})
+2025-10-02 21:39:51,870 - game.buildings - DEBUG - Cannot build 1x expensive
+2025-10-02 21:39:51,870 - game.resources - INFO - Resource added: research (initial=1000, rate=0.0/s)
+2025-10-02 21:39:51,871 - game.upgrades - INFO - Upgrade registered: basic (cost={'research': 10})
+2025-10-02 21:39:51,871 - game.upgrades - INFO - Upgrade registered: advanced (cost={'research': 20})
+2025-10-02 21:39:51,871 - game.upgrades - DEBUG - Upgrade 'advanced' requires 'basic'
+2025-10-02 21:39:51,871 - game.resources - DEBUG - Spent 10 research (remaining: 990)
+2025-10-02 21:39:51,871 - game.upgrades - INFO - Purchased upgrade: basic
+2025-10-02 21:39:51,871 - game.resources - INFO - Resource added: limited (initial=90, rate=0.0/s)
+2025-10-02 21:39:51,871 - game.resources - DEBUG - Added 10 limited (requested 20)
+2025-10-02 21:39:51,871 - game.upgrades - INFO - Upgrade registered: repeatable (cost={'research': 50})
+2025-10-02 21:39:51,872 - game.resources - DEBUG - Spent 50 research (remaining: 940)
+2025-10-02 21:39:51,872 - game.upgrades - INFO - Purchased upgrade: repeatable
+2025-10-02 21:39:51,872 - game.resources - DEBUG - Spent 75.0 research (remaining: 865.0)
+2025-10-02 21:39:51,872 - game.upgrades - INFO - Purchased upgrade: repeatable

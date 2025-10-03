@@ -353,6 +353,15 @@ class GameState:
 
 # Example usage
 if __name__ == "__main__":
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+    from game.resources import ResourceManager
+    from game.buildings import BuildingManager
+    from game.units import UnitManager
+    from game.upgrades import UpgradeManager
+    from engine.state_manager import StateManager
+
     # Create new game
     game = GameState()
     game.initialize()
