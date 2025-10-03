@@ -112,7 +112,7 @@ class HelpScreen:
         # Section header
         self.ui.print_colored(f"║ {title}", Color.BRIGHT_WHITE)
         self.ui.print_colored(
-            "║ ────────────────────────────────────────────────────────────────── ║",
+            "║ " + "─" * 69 + " ║",
             Color.WHITE
         )
 

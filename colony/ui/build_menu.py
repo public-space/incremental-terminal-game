@@ -133,7 +133,7 @@ class BuildMenu:
 
         # Separator
         self.ui.print_colored(
-            "║ ────────────────────────────────────────────────────────────────── ║",
+            "║ " + "─" * 69 + " ║",
             Color.WHITE
         )
 
