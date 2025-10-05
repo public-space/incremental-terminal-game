@@ -431,13 +431,19 @@ class BuildingManager:
         if not self.resource_manager:
             return
 
-        # Calculate total production per resource
+        # Calculate total production and consumption per resource
         total_production = self.get_total_production()
+        total_consumption = self.get_total_consumption()
 
-        # Update resource generation rates
-        for resource_name, rate in total_production.items():
+        # Update resource generation rates (net production - consumption)
+        all_resources = set(total_production.keys()) | set(total_consumption.keys())
+        for resource_name in all_resources:
+            production = total_production.get(resource_name, 0)
+            consumption = total_consumption.get(resource_name, 0)
+            net_rate = production - consumption
+
             if self.resource_manager.has_resource(resource_name):
-                self.resource_manager.set_generation_rate(resource_name, rate)
+                self.resource_manager.set_generation_rate(resource_name, net_rate)
 
     def register_build_callback(self, callback: Callable):
         """

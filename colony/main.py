@@ -65,7 +65,7 @@ class ColonyGame:
         # Timing
         self.sol_timer = 0.0
         self.render_timer = 0.0
-        self.render_interval = 1.0 / 5.0  # Render at 5 FPS
+        self.render_interval = 1.0 / 30.0  # Render at 30 FPS
 
         # Setup
         self._setup_callbacks()
@@ -235,7 +235,12 @@ class ColonyGame:
         try:
             config.ensure_save_directory()
             self.game_state.save_game(config.DEFAULT_SAVE_FILE)
-            self.event_log.success(f"Game saved")
+
+            # Get save file name for display
+            save_name = os.path.basename(config.DEFAULT_SAVE_FILE)
+            sol = self.game_state.metadata.get('sol', 0)
+
+            self.event_log.success(f"Colony saved to {save_name} (Sol {sol})")
             logger.info(f"Game saved to {config.DEFAULT_SAVE_FILE}")
         except Exception as e:
             self.event_log.critical(f"Save failed: {e}")
@@ -275,19 +280,19 @@ class ColonyGame:
         ui.clear_screen()
 
         # Title
-        ui.print_colored("╔═══════════════════════════════════════════════════════════════════════╗", Color.BRIGHT_CYAN)
-        ui.print_colored("║                                                                       ║", Color.CYAN)
-        ui.print_colored("║                          COLONY.SH                                    ║", Color.BRIGHT_WHITE, style=Color.BOLD)
-        ui.print_colored("║                                                                       ║", Color.CYAN)
-        ui.print_colored("║                  Frontier Colony Survival Sim                         ║", Color.CYAN)
-        ui.print_colored("║                                                                       ║", Color.CYAN)
-        ui.print_colored("╠═══════════════════════════════════════════════════════════════════════╣", Color.BRIGHT_CYAN)
-        ui.print_colored("║                                                                       ║", Color.WHITE)
-        ui.print_colored("║   [1] New Colony                                                      ║", Color.WHITE)
-        ui.print_colored("║   [2] Load Colony                                                     ║", Color.WHITE)
-        ui.print_colored("║   [3] Quit                                                            ║", Color.WHITE)
-        ui.print_colored("║                                                                       ║", Color.WHITE)
-        ui.print_colored("╚═══════════════════════════════════════════════════════════════════════╝", Color.BRIGHT_CYAN)
+        ui.print_colored("╔════════════════════════════════════════════════════════════════════════╗", Color.BRIGHT_CYAN)
+        ui.print_colored("║                                                                        ║", Color.CYAN)
+        ui.print_colored("║                          COLONY.SH                                     ║", Color.BRIGHT_WHITE, style=Color.BOLD)
+        ui.print_colored("║                                                                        ║", Color.CYAN)
+        ui.print_colored("║                  Frontier Colony Survival Sim                          ║", Color.CYAN)
+        ui.print_colored("║                                                                        ║", Color.CYAN)
+        ui.print_colored("╠════════════════════════════════════════════════════════════════════════╣", Color.BRIGHT_CYAN)
+        ui.print_colored("║                                                                        ║", Color.WHITE)
+        ui.print_colored("║   [1] New Colony                                                       ║", Color.WHITE)
+        ui.print_colored("║   [2] Load Colony                                                      ║", Color.WHITE)
+        ui.print_colored("║   [3] Quit                                                             ║", Color.WHITE)
+        ui.print_colored("║                                                                        ║", Color.WHITE)
+        ui.print_colored("╚════════════════════════════════════════════════════════════════════════╝", Color.BRIGHT_CYAN)
 
         print("\n> ", end='', flush=True)
 

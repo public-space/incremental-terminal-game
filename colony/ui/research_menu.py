@@ -42,15 +42,15 @@ class ResearchMenu:
 
         # Header
         self.ui.print_colored(
-            "╔═══ RESEARCH TERMINAL ════════════════════════════════════════════════╗",
+            "╔═══ RESEARCH TERMINAL ══════════════════════════════════════════════════╗",
             Color.BRIGHT_CYAN
         )
         self.ui.print_colored(
-            "║ Access corrupted databases. Unlock ancient knowledge.                ║",
+            "║ Access corrupted databases. Unlock ancient knowledge.                 ║",
             Color.CYAN
         )
         self.ui.print_colored(
-            "╠══════════════════════════════════════════════════════════════════════╣",
+            "╠════════════════════════════════════════════════════════════════════════╣",
             Color.BRIGHT_CYAN
         )
 
@@ -64,9 +64,9 @@ class ResearchMenu:
 
         # Display available research
         if available:
-            self.ui.print_colored("║ AVAILABLE RESEARCH", Color.BRIGHT_WHITE)
+            self.ui.print_colored("║ AVAILABLE RESEARCH" + " " * 51 + " ║", Color.BRIGHT_WHITE)
             self.ui.print_colored(
-                "║ ────────────────────────────────────────────────────────────────── ║",
+                "║ " + "─" * 69 + " ║",
                 Color.WHITE
             )
 
@@ -75,9 +75,9 @@ class ResearchMenu:
 
         # Display completed research
         if completed:
-            self.ui.print_colored("║ COMPLETED RESEARCH", Color.BRIGHT_GREEN)
+            self.ui.print_colored("║ COMPLETED RESEARCH" + " " * 51 + " ║", Color.BRIGHT_GREEN)
             self.ui.print_colored(
-                "║ ────────────────────────────────────────────────────────────────── ║",
+                "║ " + "─" * 69 + " ║",
                 Color.GREEN
             )
 
@@ -93,15 +93,15 @@ class ResearchMenu:
 
         # Footer
         self.ui.print_colored(
-            "╠══════════════════════════════════════════════════════════════════════╣",
+            "╠════════════════════════════════════════════════════════════════════════╣",
             Color.BRIGHT_CYAN
         )
         self.ui.print_colored(
-            "║ Enter number to research, or [ESC] to return                        ║",
+            "║ Enter number to research, or [ESC] to return                         ║",
             Color.CYAN
         )
         self.ui.print_colored(
-            "╚══════════════════════════════════════════════════════════════════════╝",
+            "╚════════════════════════════════════════════════════════════════════════╝",
             Color.BRIGHT_CYAN
         )
 
@@ -165,7 +165,7 @@ class ResearchMenu:
 
         # Separator
         self.ui.print_colored(
-            "║ ────────────────────────────────────────────────────────────────── ║",
+            "║ " + "─" * 69 + " ║",
             Color.WHITE
         )
 
@@ -197,7 +197,7 @@ class ResearchMenu:
                     upgrade_name, upgrade = available_list[idx - 1]
 
                     # Try to purchase
-                    success = game_state.upgrades.purchase(upgrade_name, game_state.resources)
+                    success = game_state.upgrades.purchase(upgrade_name)
 
                     if success:
                         return (True, f"Research complete: {upgrade.display_name}")
@@ -226,7 +226,7 @@ if __name__ == "__main__":
     game.resources.add('biomass', 50)
 
     # Purchase one upgrade to show completed section
-    game.upgrades.purchase('efficient_extraction', game.resources)
+    game.upgrades.purchase('efficient_extraction')
 
     # Render menu
     ui = UIFramework(use_colors=True)

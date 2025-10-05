@@ -2,20 +2,20 @@
   "metadata": {
     "version": "1.0.0",
     "created_at": "2025-10-03T08:08:33.299287",
-    "last_saved": "2025-10-03T08:11:47.135235",
-    "total_playtime": 193.32829570770264,
-    "tick_count": 10,
+    "last_saved": "2025-10-03T11:24:46.449237",
+    "total_playtime": 1464.3279328346252,
+    "tick_count": 1162,
     "game_name": "colony.sh",
-    "sol": 1,
+    "sol": 22,
     "started": true
   },
   "state": {},
   "resources": {
     "energy": {
       "name": "energy",
-      "amount": 20.790571808815002,
+      "amount": 68.26611030101776,
       "max_storage": 100.0,
-      "generation_rate": 2.5,
+      "generation_rate": 40.5,
       "display_name": "\u26a1 Energy",
       "description": "Life support. Without it, everything stops.",
       "unlocked": true,
@@ -29,9 +29,9 @@
     },
     "metal": {
       "name": "metal",
-      "amount": 10.0,
+      "amount": 50.0,
       "max_storage": 50.0,
-      "generation_rate": 0,
+      "generation_rate": 13.5,
       "display_name": "\u26cf Metal",
       "description": "Salvaged from dead rock. Construction material.",
       "unlocked": true,
@@ -44,9 +44,9 @@
     },
     "biomass": {
       "name": "biomass",
-      "amount": 15.0,
+      "amount": 75.0,
       "max_storage": 75.0,
-      "generation_rate": 0,
+      "generation_rate": 8.0,
       "display_name": "\ud83e\uddec Biomass",
       "description": "Recycled organic matter. Keeps colonists alive. Don't think about it.",
       "unlocked": true,
@@ -84,7 +84,7 @@
       "cost": {
         "metal": 5.0
       },
-      "count": 1,
+      "count": 24,
       "produces": {
         "energy": 3.0
       },
@@ -109,7 +109,7 @@
         "metal": 10.0,
         "energy": 5.0
       },
-      "count": 0,
+      "count": 9,
       "produces": {
         "metal": 1.5
       },
@@ -136,7 +136,7 @@
         "metal": 15.0,
         "energy": 8.0
       },
-      "count": 0,
+      "count": 4,
       "produces": {
         "biomass": 2.0
       },
@@ -163,7 +163,7 @@
         "metal": 20.0,
         "energy": 10.0
       },
-      "count": 1,
+      "count": 3,
       "produces": {},
       "consumes": {
         "energy": 0.5
@@ -189,7 +189,7 @@
         "metal": 25.0,
         "energy": 15.0
       },
-      "count": 0,
+      "count": 2,
       "produces": {},
       "consumes": {
         "energy": 3.0
@@ -218,7 +218,7 @@
         "metal": 30.0,
         "energy": 20.0
       },
-      "purchased": false,
+      "purchased": true,
       "effects": {
         "metal_production_multiplier": 1.5
       },
@@ -245,7 +245,7 @@
         "energy": 25.0,
         "biomass": 10.0
       },
-      "purchased": false,
+      "purchased": true,
       "effects": {
         "biomass_production_multiplier": 1.5
       },
@@ -271,7 +271,7 @@
         "metal": 50.0,
         "energy": 40.0
       },
-      "purchased": false,
+      "purchased": true,
       "effects": {
         "energy_production_multiplier": 2.0
       },
@@ -297,7 +297,7 @@
         "metal": 35.0,
         "energy": 30.0
       },
-      "purchased": false,
+      "purchased": true,
       "effects": {
         "energy_consumption_multiplier": 0.8
       },

@@ -307,11 +307,11 @@ class UIFramework:
             return 80, 24  # Default fallback
 
     def clear_screen(self):
-        """Clear the terminal screen."""
-        if os.name == 'nt':  # Windows
-            os.system('cls')
-        else:  # Unix/Linux/Mac
-            os.system('clear')
+        """Clear the terminal screen using ANSI escape sequences."""
+        # Use ANSI escape codes instead of os.system() to reduce flicker
+        # \033[H moves cursor to 0,0
+        # \033[2J clears entire screen
+        print('\033[H\033[2J', end='', flush=True)
         logger.debug("Screen cleared")
 
     def move_cursor(self, x: int, y: int):

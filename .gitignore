@@ -63,3 +63,6 @@ htmlcov/
 *.backup
 temp/
 tmp/
+
+# Claude Code tracking files
+*.claude-code.md
