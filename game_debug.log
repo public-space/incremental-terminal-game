@@ -31371,3 +31371,503 @@ EOFError: EOF when reading a line
 2025-10-03 12:19:28,304 - engine.ui_framework - DEBUG - Screen cleared
 2025-10-03 12:19:28,305 - engine.input_handler - DEBUG - Executing command: b with args: []
 2025-10-03 12:19:28,305 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-03 13:05:49,208 - asyncio - DEBUG - Using selector: EpollSelector
+2025-10-03 13:05:49,231 - engine.state_manager - INFO - StateManager initialized
+2025-10-03 13:05:49,231 - engine.resources - INFO - ResourceManager initialized
+2025-10-03 13:05:49,231 - engine.buildings - INFO - BuildingManager initialized
+2025-10-03 13:05:49,231 - engine.units - INFO - UnitManager initialized
+2025-10-03 13:05:49,231 - engine.upgrades - INFO - UpgradeManager initialized
+2025-10-03 13:05:49,231 - engine.game_state - INFO - GameState initialized
+2025-10-03 13:05:49,231 - engine.resources - INFO - Resource added: energy (initial=20.0, rate=0.0/s)
+2025-10-03 13:05:49,232 - engine.resources - INFO - Resource added: metal (initial=10.0, rate=0.0/s)
+2025-10-03 13:05:49,232 - engine.resources - INFO - Resource added: biomass (initial=15.0, rate=0.0/s)
+2025-10-03 13:05:49,232 - engine.resources - INFO - Resource added: colonists (initial=3.0, rate=0.0/s)
+2025-10-03 13:05:49,232 - engine.buildings - INFO - Building registered: solar_array (cost={'metal': 5.0})
+2025-10-03 13:05:49,232 - engine.buildings - INFO - Building registered: mining_rig (cost={'metal': 10.0, 'energy': 5.0})
+2025-10-03 13:05:49,232 - engine.buildings - INFO - Building registered: reclamation_bay (cost={'metal': 15.0, 'energy': 8.0})
+2025-10-03 13:05:49,232 - engine.buildings - INFO - Building registered: hab_module (cost={'metal': 20.0, 'energy': 10.0})
+2025-10-03 13:05:49,232 - engine.buildings - INFO - Building registered: research_terminal (cost={'metal': 25.0, 'energy': 15.0})
+2025-10-03 13:05:49,232 - engine.upgrades - INFO - Upgrade registered: efficient_extraction (cost={'metal': 30.0, 'energy': 20.0})
+2025-10-03 13:05:49,232 - engine.upgrades - INFO - Upgrade registered: closed_loop_bioreactor (cost={'metal': 40.0, 'energy': 25.0, 'biomass': 10.0})
+2025-10-03 13:05:49,232 - engine.upgrades - INFO - Upgrade registered: fusion_ignition (cost={'metal': 50.0, 'energy': 40.0})
+2025-10-03 13:05:49,232 - engine.upgrades - INFO - Upgrade registered: redundant_systems (cost={'metal': 35.0, 'energy': 30.0})
+2025-10-03 13:05:49,232 - engine.resources - DEBUG - Resource 'energy' amount changed: 20.0 → 20.0
+2025-10-03 13:05:49,232 - engine.resources - DEBUG - Resource 'metal' amount changed: 10.0 → 10.0
+2025-10-03 13:05:49,232 - engine.resources - DEBUG - Resource 'biomass' amount changed: 15.0 → 15.0
+2025-10-03 13:05:49,232 - engine.resources - DEBUG - Resource 'colonists' amount changed: 3.0 → 3.0
+2025-10-03 13:05:49,232 - engine.resources - DEBUG - energy generation rate: 0.0/s → 2.5/s
+2025-10-03 13:05:49,333 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:49,333 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:49,333 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 20.5)
+2025-10-03 13:05:49,333 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:49,435 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:49,435 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:49,435 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 21.0)
+2025-10-03 13:05:49,435 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:49,539 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:49,539 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:49,540 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 21.5)
+2025-10-03 13:05:49,540 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:49,643 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:49,643 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:49,643 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 22.0)
+2025-10-03 13:05:49,643 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:49,747 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:49,747 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:49,747 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 22.5)
+2025-10-03 13:05:49,747 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:49,851 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:49,851 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:49,851 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 23.0)
+2025-10-03 13:05:49,851 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:49,955 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:49,956 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:49,956 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 23.5)
+2025-10-03 13:05:49,956 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,060 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,061 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,061 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 24.0)
+2025-10-03 13:05:50,061 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,165 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,165 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,165 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 24.5)
+2025-10-03 13:05:50,165 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,269 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,269 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,269 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 25.0)
+2025-10-03 13:05:50,269 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,372 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,372 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,373 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 25.5)
+2025-10-03 13:05:50,373 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,476 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,476 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,477 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 26.0)
+2025-10-03 13:05:50,477 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,581 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,581 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,581 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 26.5)
+2025-10-03 13:05:50,581 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,684 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,684 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,685 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 27.0)
+2025-10-03 13:05:50,685 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,789 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,789 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,789 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 27.5)
+2025-10-03 13:05:50,789 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,893 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,893 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,893 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 28.0)
+2025-10-03 13:05:50,893 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:50,997 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:50,997 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:50,997 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 28.5)
+2025-10-03 13:05:50,997 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:51,102 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:51,102 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:51,102 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 29.0)
+2025-10-03 13:05:51,102 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:51,207 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:51,207 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:51,207 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 29.5)
+2025-10-03 13:05:51,208 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:51,312 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:51,312 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:51,312 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 30.0)
+2025-10-03 13:05:51,313 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:51,417 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:51,417 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:51,417 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 30.5)
+2025-10-03 13:05:51,418 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:51,522 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:51,523 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:51,523 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 31.0)
+2025-10-03 13:05:51,523 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:51,627 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:51,628 - engine.resources - DEBUG - Added 0.3000000000000007 energy (requested 0.30000000000000004)
+2025-10-03 13:05:51,628 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 31.5)
+2025-10-03 13:05:51,628 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:51,734 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:51,734 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:51,734 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 31.999999999999996)
+2025-10-03 13:05:51,734 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:51,840 - engine.resources - DEBUG - Added 0.25000000000000355 energy (requested 0.25)
+2025-10-03 13:05:51,841 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:51,841 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 32.5)
+2025-10-03 13:05:51,841 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:51,945 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:51,945 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:51,945 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 33.0)
+2025-10-03 13:05:51,945 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,049 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,049 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,050 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 33.5)
+2025-10-03 13:05:52,050 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,154 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,154 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,154 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 34.0)
+2025-10-03 13:05:52,155 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,259 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,260 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,260 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 34.5)
+2025-10-03 13:05:52,260 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,366 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,366 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,366 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 35.0)
+2025-10-03 13:05:52,366 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,472 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,473 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,473 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 35.5)
+2025-10-03 13:05:52,473 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,577 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,577 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,577 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 36.0)
+2025-10-03 13:05:52,577 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,681 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,682 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,682 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 36.5)
+2025-10-03 13:05:52,682 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,786 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,786 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,786 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 37.0)
+2025-10-03 13:05:52,787 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,891 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,891 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,891 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 37.5)
+2025-10-03 13:05:52,892 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:52,996 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:52,997 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:52,997 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 38.0)
+2025-10-03 13:05:52,997 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:53,101 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:53,101 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:53,101 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 38.5)
+2025-10-03 13:05:53,101 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:53,206 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:53,207 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:53,207 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 39.0)
+2025-10-03 13:05:53,207 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:53,311 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:53,311 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:53,311 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 39.5)
+2025-10-03 13:05:53,311 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:53,415 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:53,415 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:53,416 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 40.0)
+2025-10-03 13:05:53,416 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:53,519 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:53,520 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:53,520 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 40.5)
+2025-10-03 13:05:53,520 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:53,626 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:53,627 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:53,627 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 41.0)
+2025-10-03 13:05:53,627 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:53,731 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:53,731 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:53,732 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 41.5)
+2025-10-03 13:05:53,732 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:53,836 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:53,837 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:53,837 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 42.0)
+2025-10-03 13:05:53,837 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:53,941 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:53,942 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:53,942 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 42.5)
+2025-10-03 13:05:53,942 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:54,046 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:54,046 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:54,046 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 43.0)
+2025-10-03 13:05:54,046 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:54,151 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:54,151 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:54,152 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 43.5)
+2025-10-03 13:05:54,152 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:54,256 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:54,257 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:54,257 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 44.0)
+2025-10-03 13:05:54,257 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:54,362 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:54,362 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:54,363 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 44.5)
+2025-10-03 13:05:54,363 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:54,468 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:54,469 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:54,469 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 45.0)
+2025-10-03 13:05:54,470 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:54,575 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:54,575 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:54,575 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 45.5)
+2025-10-03 13:05:54,576 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:54,681 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:54,682 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:54,682 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 46.0)
+2025-10-03 13:05:54,682 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:54,787 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:54,787 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:54,787 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 46.5)
+2025-10-03 13:05:54,788 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:54,893 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:54,893 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:54,894 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 47.0)
+2025-10-03 13:05:54,894 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,001 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,001 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,001 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 47.5)
+2025-10-03 13:05:55,001 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,106 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,106 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,107 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 48.0)
+2025-10-03 13:05:55,107 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,211 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,212 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,212 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 48.5)
+2025-10-03 13:05:55,212 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,318 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,318 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,318 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 49.0)
+2025-10-03 13:05:55,318 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,425 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,426 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,426 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 49.5)
+2025-10-03 13:05:55,426 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,534 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,534 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,534 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 50.0)
+2025-10-03 13:05:55,534 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,639 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,640 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,640 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 50.5)
+2025-10-03 13:05:55,640 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,744 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,745 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,745 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 51.0)
+2025-10-03 13:05:55,745 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,849 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,850 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,850 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 51.5)
+2025-10-03 13:05:55,850 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:55,956 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:55,956 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:55,956 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 52.0)
+2025-10-03 13:05:55,957 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:56,061 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:56,061 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:56,061 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 52.5)
+2025-10-03 13:05:56,062 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:56,166 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:56,166 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:56,166 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 53.0)
+2025-10-03 13:05:56,166 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:56,271 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:56,271 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:56,271 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 53.5)
+2025-10-03 13:05:56,271 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:56,378 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:56,378 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:56,378 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 54.0)
+2025-10-03 13:05:56,379 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:56,484 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:56,484 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:56,485 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 54.5)
+2025-10-03 13:05:56,485 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:56,589 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:56,589 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:56,589 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 55.0)
+2025-10-03 13:05:56,589 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:56,694 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:56,694 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:56,694 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 55.5)
+2025-10-03 13:05:56,694 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:56,800 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:56,801 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:56,801 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 56.0)
+2025-10-03 13:05:56,801 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:56,906 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:56,906 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:56,906 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 56.5)
+2025-10-03 13:05:56,906 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,011 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,011 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,012 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 57.0)
+2025-10-03 13:05:57,012 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,119 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,120 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,120 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 57.5)
+2025-10-03 13:05:57,120 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,225 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,225 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,225 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 58.0)
+2025-10-03 13:05:57,225 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,330 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,331 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,331 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 58.5)
+2025-10-03 13:05:57,331 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,436 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,436 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,436 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 59.0)
+2025-10-03 13:05:57,436 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,540 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,540 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,540 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 59.5)
+2025-10-03 13:05:57,541 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,644 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,645 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,645 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 60.0)
+2025-10-03 13:05:57,645 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,751 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,751 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,751 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 60.5)
+2025-10-03 13:05:57,751 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,856 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,856 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,856 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 61.0)
+2025-10-03 13:05:57,856 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:57,960 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:57,961 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:57,961 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 61.5)
+2025-10-03 13:05:57,961 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:58,065 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:58,065 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:58,066 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 62.0)
+2025-10-03 13:05:58,066 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:58,172 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:58,173 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:58,173 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 62.5)
+2025-10-03 13:05:58,173 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:58,277 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:58,277 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:58,277 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 63.0)
+2025-10-03 13:05:58,277 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:58,381 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:58,381 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:58,381 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 63.5)
+2025-10-03 13:05:58,382 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:58,485 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:58,485 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:58,485 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 64.0)
+2025-10-03 13:05:58,486 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:58,590 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:58,590 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:58,590 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 64.5)
+2025-10-03 13:05:58,590 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-03 13:05:58,695 - engine.resources - DEBUG - Added 0.25 energy (requested 0.25)
+2025-10-03 13:05:58,695 - engine.resources - DEBUG - Added 0.29999999999999716 energy (requested 0.30000000000000004)
+2025-10-03 13:05:58,695 - engine.resources - DEBUG - Spent 0.05 energy (remaining: 65.0)
+2025-10-03 13:05:58,695 - engine.game_state - DEBUG - Game updated (Δt=0.100s)
+2025-10-04 05:30:57,959 - engine.tick_system - INFO - TickSystem initialized with tick_rate=1.0s
+2025-10-04 05:30:57,960 - engine.ui_framework - INFO - UIFramework initialized (terminal: 82x25)
+2025-10-04 05:30:57,960 - engine.input_handler - INFO - InputHandler initialized
+2025-10-04 05:30:57,960 - engine.animator - INFO - Animator initialized
+2025-10-04 05:30:57,960 - engine.game_loop - INFO - GameLoop initialized (tick_rate=1.0, max_fps=30.0)
+2025-10-04 05:30:57,960 - engine.tick_system - INFO - Registered tick callback: _on_update
+2025-10-04 05:30:57,960 - engine.input_handler - INFO - Command registered: build (aliases: ['b'])
+2025-10-04 05:30:57,961 - engine.input_handler - INFO - Command registered: research (aliases: ['r'])
+2025-10-04 05:30:57,961 - engine.input_handler - INFO - Command registered: info (aliases: ['i'])
+2025-10-04 05:30:57,961 - engine.input_handler - INFO - Command registered: help (aliases: ['h', '?'])
+2025-10-04 05:30:57,961 - engine.input_handler - INFO - Command registered: save (aliases: ['s'])
+2025-10-04 05:30:57,961 - engine.input_handler - INFO - Command registered: quit (aliases: ['q', 'exit'])
+2025-10-04 05:30:57,961 - main - INFO - Colony.sh initialized
+2025-10-04 05:30:57,961 - main - INFO - === COLONY.SH STARTED ===
+2025-10-04 05:30:57,961 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,546 - engine.state_manager - INFO - StateManager initialized
+2025-10-04 05:31:01,546 - engine.resources - INFO - ResourceManager initialized
+2025-10-04 05:31:01,546 - engine.buildings - INFO - BuildingManager initialized
+2025-10-04 05:31:01,546 - engine.units - INFO - UnitManager initialized
+2025-10-04 05:31:01,547 - engine.upgrades - INFO - UpgradeManager initialized
+2025-10-04 05:31:01,576 - engine.game_state - INFO - GameState initialized
+2025-10-04 05:31:01,576 - engine.resources - INFO - Resource added: energy (initial=20.0, rate=0.0/s)
+2025-10-04 05:31:01,576 - engine.resources - INFO - Resource added: metal (initial=10.0, rate=0.0/s)
+2025-10-04 05:31:01,577 - engine.resources - INFO - Resource added: biomass (initial=15.0, rate=0.0/s)
+2025-10-04 05:31:01,577 - engine.resources - INFO - Resource added: colonists (initial=3.0, rate=0.0/s)
+2025-10-04 05:31:01,577 - engine.buildings - INFO - Building registered: solar_array (cost={'metal': 5.0})
+2025-10-04 05:31:01,577 - engine.buildings - INFO - Building registered: mining_rig (cost={'metal': 10.0, 'energy': 5.0})
+2025-10-04 05:31:01,577 - engine.buildings - INFO - Building registered: reclamation_bay (cost={'metal': 15.0, 'energy': 8.0})
+2025-10-04 05:31:01,577 - engine.buildings - INFO - Building registered: hab_module (cost={'metal': 20.0, 'energy': 10.0})
+2025-10-04 05:31:01,577 - engine.buildings - INFO - Building registered: research_terminal (cost={'metal': 25.0, 'energy': 15.0})
+2025-10-04 05:31:01,578 - engine.upgrades - INFO - Upgrade registered: efficient_extraction (cost={'metal': 30.0, 'energy': 20.0})
+2025-10-04 05:31:01,578 - engine.upgrades - INFO - Upgrade registered: closed_loop_bioreactor (cost={'metal': 40.0, 'energy': 25.0, 'biomass': 10.0})
+2025-10-04 05:31:01,578 - engine.upgrades - INFO - Upgrade registered: fusion_ignition (cost={'metal': 50.0, 'energy': 40.0})
+2025-10-04 05:31:01,578 - engine.upgrades - INFO - Upgrade registered: redundant_systems (cost={'metal': 35.0, 'energy': 30.0})
+2025-10-04 05:31:01,578 - engine.resources - DEBUG - Resource 'energy' amount changed: 20.0 → 20.0
+2025-10-04 05:31:01,578 - engine.resources - DEBUG - Resource 'metal' amount changed: 10.0 → 10.0
+2025-10-04 05:31:01,578 - engine.resources - DEBUG - Resource 'biomass' amount changed: 15.0 → 15.0
+2025-10-04 05:31:01,579 - engine.resources - DEBUG - Resource 'colonists' amount changed: 3.0 → 3.0
+2025-10-04 05:31:01,579 - engine.resources - DEBUG - energy generation rate: 0.0/s → 2.5/s
+2025-10-04 05:31:01,579 - main - INFO - New game started
+2025-10-04 05:31:01,579 - engine.game_loop - INFO - Entering main game loop
+2025-10-04 05:31:01,579 - engine.tick_system - INFO - TickSystem started
+2025-10-04 05:31:01,579 - engine.game_loop - INFO - Game loop started
+2025-10-04 05:31:01,580 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,613 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,647 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,680 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,714 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,747 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,781 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,814 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,848 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,882 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,915 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,949 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:01,982 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,016 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,049 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,083 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,116 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,150 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,183 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,217 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,250 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,284 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,318 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,351 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,385 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,418 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,452 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,485 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,519 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,552 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,586 - engine.resources - DEBUG - Added 2.5155282020568848 energy (requested 2.5155282020568848)
+2025-10-04 05:31:02,586 - engine.resources - DEBUG - Added 3.0186338424682617 energy (requested 3.0186338424682617)
+2025-10-04 05:31:02,586 - engine.resources - DEBUG - Spent 0.503105640411377 energy (remaining: 25.03105640411377)
+2025-10-04 05:31:02,586 - engine.game_state - DEBUG - Game updated (Δt=1.006s)
+2025-10-04 05:31:02,586 - engine.tick_system - DEBUG - Tick #1 executed (Δt=1.006s)
+2025-10-04 05:31:02,587 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,619 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,653 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,686 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,720 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,753 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,786 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,820 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,853 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,887 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,920 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,954 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:02,987 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,021 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,054 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,088 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,121 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,155 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,188 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,222 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,255 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,289 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,322 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,356 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,389 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,423 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,456 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,490 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,523 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,557 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,590 - engine.resources - DEBUG - Added 2.512006163597107 energy (requested 2.512006163597107)
+2025-10-04 05:31:03,591 - engine.resources - DEBUG - Added 3.0144073963165283 energy (requested 3.0144073963165283)
+2025-10-04 05:31:03,591 - engine.resources - DEBUG - Spent 0.5024012327194214 energy (remaining: 30.055068731307983)
+2025-10-04 05:31:03,591 - engine.game_state - DEBUG - Game updated (Δt=1.005s)
+2025-10-04 05:31:03,591 - engine.tick_system - DEBUG - Tick #2 executed (Δt=1.005s)
+2025-10-04 05:31:03,591 - engine.ui_framework - DEBUG - Screen cleared
+2025-10-04 05:31:03,624 - engine.ui_framework - DEBUG - Screen cleared
